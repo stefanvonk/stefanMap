@@ -4,7 +4,9 @@ git add .
 
 git commit "beschrijving"
 
-git push
+git push origin master
+
+
 
 
 
