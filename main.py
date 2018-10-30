@@ -12,10 +12,13 @@ def main():
     keuze = input("Make your choice: ")
 
     if keuze == "1":
+        print("1")
         pasive.pasive()
     elif keuze == "2":
+        print("2")
         active.active()
     elif keuze == "3":
+        print("3")
         onSystem.onSystem()
 
 main()
