@@ -1,3 +1,6 @@
 def onSystem():
     file = open('/etc/passwd', 'r')
-    print(file)
+    content = file.read()
+    file.close()
+
+    print(content)
