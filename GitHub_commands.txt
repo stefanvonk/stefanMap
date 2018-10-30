@@ -1,0 +1,25 @@
+Pushen
+--------
+git add .
+
+git commit -m "beschrijving"
+
+git push origin master
+
+
+
+
+
+Pullen
+--------
+Git pull origin master
+
+
+
+Repository clonen in map
+-------
+git init
+
+git remote add origin https://github.com/stefanvonk/honey-detect.git
+
+git pull origin master
