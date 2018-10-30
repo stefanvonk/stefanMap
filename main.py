@@ -1,4 +1,4 @@
-import pasive, active, onSystem
+import pasive, active, onSystem, help
 
 # definieren variabelen
 
@@ -17,5 +17,7 @@ def main():
         active.active()
     elif keuze == "3":
         onSystem.onSystem()
+    else:
+        help.help()
 
 main()
