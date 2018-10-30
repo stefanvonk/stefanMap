@@ -3,11 +3,13 @@ def onSystem():
     content = file.read()
     file.close()
 
-    if content.find("kippo") or content.find("Kippo"):
+    if "kippo" in content or "Kippo" in content:
         print("Kippo detected")
-    elif content.find("cowrie") or content.find("Cowrie"):
+    elif "cowrie" in content or "Cowrie" in content:
         print("Cowrie detected")
-    elif content.find("tsec") or content.find("Tsec") or content.find("tpot") or content.find("Tpot"):
+    elif "tsec" in content or "Tsec" in content or "tpot" in content or "Tpot" in content:
+        print("T-potce detected")
+    elif "t-sec" in content or "Tsec" in content or "tpot" in content or "Tpot" in content:
         print("T-potce detected")
     else:
         print("No honeypot account configuration found.")
