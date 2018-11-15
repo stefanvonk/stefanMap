@@ -3,21 +3,17 @@ import pasive, active, onSystem, help
 # definieren variabelen
 
 def main():
-    print("Hello, this is honey-detect. Welcome! This script is created by Stefan Vonk, for purpose of honeypot detection.\n")
-    print("Choose one of the integers below to execute a detection script:\n")
-    print("1    : Pasive detection")
-    print("2    : Active detection")
-    print("3    : On system detection\n")
+    choise = input("p    : pasive scanning\na    : active scanning\no    : on system scanning\n\nMake your choice: ")
 
-    keuze = input("Make your choice: ")
-
-    if keuze == "1":
-        pasive.pasive()
-    elif keuze == "2":
-        active.active()
-    elif keuze == "3":
-        onSystem.onSystem()
+    if choise == "p":
+        result = pasive.pasive()
+    elif choise == "a":
+        result = active.active()
+    elif choise == "o":
+        result = onSystem.onSystem()
     else:
         help.help()
+
+    print(result)
 
 main()
