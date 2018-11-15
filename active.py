@@ -3,7 +3,8 @@ import kippoDetect
 def active():
     status = 0
 
-    ip = input("Enter host IP for scanning: ")
+    ip = input("\nEnter host IP for scanning: ")
+    print("\n")
     status += kippoDetect.kippoDetect(ip)
 
 
@@ -12,6 +13,6 @@ def active():
 
 
 
-    result = status + " / 1"
+    result = str(status) + " / 1"
 
     return result

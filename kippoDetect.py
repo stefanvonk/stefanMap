@@ -1,4 +1,4 @@
-# This code is from a github library
+# Deze code is een aangepaste versie van een github library
 
 import socket, sys
 from colorama import init
@@ -14,7 +14,7 @@ spacer = b'\n\n\n\n\n\n\n\n'
 #'Protocol Mismatch' error or a 'bad packet length' error, both are non standard error messages.
 
 def checkKippo(ip):
-	s.connect((ip, 22))
+	s.connect((ip, 2222))
 	banner = s.recv(1024)
 	s.send(banner + spacer)
 	response = s.recv(1024)
