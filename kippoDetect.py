@@ -22,6 +22,7 @@ def checkKippo(ip):
         s.send(banner + spacer)
         response = s.recv(1024)
         if (b'Protocol mismatch' in response or b'bad packet length' in response):
+            print("[*] Got 'Protocol mismatch' or 'bad packet length' in response of probe. this might be a honeypot!\n")
             return 1
         else:
             return 0
