@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="Change port back to 22 and implementation of detectKippoCowrie">
-      <change afterPath="$PROJECT_DIR$/isPortOpen.py" afterDir="false" />
+    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="Eerste versie goede implementatie beide scripts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/active.py" beforeDir="false" afterPath="$PROJECT_DIR$/active.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detectKippoCowrie.py" beforeDir="false" afterPath="$PROJECT_DIR$/detectKippoCowrie.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kippoDetect.py" beforeDir="false" afterPath="$PROJECT_DIR$/kippoDetect.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,14 +34,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="2" />
-          <entry key="py" value="2910" />
-          <entry key="txt" value="235" />
+          <entry key="py" value="2920" />
+          <entry key="txt" value="283" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="237" />
-          <entry key="Python" value="2910" />
+          <entry key="PLAIN_TEXT" value="285" />
+          <entry key="Python" value="2920" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -87,7 +84,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/active.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -99,14 +96,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kippoDetect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+            <state relative-caret-position="289">
+              <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
               <folding>
                 <element signature="e#61#85#0" expanded="true" />
-                <marker date="1542286237237" expanded="true" signature="530:531" ph="..." />
+                <marker date="1542286691091" expanded="true" signature="530:531" ph="..." />
               </folding>
             </state>
           </provider>
@@ -115,7 +112,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/detectKippoCowrie.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
+            <state relative-caret-position="651">
               <caret line="177" column="22" lean-forward="true" selection-start-line="177" selection-start-column="22" selection-end-line="177" selection-end-column="22" />
               <folding>
                 <element signature="e#234#244#0" expanded="true" />
@@ -188,8 +185,8 @@
         <option value="$PROJECT_DIR$/help.py" />
         <option value="$PROJECT_DIR$/isPortOpen.py" />
         <option value="$PROJECT_DIR$/detectKippoCowrie.py" />
-        <option value="$PROJECT_DIR$/kippoDetect.py" />
         <option value="$PROJECT_DIR$/active.py" />
+        <option value="$PROJECT_DIR$/kippoDetect.py" />
       </list>
     </option>
   </component>
@@ -463,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542279278577</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Eerste versie goede implementatie beide scripts">
+      <created>1542286590569</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1542286590569</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -533,7 +537,8 @@
     <MESSAGE value="Dependency fix 2" />
     <MESSAGE value="Change port to 2222" />
     <MESSAGE value="Change port back to 22 and implementation of detectKippoCowrie" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change port back to 22 and implementation of detectKippoCowrie" />
+    <MESSAGE value="Eerste versie goede implementatie beide scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Eerste versie goede implementatie beide scripts" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/GitHub_commands.txt">
@@ -587,9 +592,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/active.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/detectKippoCowrie.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
+        <state relative-caret-position="651">
           <caret line="177" column="22" lean-forward="true" selection-start-line="177" selection-start-column="22" selection-end-line="177" selection-end-column="22" />
           <folding>
             <element signature="e#234#244#0" expanded="true" />
@@ -599,21 +614,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kippoDetect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        <state relative-caret-position="289">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
           <folding>
             <element signature="e#61#85#0" expanded="true" />
-            <marker date="1542286237237" expanded="true" signature="530:531" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/active.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <marker date="1542286691091" expanded="true" signature="530:531" ph="..." />
           </folding>
         </state>
       </provider>
