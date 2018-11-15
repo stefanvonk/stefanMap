@@ -14,6 +14,8 @@ import time
 import platform
 import argparse
 
+import isPortOpen
+
 CRED = '\033[91m'
 CEND = '\033[0m'
 
@@ -160,7 +162,7 @@ def detectKippoCowrie(host, port):
     return score
 
 
-def main(ip):
+def checkKippoCowrie(ip):
     # if len(sys.argv) >= 1:
     #     host = sys.argv[1]
     #     port = int(sys.argv[2])
@@ -176,4 +178,8 @@ def main(ip):
     # elif score == 0:
     #     print("\t\t\t[!] %s on port %d is not a honeypot." % (host, port))
     #
-    return detectKippoCowrie(ip, 22)
+    if isPortOpen.isOpen(ip, 22):
+        return detectKippoCowrie(ip, 22)
+    else:
+        print("Port 22 is closed, this is probably not a (working) SSH honeypot.")
+        return 0
