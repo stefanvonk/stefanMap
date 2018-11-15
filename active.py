@@ -1,11 +1,16 @@
-import kippoDetect
+import kippoDetect, detectKippoCowrie
 
 def active():
     status = 0
 
     ip = input("\nEnter host IP for scanning: ")
     print("\n")
-    status += kippoDetect.kippoDetect(ip)
+
+    # Test 1
+    status += kippoDetect.main(ip)
+
+    # Test 2
+    status += detectKippoCowrie(ip)
 
 
 
