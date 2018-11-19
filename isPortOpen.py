@@ -5,5 +5,6 @@ def isOpen(ip,port):
       s.connect((ip, int(port)))
       s.shutdown(2)
       return True
-   except:
+   except Exception as e:
+      print(str(e))
       return False
