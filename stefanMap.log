@@ -1,0 +1,34 @@
+DEBUG:root:This message should go to the log file
+INFO:root:So should this
+WARNING:root:And this, too
+INFO:root:hoi
+2018-11-22 12:22:47 INFO     hoi
+2018-11-22 12:23:17 INFO     hoi
+2018-11-22 12:24:37 INFO     hoi
+2018-11-22 12:25:46 INFO     hallo
+2018-11-22 12:25:48 INFO     hallo
+2018-11-22 12:25:55 WARNING  hallo
+2018-11-22 12:30:23 WARNING  Hoi
+2018-11-22 12:43:12 INFO     stefanMap started
+2018-11-22 14:35:07 INFO     stefanMap started
+2018-11-22 14:37:23 INFO     stefanMap started
+2018-11-22 14:37:34 INFO     stefanMap Finished
+2018-11-22 14:38:26 INFO     stefanMap started
+2018-11-22 14:38:28 INFO     stefanMap Finished
+2018-11-22 14:39:07 INFO     stefanMap started
+2018-11-22 14:39:08 INFO     stefanMap Finished
+2018-11-22 14:41:22 INFO     stefanMap started
+2018-11-22 14:41:28 INFO     stefanMap Finished
+2018-11-22 14:50:18 INFO     stefanMap started
+2018-11-22 14:50:21 INFO     stefanMap Finished
+2018-11-22 14:50:37 INFO     stefanMap started
+2018-11-22 14:50:42 INFO     stefanMap Finished
+2018-11-22 15:13:44 INFO     stefanMap started
+2018-11-22 15:13:46 INFO     stefanMap Finished
+2018-11-22 15:17:20 INFO     stefanMap started
+2018-11-22 15:17:22 INFO     stefanMap Finished
+2018-11-22 15:39:23 INFO     stefanMap started
+2018-11-22 15:41:20 INFO     stefanMap Finished
+2018-11-22 15:48:21 INFO     stefanMap started
+2018-11-22 15:48:24 INFO     stefanMap Finished
+2018-11-22 15:48:29 INFO     stefanMap Finished

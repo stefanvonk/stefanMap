@@ -181,5 +181,4 @@ def checkKippoCowrie(ip):
     if isPortOpen.isOpen(ip, 22):
         return detectKippoCowrie(ip, 22)
     else:
-        print("Port 22 is closed, this is probably not a (working) SSH honeypot.")
         return 0

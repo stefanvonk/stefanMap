@@ -27,5 +27,5 @@ def checkKippo(ip):
         else:
             return 0
     else:
-        print("Port 22 is closed, this is probably not a (working) SSH honeypot.")
+
         return 0
