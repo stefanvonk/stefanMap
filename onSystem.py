@@ -26,7 +26,7 @@ def onSystem():
     else:
         print("No such file or directory: '/etc/passwd'. This machine is probably not a honeypot because it isn't running on a linux system.")
 
-    # Check the whole filesystem if there are files or folders that
+    # Check the whole filesystem if there are files or folders that are from honeypot configuration
     print("\n#2: Check if there are standard honeypot directories on the machine.")
     if os.path.isdir('/home/kippo'):
         print("Directory '/home/kippo' detected")
