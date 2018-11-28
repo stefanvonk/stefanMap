@@ -22,25 +22,44 @@ def onSystem():
             print("T-potce useraccount detected")
         else:
             print("No honeypot account configuration found.")
-
     else:
-        print("No such file or directory: '/etc/passwd'. This machine is probably not a honeypot because it isn't running on a linux system.")
+        print("No such file or directory: '/etc/passwd'. This machine is probably not a honeypot because it isn't running a linux system.")
 
     # Check the whole filesystem if there are files or folders that are from honeypot configuration
-    print("\n#2: Check if there are standard honeypot directories on the machine.")
-    if os.path.isdir('/home/kippo'):
-        print("Directory '/home/kippo' detected")
-    elif os.path.isdir('/home/cowrie'):
-        print("Directory '/home/cowrie' detected")
-    else:
-        print("No standard honeypot directory detected")
+    # print("\n#2: Check if there are standard honeypot directories on the machine.")
+    # if os.path.isdir('/home/kippo'):
+    #     print("Directory '/home/kippo' detected")
+    # elif os.path.isdir('/home/cowrie'):
+    #     print("Directory '/home/cowrie' detected")
+    # else:
+    #     print("No standard honeypot directory detected")
 
     rootDir = '/home/'
     for dirName, subdirList, fileList in os.walk(rootDir):
         folderName = '%s' % dirName
         if "cowrie" in folderName:
             print(folderName)
+        elif "kippo" in folderName:
+            print(folderName)
+        elif "sshesame" in folderName:
+            print(folderName)
+        elif "mhn" in folderName:
+            print(folderName)
+        elif "dionaea" in folderName:
+            print(folderName)
+        elif "t-pot" in folderName:
+            print(folderName)
         for fname in fileList:
             fileName = fname
             if "cowrie" in fileName:
+                print(folderName+'/'+fileName)
+            elif "kippo" in fileName:
+                print(folderName+'/'+fileName)
+            elif "sshesame" in fileName:
+                print(folderName+'/'+fileName)
+            elif "mhn" in fileName:
+                print(folderName+'/'+fileName)
+            elif "dionaea" in fileName:
+                print(folderName+'/'+fileName)
+            elif "t-pot" in fileName:
                 print(folderName+'/'+fileName)
