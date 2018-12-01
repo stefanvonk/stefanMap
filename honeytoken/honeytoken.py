@@ -50,7 +50,7 @@ def folder():
         file.close()
 
         # check if part of canarytoken url is in the filecontent
-        if "\\%USERNAME%.%USERDOMAIN%.INI." in content and ".canarytokens.com\resource.dll" in content:
+        if "%USERNAME%.%USERDOMAIN%.INI." in content and ".canarytokens.com" in content and "resource.dll" in content:
             print("\nThis Windows Folder is probably a Canarytoken.")
         else:
             print("\nThis Windows Folder is probably not a Canarytoken.")
