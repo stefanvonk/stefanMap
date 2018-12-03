@@ -10,11 +10,7 @@
 
 import sys
 import socket
-import time
-import platform
-import argparse
 import logging
-
 import isPortOpen
 
 CRED = '\033[91m'
@@ -164,21 +160,6 @@ def detectKippoCowrie(host, port):
 
 
 def checkKippoCowrie(ip):
-    # if len(sys.argv) >= 1:
-    #     host = sys.argv[1]
-    #     port = int(sys.argv[2])
-    #
-    # score = detectKippoCowrie(host, port)
-    #
-    # print("\t\t\t[+] Detection score for %s on port %d: %d" % (host, port, score))
-    #
-    # if score >= 2:
-    #     print("\t\t\t[*] IT'S A TRAP! %s on port %d is definitely a Kippo/Cowrie honeypot [*]" % (host, port))
-    # elif score == 1:
-    #     print("\t\t\t[+] %s:%d may be a Kippo/Cowrie honeypot or a misconfigured OpenSSH" % (host, port))
-    # elif score == 0:
-    #     print("\t\t\t[!] %s on port %d is not a honeypot." % (host, port))
-    #
     if isPortOpen.isOpen(ip, 22):
         return detectKippoCowrie(ip, 22)
     else:

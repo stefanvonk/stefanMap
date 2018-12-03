@@ -7,3 +7,6 @@ def help():
     print("a    : Active detection")
     print("o    : On system detection\n")
     print("")
+
+
+    print("For this python you must install the following dependecies: nmap, python-nmap")

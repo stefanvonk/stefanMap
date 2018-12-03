@@ -2,6 +2,9 @@ import nmap
 
 def scanSystem():
     ip = input("\nEnter a host IP for scanning the entire network where this IP participate: ")
+
+    ######################################################################## check ip
+
     print("\n")
 
     nm = nmap.PortScanner()
