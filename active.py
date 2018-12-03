@@ -8,7 +8,7 @@ def active():
     status = 0
     # ask user to enter ip-address for scanning
     ip = input("\nEnter a host IP for scanning: ")
-    logging.info("Entered host ip is: " + ip + ".")
+    logging.info("Entered host ip is: " + str(ip) + ".")
     print("\n")
 
     # test 1 kippoDetect, score 0 - 1
@@ -25,10 +25,10 @@ def active():
     logging.info("Starting check T-Pot daschboard")
     if isPortOpen.isOpen(ip, 64297):
         tpotdashboard = 1
-        logging.info("Port 64297 on " + ip + " is open. This is possible the dashboard of a T-Pot honeynetwork.")
+        logging.info("Port 64297 on " + str(ip) + " is open. This is possible the dashboard of a T-Pot honeynetwork.")
     else:
         tpotdashboard = 0
-        logging.info("Port 64297 on " + ip + " is closed. It is not the dashboard of a T-Pot honeynetwork.")
+        logging.info("Port 64297 on " + str(ip) + " is closed. It is not the dashboard of a T-Pot honeynetwork.")
     logging.info("Finishing check T-Pot daschboard")
 
 

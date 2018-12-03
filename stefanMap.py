@@ -14,7 +14,7 @@ def stefanMap():
     # append data to logfile
     logging.info("stefanMap started")
 
-    choise = input("p    : pasive scan\na    : active scan\no    : local scan\nf    : full nmap network scan"
+    choise = input("p    : pasive scan\na    : active scan\nf    : full nmap network scan"
                    "\n\nMake your choice: ")
 
     if choise == "p":
@@ -23,9 +23,6 @@ def stefanMap():
     elif choise == "a":
         logging.info("Active detection selected.")
         result = active.active()
-    elif choise == "o":
-        logging.info("Local detection selected.")
-        local.onSystem()
     elif choise == "f":
         logging.info("Full nmap network scan selected.")
         result = nmapSystemScan.scanSystem()
