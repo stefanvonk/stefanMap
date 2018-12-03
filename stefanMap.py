@@ -1,6 +1,6 @@
 import pasive
 import active
-import onSystem
+import local
 import nmapSystemScan
 import help
 import logging
@@ -9,11 +9,13 @@ import logging
 
 def stefanMap():
     # setup logging: logfile stefanMap.log, add date and time to logging, add loglevel to the logging
-    logging.basicConfig(filename='stefanMap.log',format='%(asctime)s %(levelname)-8s %(message)s',level=logging.INFO,datefmt='%Y-%m-%d %H:%M:%S')
+    logging.basicConfig(filename='stefanMap.log',format='%(asctime)s %(levelname)-8s %(message)s',
+                        level=logging.INFO,datefmt='%Y-%m-%d %H:%M:%S')
     # append data to logfile
     logging.info("stefanMap started")
 
-    choise = input("p    : pasive scanning\na    : active scanning\no    : on system scanning\nf    : full nmap network scan\n\nMake your choice: ")
+    choise = input("p    : pasive scan\na    : active scan\no    : local scan\nf    : full nmap network scan"
+                   "\n\nMake your choice: ")
 
     if choise == "p":
         logging.info("Pasive detection selected.")
@@ -23,7 +25,7 @@ def stefanMap():
         result = active.active()
     elif choise == "o":
         logging.info("Local detection selected.")
-        onSystem.onSystem()
+        local.onSystem()
     elif choise == "f":
         logging.info("Full nmap network scan selected.")
         result = nmapSystemScan.scanSystem()
@@ -34,7 +36,8 @@ def stefanMap():
     if "result" in locals() or "result" in globals():
         print(result)
 
-    print("This is an indication whether there is a honeypot running on the IP you have entered. For details check the logfile stefanMap.log")
+    print("This is an indication whether there is a honeypot running on the IP you have entered.\n"
+          "For details check the logfile stefanMap.log.")
 
     # append data to logfile
     logging.info("stefanMap Finished")

@@ -10,3 +10,5 @@ def scanSystem():
     for host, status in hosts_list:
         print('{0}:{1}'.format(host, status))
 
+        ####### not ready
+
