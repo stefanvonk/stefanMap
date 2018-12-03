@@ -13,6 +13,7 @@ import socket
 import time
 import platform
 import argparse
+import logging
 
 import isPortOpen
 
@@ -44,7 +45,7 @@ def getSSHBanner(bannerFromServer):
     banner = bannerFromServer.decode('utf-8').strip()
 
     if banner in DEFAULT_KIPPOCOWRIE_BANNERS:
-        print("[!] Heads up: the banner of this server is on Kippo/Cowrie's default list. May be promising...")
+        logging.info("[!] Heads up: the banner of this server is on Kippo/Cowrie's default list. May be promising...")
 
     return DEFAULT_BANNER in banner
 
@@ -59,13 +60,13 @@ def connectToSSH(host, port):
 
         if getSSHBanner(banner):
             if VERBOSE:
-                print("[+] %s:%d advertised itself as OpenSSH. Continuing..." % (host, port))
+                logging.info("[+] %s:%d advertised itself as OpenSSH. Continuing..." % (host, port))
             else:
-                print("[!] %s:%d does not advertise itself as OpenSSH. Quitting..." % (host, port))
+                logging.info("[!] %s:%d does not advertise itself as OpenSSH. Quitting..." % (host, port))
                 return False
 
     except Exception as err:
-        print("[!] Error connecting to %s port %d: %s" % (host, port, str(err)))
+        logging.info("[!] Error connecting to %s port %d: %s" % (host, port, str(err)))
         return False
 
     return sockfd
@@ -75,17 +76,17 @@ def probeBadVersion(sockfd):
     try:
         sockfd.sendall('SSH-1337\n'.encode('utf-8'))
     except Exception as err:
-        print("[!] Error sending probe #1: %s" % str(err))
+        logging.info("[!] Error sending probe #1: %s" % str(err))
 
     response = sockfd.recv(1024)
     sockfd.close()
 
     if VERBOSE:
-        print(response)
+        logging.info(str(response))
 
     if b"bad version" in response:
         if VERBOSE:
-            print("[*] Got 'bad version' in response to probe #1. Might be a honeypot!\n")
+            logging.info("[*] Got 'bad version' in response to probe #1. Might be a honeypot!")
         return True
     else:
         return False
@@ -96,14 +97,14 @@ def probeSpacerPacketCorrupt(sockfd):
     try:
         sockfd.sendall("SSH-2.0-OpenSSH\n\n\n\n\n\n\n\n\n\n".encode('utf-8'))
     except Exception as err:
-        print("[!] Error sending probe #2: %s" % str(err))
+        logging.info("[!] Error sending probe #2: %s" % str(err))
 
     response = sockfd.recv(1024)
     sockfd.close()
 
     if b"corrupt" in response or b"mismatch" in response:
         if VERBOSE:
-            print("[*] Got 'packet corrupt' or 'protocol mismatch' in response of probe #2. Might be a honeypot!\n")
+            logging.info("[*] Got 'packet corrupt' or 'protocol mismatch' in response of probe #2. Might be a honeypot!")
             return True
         else:
             return False
@@ -113,14 +114,14 @@ def probeDoubleBanner(sockfd):
     try:
         sockfd.sendall("SSH-2.0-OpenSSH_6.0p1 Debian-4+deb7u2\nSSH-2.0-OpenSSH_6.0p1 Debian-4+deb7u2\n".encode('utf-8'))
     except Exception as err:
-        print("[!] Error sending probe #3: %s" % str(err))
+        logging.info("[!] Error sending probe #3: %s" % str(err))
 
     response = sockfd.recv(1024)
     sockfd.close()
 
     if b"corrupt" in response or b"mismatch" in response:
         if VERBOSE:
-            print("[*] Got 'packet corrupt' or 'protocol mismatch' in response of probe #3. Might be a honeypot!\n")
+            logging.info("[*] Got 'packet corrupt' or 'protocol mismatch' in response of probe #3. Might be a honeypot!")
         return True
     else:
         return False
@@ -129,34 +130,34 @@ def probeDoubleBanner(sockfd):
 def detectKippoCowrie(host, port):
     score = 0
 
-    print("[+] Detecting Kippo/Cowrie technique #1 - bad version")
+    logging.info("[+] Detecting Kippo/Cowrie technique #1 - bad version")
     sockfd = connectToSSH(host, port)
 
     if sockfd:
         if probeBadVersion(sockfd):
             score += 1
     else:
-        print("Socket error in probe #1")
+        logging.info("Socket error in probe #1")
         sys.exit(ERROR)
 
-    print("[+] Detecting Kippo/Cowrie technique #2 - spacer")
+    logging.info("[+] Detecting Kippo/Cowrie technique #2 - spacer")
     sockfd = connectToSSH(host, port)
 
     if sockfd:
         if probeSpacerPacketCorrupt(sockfd):
             score += 1
     else:
-        print("Socket error in probe #2")
+        logging.info("Socket error in probe #2")
         sys.exit(ERROR)
 
-    print("[+] Detecting Kippo/Cowrie technique #3 - double banner")
+    logging.info("[+] Detecting Kippo/Cowrie technique #3 - double banner")
     sockfd = connectToSSH(host, port)
 
     if sockfd:
         if probeDoubleBanner(sockfd):
             score += 1
     else:
-        print("Socket error in probe #3")
+        logging.info("Socket error in probe #3")
         sys.exit(ERROR)
 
     return score

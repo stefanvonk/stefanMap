@@ -13,22 +13,30 @@ def active():
 
     # test 1 kippoDetect, score 0 - 1
     logging.info("Starting kippoDetect")
-    kippodetect = kippoDetect.checkKippo(ip)
+    try:
+        kippodetect = kippoDetect.checkKippo(ip)
+    except Exception as e:
+        logging.info("The following error raise when running kippoDetect: " + str(e))
+        kippodetect = 0
     logging.info("Finishing kippoDetect")
 
     # test 2 detectKippoCowrie, score 0 - 3
     logging.info("Starting detectKippoCowrie")
-    detectkippocowrie = detectKippoCowrie.checkKippoCowrie(ip)
+    try:
+        detectkippocowrie = detectKippoCowrie.checkKippoCowrie(ip)
+    except Exception as e:
+        print("The following error raise when running detectKippoCowrie: " + str(e))
+        detectkippocowrie = 0
     logging.info("Finishing detectKippoCowrie")
 
     # test 3 T-Pot dashboard - ip:64297, score 0 - 1
     logging.info("Starting check T-Pot daschboard")
     if isPortOpen.isOpen(ip, 64297):
-        tpotdashboard = 1
         logging.info("Port 64297 on " + str(ip) + " is open. This is possible the dashboard of a T-Pot honeynetwork.")
+        tpotdashboard = 1
     else:
-        tpotdashboard = 0
         logging.info("Port 64297 on " + str(ip) + " is closed. It is not the dashboard of a T-Pot honeynetwork.")
+        tpotdashboard = 0
     logging.info("Finishing check T-Pot daschboard")
 
 
@@ -37,12 +45,15 @@ def active():
     # test 4 checkOpenPorts, score 0 - 1
     logging.info("Starting checkOpenPorst")
     nm = nmap.PortScanner()
-    nm.scan(hosts=ip + '/24', arguments='-n -sP -PE -PA21,23,80,3389')
-    hosts_list = [(x, nm[x]['status']['state']) for x in nm.all_hosts()]
-    for host, status in hosts_list:
-        print('{0}:{1}'.format(host, status))
+    try:
+        openports = nm.scan(hosts=ip, ports="0-1023")
+    except Exception as e:
+        logging.info("The following error raise when running portscan: " + str(e))
+        openports = "0"
+
+    print("Open ports:\n" + openports)
+
     logging.info("Finishing checkOpenPorst")
-    ######## not ready
 
     result = str(status) + " / 5"
 

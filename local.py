@@ -4,25 +4,25 @@
 import os
 import struct
 
-# source: https://gist.github.com/mojaves/3480749
-def cpuHypervisorID():
-    # we cannot (yet) use _cpuid because of the different unpack format.
-    HYPERVISOR_CPUID_LEAF = 0x40000000
-    with open('/dev/cpu/0/cpuid', 'rb') as f:
-        f.seek(HYPERVISOR_CPUID_LEAF)
-        c = struct.unpack('I12s', f.read(16))
-        return c[1].strip('\x00')
-
-# source: https://gist.github.com/mojaves/3480749
-def cpuModelName():
-    with open('/proc/cpuinfo', 'rt') as f:
-        for line in f:
-            if ':' in line:
-                k, v = line.split(':', 1)
-                k = k.strip()
-                if k == 'model name':
-                    return v.strip()
-    return ''
+# # source: https://gist.github.com/mojaves/3480749
+# def cpuHypervisorID():
+#     # we cannot (yet) use _cpuid because of the different unpack format.
+#     HYPERVISOR_CPUID_LEAF = 0x40000000
+#     with open('/dev/cpu/0/cpuid', 'rb') as f:
+#         f.seek(HYPERVISOR_CPUID_LEAF)
+#         c = struct.unpack('I12s', f.read(16))
+#         return c[1].strip('\x00')
+#
+# # source: https://gist.github.com/mojaves/3480749
+# def cpuModelName():
+#     with open('/proc/cpuinfo', 'rt') as f:
+#         for line in f:
+#             if ':' in line:
+#                 k, v = line.split(':', 1)
+#                 k = k.strip()
+#                 if k == 'model name':
+#                     return v.strip()
+#     return ''
 
 def main():
     print("The following actions are done by the script:")
@@ -126,33 +126,33 @@ def main():
 
 
     ########## method 5 ##########
-    print("\n#5: Detect virtualization of the machine.")
-
-    name = "0"
-    hid = "0"
-    hid2 = "0"
-    try:
-        hid = cpuHypervisorID()
-        if hid == 'VMwareVMware':
-            name = 'vmware'
-        elif hid == 'Microsoft Hv':
-            name = 'hyperv'
-        elif hid == 'XenVMMXenVMM':
-            name = 'xen'
-        elif hid == 'KVMKVMKVM':
-            name = 'kvm'
-    except Exception as e:
-        print("The following error raise when trying to detect virtualization: " + str(e))
-
-    try:
-        hid2 = cpuModelName()
-        if 'QEMU' in hid2:
-            name = 'qemu'
-    except Exception as e:
-        print("The following error raise when trying to detect virtualization: " + str(e))
-
-    print(name)
-    print(hid)
-    print(hid2)
+    # print("\n#5: Detect virtualization of the machine.")
+    #
+    # name = "0"
+    # hid = "0"
+    # hid2 = "0"
+    # try:
+    #     hid = cpuHypervisorID()
+    #     if hid == 'VMwareVMware':
+    #         name = 'vmware'
+    #     elif hid == 'Microsoft Hv':
+    #         name = 'hyperv'
+    #     elif hid == 'XenVMMXenVMM':
+    #         name = 'xen'
+    #     elif hid == 'KVMKVMKVM':
+    #         name = 'kvm'
+    # except Exception as e:
+    #     print("The following error raise when trying to detect virtualization: " + str(e))
+    #
+    # try:
+    #     hid2 = cpuModelName()
+    #     if 'QEMU' in hid2:
+    #         name = 'qemu'
+    # except Exception as e:
+    #     print("The following error raise when trying to detect virtualization: " + str(e))
+    #
+    # print(name)
+    # print(hid)
+    # print(hid2)
 
 main()

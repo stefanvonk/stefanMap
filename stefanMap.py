@@ -1,6 +1,5 @@
 import pasive
 import active
-import local
 import nmapSystemScan
 import help
 import logging
@@ -12,6 +11,7 @@ def stefanMap():
     logging.basicConfig(filename='stefanMap.log',format='%(asctime)s %(levelname)-8s %(message)s',
                         level=logging.INFO,datefmt='%Y-%m-%d %H:%M:%S')
     # append data to logfile
+    logging.info("")
     logging.info("stefanMap started")
 
     choise = input("p    : pasive scan\na    : active scan\nf    : full nmap network scan"

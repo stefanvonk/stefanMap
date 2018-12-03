@@ -37,3 +37,72 @@ INFO:root:hoi
 2018-12-03 10:45:18 INFO     Local detection selected.
 2018-12-03 10:45:18 INFO     stefanMap Finished
 2018-12-03 10:47:34 INFO     stefanMap started
+2018-12-03 11:40:13 INFO     stefanMap started
+2018-12-03 11:40:16 INFO     Active detection selected.
+2018-12-03 11:40:21 INFO     Entered host ip is: 11223243.
+2018-12-03 11:40:21 INFO     Starting kippoDetect
+2018-12-03 11:40:21 INFO     Port 22 on 11223243 is open.
+2018-12-03 11:42:18 INFO     stefanMap started
+2018-12-03 11:42:20 INFO     Active detection selected.
+2018-12-03 11:42:22 INFO     Entered host ip is: asdfasdfasdf.
+2018-12-03 11:42:22 INFO     Starting kippoDetect
+2018-12-03 11:42:29 WARNING  Exception when testing if port 22 on asdfasdfasdf is open:[Errno 11001] getaddrinfo failed.
+2018-12-03 11:42:29 INFO     Port 22 on asdfasdfasdf is closed.
+2018-12-03 11:42:29 INFO     Finishing kippoDetect
+2018-12-03 11:42:29 INFO     Starting detectKippoCowrie
+2018-12-03 11:42:32 INFO     stefanMap started
+2018-12-03 11:42:33 INFO     Active detection selected.
+2018-12-03 11:42:35 INFO     Entered host ip is: 234567890.
+2018-12-03 11:42:35 INFO     Starting kippoDetect
+2018-12-03 11:42:35 INFO     Port 22 on 234567890 is open.
+2018-12-03 11:42:36 INFO     Got no 'Protocol mismatch' or 'bad packet length' in response of probe. This might not be a kippo honeypot.
+2018-12-03 11:42:36 INFO     Finishing kippoDetect
+2018-12-03 11:42:36 INFO     Starting detectKippoCowrie
+2018-12-03 11:42:36 INFO     Port 22 on 234567890 is open.
+2018-12-03 11:42:39 INFO     Finishing detectKippoCowrie
+2018-12-03 11:42:39 INFO     Starting check T-Pot daschboard
+2018-12-03 11:42:39 INFO     Port 64297 on 234567890 is open.
+2018-12-03 11:42:39 INFO     Port 64297 on 234567890 is open. This is possible the dashboard of a T-Pot honeynetwork.
+2018-12-03 11:42:39 INFO     Finishing check T-Pot daschboard
+2018-12-03 11:42:39 INFO     Starting checkOpenPorst
+2018-12-03 12:23:20 INFO     
+2018-12-03 12:23:20 INFO     stefanMap started
+2018-12-03 12:23:21 INFO     Active detection selected.
+2018-12-03 12:23:25 INFO     Entered host ip is: 123.
+2018-12-03 12:23:25 INFO     
+2018-12-03 12:23:25 INFO     Starting kippoDetect
+2018-12-03 12:23:25 INFO     Port 22 on 123 is open.
+2018-12-03 12:23:25 INFO     Finishing kippoDetect
+2018-12-03 12:23:25 INFO     
+2018-12-03 12:23:25 INFO     Starting detectKippoCowrie
+2018-12-03 12:23:25 INFO     Port 22 on 123 is open.
+2018-12-03 12:23:25 INFO     [+] Detecting Kippo/Cowrie technique #1 - bad version
+2018-12-03 12:23:25 INFO     Finishing detectKippoCowrie
+2018-12-03 12:23:25 INFO     
+2018-12-03 12:23:25 INFO     Starting check T-Pot daschboard
+2018-12-03 12:23:25 INFO     Port 64297 on 123 is open.
+2018-12-03 12:23:25 INFO     Port 64297 on 123 is open. This is possible the dashboard of a T-Pot honeynetwork.
+2018-12-03 12:23:25 INFO     Finishing check T-Pot daschboard
+2018-12-03 12:23:25 INFO     
+2018-12-03 12:23:25 INFO     Starting checkOpenPorst
+2018-12-03 12:27:27 INFO     
+2018-12-03 12:27:27 INFO     stefanMap started
+2018-12-03 12:27:31 INFO     Active detection selected.
+2018-12-03 12:27:35 INFO     Entered host ip is: 23.
+2018-12-03 12:27:35 INFO     
+2018-12-03 12:27:35 INFO     Starting kippoDetect
+2018-12-03 12:27:35 INFO     Port 22 on 23 is open.
+2018-12-03 12:27:35 INFO     The following error raise when running kippoDetect: [WinError 10053] De software op uw hostcomputer heeft een verbinding verbroken
+2018-12-03 12:27:35 INFO     Finishing kippoDetect
+2018-12-03 12:27:35 INFO     
+2018-12-03 12:27:35 INFO     Starting detectKippoCowrie
+2018-12-03 12:27:35 INFO     Port 22 on 23 is open.
+2018-12-03 12:27:35 INFO     [+] Detecting Kippo/Cowrie technique #1 - bad version
+2018-12-03 12:27:35 INFO     Finishing detectKippoCowrie
+2018-12-03 12:27:35 INFO     
+2018-12-03 12:27:35 INFO     Starting check T-Pot daschboard
+2018-12-03 12:27:35 INFO     Port 64297 on 23 is open.
+2018-12-03 12:27:35 INFO     Port 64297 on 23 is open. This is possible the dashboard of a T-Pot honeynetwork.
+2018-12-03 12:27:35 INFO     Finishing check T-Pot daschboard
+2018-12-03 12:27:35 INFO     
+2018-12-03 12:27:35 INFO     Starting checkOpenPorst
