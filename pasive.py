@@ -1,8 +1,11 @@
-import subprocess
-
 def pasive():
-    network = "192.168.11.0/24"
-    p = subprocess.Popen(["sudo", "nmap", "-sP", network], stdout=subprocess.PIPE)
-
-    for line in p.stdout:
-        print(line)
+    print("pasive")
+    #
+    # arp scan:
+    # "https://github.com/ffauberteau/arpscan/blob/master/arpscan.py"
+    # "https://stackoverflow.com/questions/38935304/program-for-arp-scanning"
+    #
+    # wireshark python
+    #
+    # honeybee:
+    # "https://github.com/mohitrajain/honeybee"

@@ -1,14 +1,26 @@
-import nmap
+import ipaddress
+import subprocess
+import logging
 
-def scanSystem():
-    ip = input("\nEnter a host IP for scanning the entire network where this IP participate: ")
 
-    ######################################################################## check ip
+def scanNetwork():
+    print("\nFor this full network scan you need a local nmap installation. (For linux run 'sudo apt-get install nmap')")
+    ip = input("Enter a valid host IP address for scanning the entire network where it participate: ")
+    logging.info("Entered host IP is: " + str(ip))
 
-    print("\n")
+    try:
+        # check ip address
+        ipaddress.ip_address(ip)
 
-    nm = nmap.PortScanner()
-    nm.scan(hosts=ip + '/24', arguments='-n -sP -PE')
-    hosts_list = [(x, nm[x]['status']['state']) for x in nm.all_hosts()]
-    for host, status in hosts_list:
-        print('{0}:{1}'.format(host, status))
+        # run nmap scan
+        p = subprocess.Popen(["sudo", "nmap", "-sP", ip], stdout=subprocess.PIPE)
+
+        # print results of scan
+        for line in p.stdout:
+            print(line)
+
+    # exception when the entered ip is not a IPv4 or IPv6 address
+    except Exception as e:
+        logging.warning("The following error raise when checking the IP address: " + str(e))
+        print("Your input does not appear to be an IPv4 or IPv6 address, please try again.")
+        scanNetwork()

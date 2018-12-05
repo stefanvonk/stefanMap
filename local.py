@@ -4,30 +4,30 @@
 import os
 import struct
 
-# # source: https://gist.github.com/mojaves/3480749
-# def cpuHypervisorID():
-#     # we cannot (yet) use _cpuid because of the different unpack format.
-#     HYPERVISOR_CPUID_LEAF = 0x40000000
-#     with open('/dev/cpu/0/cpuid', 'rb') as f:
-#         f.seek(HYPERVISOR_CPUID_LEAF)
-#         c = struct.unpack('I12s', f.read(16))
-#         return c[1].strip('\x00')
-#
-# # source: https://gist.github.com/mojaves/3480749
-# def cpuModelName():
-#     with open('/proc/cpuinfo', 'rt') as f:
-#         for line in f:
-#             if ':' in line:
-#                 k, v = line.split(':', 1)
-#                 k = k.strip()
-#                 if k == 'model name':
-#                     return v.strip()
-#     return ''
 
-def main():
-    print("The following actions are done by the script:")
+# source: https://gist.github.com/mojaves/3480749
+def cpuHypervisorID():
+    # we cannot (yet) use _cpuid because of the different unpack format.
+    HYPERVISOR_CPUID_LEAF = 0x40000000
+    with open('/dev/cpu/0/cpuid', 'rb') as f:
+        f.seek(HYPERVISOR_CPUID_LEAF)
+        c = struct.unpack('I12s', f.read(16))
+        return c[1].strip('\x00')
 
-    ########## method 1 ##########
+
+# source: https://gist.github.com/mojaves/3480749
+def cpuModelName():
+    with open('/proc/cpuinfo', 'rt') as f:
+        for line in f:
+            if ':' in line:
+                k, v = line.split(':', 1)
+                k = k.strip()
+                if k == 'model name':
+                    return v.strip()
+    return ''
+
+
+def detectionMethod1():
     print("\n#1: Check if there are standard honeypot accounts on the machine.")
 
     # write the content of the /etc/passwd file to a variable
@@ -44,14 +44,15 @@ def main():
             print("T-potce useraccount detected")
         elif "t-sec" in content or "T-sec" in content or "t-pot" in content or "T-pot" in content:
             print("T-potce useraccount detected")
-        # the other honeypots don't have a standard yser account
+        # the other honeypots don't have a standard user account
         else:
             print("No standard honeypot account configuration found.")
     else:
         print("No such file or directory: '/etc/passwd'. This machine is probably not a honeypot because it isn't"
               " running a linux system.")
 
-    ########## method 2 ##########
+
+def detectionMethod2():
     print("\n#2: Check if there are standard honeypot files or folders on the machine.")
 
     # declare variables
@@ -117,16 +118,17 @@ def main():
     else:
         print("No standard honeypot machine configuration found.")
 
-    ########## method 3 ##########
+
+def detectionMethod3():
     print("\n#3: Check the networktraffic of the machine.")
 
 
-    ########## method 4 ##########
+def detectionMethod4():
     print("\n#4: check the services of the machine.")
 
 
-    ########## method 5 ##########
-    # print("\n#5: Detect virtualization of the machine.")
+def detectionMethod5():
+    print("\n#5: Detect virtualization of the machine.")
     #
     # name = "0"
     # hid = "0"
@@ -155,4 +157,15 @@ def main():
     # print(hid)
     # print(hid2)
 
-main()
+
+def local():
+    print("The following actions are done by the script:")
+
+    detectionMethod1()
+    detectionMethod2()
+    detectionMethod3()#TODO
+    detectionMethod4()#TODO
+    detectionMethod5()#TODO
+
+
+local()

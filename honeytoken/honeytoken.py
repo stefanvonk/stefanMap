@@ -23,9 +23,11 @@ def pdf():
 
         old_stdout = sys.stdout
         sys.stdout = MyBuffer()
+
         # execute the peepdf library in the buffer
         peepdf.PDFConsole.PDFConsole(pdf[1], VT_KEY).do_object(argv="16")
         my_buffer, sys.stdout = sys.stdout, old_stdout
+
         # put the buffer to the variable content
         content = str(my_buffer.buffer)
 
