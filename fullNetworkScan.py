@@ -13,7 +13,7 @@ def scanNetwork():
         ipaddress.ip_address(ip)
 
         # run nmap scan
-        p = subprocess.Popen(["sudo", "nmap", "-sP", ip], stdout=subprocess.PIPE)
+        p = subprocess.Popen(["sudo", "nmap", "-sP", ip + "/24"], stdout=subprocess.PIPE)
 
         # print results of scan
         for line in p.stdout:
