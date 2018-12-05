@@ -1,4 +1,3 @@
-import ipaddress
 import kippoDetect
 import detectKippoCowrie
 import isPortOpen
@@ -127,25 +126,12 @@ def detectionMethod6(ip):
     return
 
 
-def active():
-    # ask user to enter ip address for scanning
-    ip = input("Enter a valid host IP address for scanning: ")
-    logging.info("Entered host IP is: " + str(ip))
+def active(ip):
+    # run all detection methods
+    detectionMethod1(ip)
+    detectionMethod2(ip)
+    detectionMethod3(ip)
+    detectionMethod4(ip)
+    detectionMethod5(ip)
+    detectionMethod6(ip)#TODO
 
-    try:
-        # check ip address
-        ipaddress.ip_address(ip)
-
-        # run all detection methods
-        detectionMethod1(ip)
-        detectionMethod2(ip)
-        detectionMethod3(ip)
-        detectionMethod4(ip)
-        detectionMethod5(ip)
-        detectionMethod6(ip)#TODO
-
-    # exception when the entered ip is not a IPv4 or IPv6 address
-    except Exception as e:
-        logging.warning("The following error raise when checking the IP address: " + str(e))
-        print("Your input does not appear to be an IPv4 or IPv6 address, please try again.")
-        active()
