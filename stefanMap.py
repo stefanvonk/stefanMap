@@ -31,8 +31,7 @@ def stefanMap():
         logging.info("Help function is showing.")
         help.help()
 
-    print("\n\nThis results are an indication whether there is a honeypot running on the IP address you have entered.\n"
-          "For details check the logfile stefanMap.log.")
+    print("\n\nFor details about the process check the logfile stefanMap.log.")
 
     # append data to logfile
     logging.info("stefanMap Finished\n")
