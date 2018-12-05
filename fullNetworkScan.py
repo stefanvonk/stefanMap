@@ -4,7 +4,7 @@ import logging
 
 
 def scanNetwork():
-    print("\nFor this full network scan you need a local nmap installation. (For linux run 'sudo apt-get install nmap')")
+    print("\nFor this full network scan you need a local nmap installation. (Run 'sudo apt-get install nmap')")
     ip = input("Enter a valid host IP address for scanning the entire network where it participate: ")
     logging.info("Entered host IP is: " + str(ip))
 
@@ -12,12 +12,14 @@ def scanNetwork():
         # check ip address
         ipaddress.ip_address(ip)
 
-        # run nmap scan
-        p = subprocess.Popen(["sudo", "nmap", "-sP", ip + "/24"], stdout=subprocess.PIPE)
+        try:
+            # run nmap scan
+            subprocess.run(["sudo", "nmap", "-sP", ip + "/24"])
 
-        # print results of scan
-        for line in p.stdout:
-            print(line)
+        # exception when nmap is not installed
+        except Exception as e:
+            logging.warning("The following error raise when running nmap: " + str(e))
+            print("Please install nmap before run this full network scan. (Run 'sudo apt-get install nmap')")
 
     # exception when the entered ip is not a IPv4 or IPv6 address
     except Exception as e:

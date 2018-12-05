@@ -1,0 +1,13 @@
+2018-12-05 12:32:07 INFO     stefanMap started
+2018-12-05 12:32:08 INFO     Full network scan selected.
+2018-12-05 12:32:15 INFO     Entered host IP is: 123.123.123.123
+2018-12-05 12:32:15 WARNING  The following error raise when running nmap: 'module' object has no attribute 'run'
+2018-12-05 12:32:15 INFO     stefanMap Finished
+
+2018-12-05 12:33:02 INFO     stefanMap started
+2018-12-05 12:33:03 INFO     Full network scan selected.
+2018-12-05 12:33:11 INFO     Entered host IP is: 123.123.123.123
+2018-12-05 12:33:11 WARNING  The following error raise when checking the IP address: 'module' object has no attribute 'run'
+2018-12-05 12:33:26 INFO     stefanMap started
+2018-12-05 12:33:27 INFO     Full network scan selected.
+2018-12-05 12:33:31 INFO     Entered host IP is: 123.123.123.123
