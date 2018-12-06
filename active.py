@@ -147,11 +147,9 @@ def detectionMethod6(ip):
         except paramiko.ssh_exception.AuthenticationException:
             logging.info("Authentication failure")
             sshserver = 0
-            exit()
         except paramiko.ssh_exception.BadHostKeyException:
             logging.info("This server is probably a ssh honeypot witch does a man-in-the-middle attack")
             sshserver = 1
-            exit()
     else:
         logging.info("This is not a running ssh server")
         sshserver = 0
