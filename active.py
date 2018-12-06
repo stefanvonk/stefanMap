@@ -82,7 +82,7 @@ def detectionMethod4(ip):
 
     if isPortOpen.isOpen(ip, 80):
         logging.info("Port 80 on " + str(ip) + " is open")
-        contentWebPage = str(urllib.request.urlopen(ip).read())
+        contentWebPage = str(urllib.request.urlopen("http://" + ip).read())
         if "Modern Honeypot Network" in contentWebPage and "Modern Honeynet Framework" in contentWebPage \
                 and "threatstream.com" in contentWebPage:
             logging.info("This webpage is a dashboard from a mhn honeypot")

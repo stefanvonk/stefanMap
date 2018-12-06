@@ -1,6 +1,5 @@
 import subprocess
 import sys
-
 import passive
 import active
 import fullNetworkScan
@@ -42,22 +41,41 @@ def getIP():
         getIP()
 
 
-def procesInput(choise):
+def processInput():
+    # choose scan method
+    print("\nChoose your scan mehod:")
+    choise = input("p    : passive scan\na    : active scan\nf    : full (active) network scan"
+                   "\n\nMake your choice: ")
     if choise == "p":
-        logging.info("Passive detection selected.")
+        logging.info("Passive detection selected")
         ip = getIP()
         passive.passive(ip)
     elif choise == "a":
-        logging.info("Active detection selected.")
+        logging.info("Active detection selected")
         ip = getIP()
         active.active(ip)
     elif choise == "f":
-        logging.info("Full(active) network scan selected.")
+        logging.info("Full (active) network scan selected")
         ip = getIP()
         fullNetworkScan.scanNetwork(ip)
     else:
-        logging.info("Help function is showing.")
+        logging.info("Help function is showing")
         help.help()
+
+
+def runAgain():
+    print("Do you want to run one of the scan methods of stefanMap or close the program?")
+    again = input("Typ 'a' for again or 'c' for close:")
+
+    if again == "a":
+        logging.info("Run stefanMap again selected")
+        processInput()
+    elif again == "c":
+        logging.info("Close stefanMap selected")
+        return
+    else:
+        print("Your input is true, please try again.")
+        runAgain()
 
 
 def stefanMap():
@@ -71,15 +89,13 @@ def stefanMap():
     # run an full network arp scan
     arpScan()
 
-    # choose scan method
-    print("\nChoose your scan mehod:")
-    choise = input("p    : passive scan\na    : active scan\nf    : full (active) network scan"
-                   "\n\nMake your choice: ")
-
     # read choise and execute a function
-    procesInput(choise)
+    processInput()
 
-    print("\n\nFor details about the process check the logfile stefanMap.log.")
+    print("\n\nFor details about the process of scanning, check the logfile 'stefanMap.log'.")
+
+    # run the program again
+    runAgain()
 
     # append data to logfile
     logging.info("stefanMap finished\n")

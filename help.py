@@ -1,3 +1,6 @@
+from stefanMap import processInput
+
+
 def help():
     print("Hello, this is the help function of honey-detect. Welcome! This script is created by Stefan Vonk, "
           "for purpose of honeypot detection.")
@@ -9,3 +12,5 @@ def help():
     print("For this python tool you must install the following linux tools:")
     print("sudo apt-get install nmap")
     print("sudo apt-get install arp-scan")
+
+    processInput()
