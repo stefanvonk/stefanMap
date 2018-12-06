@@ -141,19 +141,25 @@ def detectionMethod6(ip):
                 stdin, stdout, stderr = client.exec_command('ifconfig')
                 logging.info('Commands execution is supported by this ssh server')
                 sshserver = 0
+            # if command execution failed
             except:
                 logging.info('Commands execution not supported by this ssh server')
                 sshserver = 1
+        # authentication error
         except paramiko.ssh_exception.AuthenticationException:
             logging.info("Authentication root, 123456: failure")
             sshserver = 0
+        # BadHostKeyException
         except paramiko.ssh_exception.BadHostKeyException:
             logging.info("This server is probably a ssh honeypot witch does a man-in-the-middle attack")
             sshserver = 1
-
+        except Exception as e:
+            logging.warning("The following error raise when trying connect to ssh server:" + str(e))
+            sshserver = 0
     else:
         logging.info("This is not a running ssh server")
         sshserver = 0
+
     print("\n#6: The possibility that this ip runs a honeypot ssh server:"
           "\n" + str(sshserver) + "/1")
     logging.info("Result check ssh server: " + str(sshserver) + "/1")
