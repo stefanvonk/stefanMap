@@ -100,7 +100,7 @@ try:
 # except when pressed ctrl + c
 except KeyboardInterrupt as e:
     logging.warning("The following error raise: " + str(e))
-    print("Clossing stefanMap...")
+    print("\nClossing stefanMap...")
     logging.info("stefanMap stopped\n")
     sys.exit(0)
 # except when system exit

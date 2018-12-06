@@ -1,4 +1,4 @@
-from stefanMap import processInput
+import sys
 
 
 def help():
@@ -11,7 +11,8 @@ def help():
     print("f    : Full(active) network scan\n")
     print("For this python tool you must install the following linux tools:")
     print("sudo pip3 install paramiko")
+    print("sudo apt-get install ssh")
     print("sudo apt-get install nmap")
     print("sudo apt-get install arp-scan")
 
-    processInput()
+    sys.exit(0)

@@ -129,31 +129,32 @@ def detectionMethod6(ip):
     if isPortOpen.isOpen(ip, 22):
         # set up ssh
         client = paramiko.SSHClient()
-        client.load_system_host_keys()
-        client.set_missing_host_key_policy(paramiko.WarningPolicy())
+        #client.load_system_host_keys()
+        #client.set_missing_host_key_policy(paramiko.WarningPolicy())
         logging.info("Try to connect ssh server on " + str(ip))
         # try to connect to ip:22
         try:
             client.connect(ip, 22, 'root', '123456')
-            logging.info("Authentication accepted")
+            logging.info("Authentication root, 123456: accepted")
             # try to execute command
             try:
-                (stdin, stdout, stderr) = client.exec_command('ifconfig')
+                stdin, stdout, stderr = client.exec_command('ifconfig')
                 logging.info('Commands execution is supported by this ssh server')
                 sshserver = 0
             except:
                 logging.info('Commands execution not supported by this ssh server')
                 sshserver = 1
         except paramiko.ssh_exception.AuthenticationException:
-            logging.info("Authentication failure")
+            logging.info("Authentication root, 123456: failure")
             sshserver = 0
         except paramiko.ssh_exception.BadHostKeyException:
             logging.info("This server is probably a ssh honeypot witch does a man-in-the-middle attack")
             sshserver = 1
+
     else:
         logging.info("This is not a running ssh server")
         sshserver = 0
-    print("\n#3: The possibility that this ip runs a honeypot ssh server:"
+    print("\n#6: The possibility that this ip runs a honeypot ssh server:"
           "\n" + str(sshserver) + "/1")
     logging.info("Result check ssh server: " + str(sshserver) + "/1")
 
