@@ -184,10 +184,10 @@ def detectionMethod6(ip):
     logging.info("Result check ssh server: " + str(sshserver) + "/1")
 
     if sshesame:
-        print("\n\t#6.1: The hostname of the ssh server is sshesame (sshesame is a known honeypot):\n1/1")
+        print("\n#6.1: The hostname of the ssh server is sshesame (sshesame is a known honeypot):\n1/1")
         logging.info("Result of hostname ssh server is sshesame (sshesame is a known honeypot): 1/1")
     else:
-        print("\n\t#6.1: The hostname of the ssh server is sshesame (sshesame is a known honeypot):\n0/1")
+        print("\n#6.1: The hostname of the ssh server is sshesame (sshesame is a known honeypot):\n0/1")
         logging.info("Result of hostname ssh server is sshesame (sshesame is a known honeypot): 0/1")
 
     logging.info("End check ssh server")
