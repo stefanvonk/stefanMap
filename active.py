@@ -134,8 +134,8 @@ def detectionMethod6(ip):
         logging.info("Try to connect ssh server on " + str(ip))
         # try to connect to ip:22
         try:
-            client.connect(ip, 22, 'root', '')
-            logging.info("Authentication accepted!")
+            client.connect(ip, 22, 'root', '123456')
+            logging.info("Authentication accepted")
             # try to execute command
             try:
                 (stdin, stdout, stderr) = client.exec_command('ifconfig')
@@ -145,8 +145,12 @@ def detectionMethod6(ip):
                 logging.info('Commands execution not supported by this ssh server')
                 sshserver = 1
         except paramiko.ssh_exception.AuthenticationException:
-            logging.info("Authentication failure!")
+            logging.info("Authentication failure")
             sshserver = 0
+            exit()
+        except paramiko.ssh_exception.BadHostKeyException:
+            logging.info("This server is probably a ssh honeypot witch does a man-in-the-middle attack")
+            sshserver = 1
             exit()
     else:
         logging.info("This is not a running ssh server")
