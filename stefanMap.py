@@ -70,8 +70,10 @@ def runAgain():
     if again == "a":
         logging.info("Run stefanMap again selected")
         processInput()
+        runAgain()
     elif again == "c":
         logging.info("Close stefanMap selected")
+        print("Clossing stefanMap...")
         return
     else:
         print("Your input is true, please try again.")

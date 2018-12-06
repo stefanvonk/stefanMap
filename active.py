@@ -127,7 +127,7 @@ def detectionMethod6(ip):
 
 
 def active(ip):
-    print("\nThe results of the active honeypot scan on " + ip)
+    print("\nThe results of the active honeypot scan on " + ip + ":")
     # run all detection methods
     detectionMethod1(ip)
     detectionMethod2(ip)
