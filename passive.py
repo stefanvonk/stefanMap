@@ -43,3 +43,5 @@ def passive(ip):
     # else:
     #     print("p0f not good")
     #     logging.info("p0f not good")
+
+    print("\n\nFor details about the process of scanning, check the logfile 'stefanMap.log'.\n")

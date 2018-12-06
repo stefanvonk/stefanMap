@@ -13,4 +13,4 @@ def scanNetwork(ip):
         logging.warning("The following error raise when running nmap: " + str(e))
         print("Error: please install nmap before run this full network scan. (Run 'sudo apt-get install nmap')")
 
-
+    print("\n\nFor details about the process of scanning, check the logfile 'stefanMap.log'.\n")

@@ -4,6 +4,7 @@ import isPortOpen
 import logging
 import socket
 import urllib.request
+import paramiko
 
 
 def portScan(ip):
@@ -69,8 +70,8 @@ def detectionMethod3(ip):
     else:
         logging.info("There is probably no T-pot dashboard on this port")
         tpotdashboard = 0
-    print(
-        "\n#3: The possibility that this ip runs a T-pot honeynetwork with a dashboard:\n" + str(tpotdashboard) + "/1")
+    print("\n#3: The possibility that this ip runs a T-pot honeynetwork with a dashboard:"
+          "\n" + str(tpotdashboard) + "/1")
     logging.info("Result T-pot dashboard: " + str(tpotdashboard) + "/1")
 
     logging.info("End check T-Pot daschboard")
@@ -106,13 +107,13 @@ def detectionMethod5(ip):
     # if there are more than 10 ports open, it gives a true positive
     openports = portScan(ip)
     if openports > 10:
-        print("\n#5: The possibility that this ip runs a honeypot is on subject of open ports:\n1/1")
+        print("\n#5: The possibility that this ip runs a honeypot is on subject of more then 10 open ports:\n1/1")
         logging.info("Result portScan: 1/1")
         logging.info(
             "There are: " + str(openports) + " open ports and " + str(1023 - openports) +
             " closed ports on ip " + str(ip))
     else:
-        print("\n#5: The possibility that this ip runs a honeypot is on subject of open ports:\n0/1")
+        print("\n#5: The possibility that this ip runs a honeypot is on subject of more then 10 open ports:\n0/1")
         logging.info("Result portScan: 0/1")
         logging.info(
             "There are: " + str(openports) + " open ports and " + str(1023 - openports) +
@@ -122,6 +123,47 @@ def detectionMethod5(ip):
 
 
 def detectionMethod6(ip):
+    # check if ssh is running correctly
+    logging.info("Start check ssh server")
+
+    if isPortOpen.isOpen(ip, 22):
+        # set up ssh
+        client = paramiko.SSHClient()
+        client.load_system_host_keys()
+        client.set_missing_host_key_policy(paramiko.WarningPolicy())
+        logging.info("Try to connect ssh server on " + str(ip))
+        # try to connect to ip:22
+        try:
+            client.connect(ip, 22, 'root', '')
+            logging.info("Authentication accepted!")
+            # try to execute command
+            try:
+                (stdin, stdout, stderr) = client.exec_command('ifconfig')
+                logging.info('Commands execution is supported by this ssh server')
+                sshserver = 0
+            except:
+                logging.info('Commands execution not supported by this ssh server')
+                sshserver = 1
+        except paramiko.ssh_exception.AuthenticationException:
+            logging.info("Authentication failure!")
+            sshserver = 0
+            exit()
+    else:
+        logging.info("This is not a running ssh server")
+        sshserver = 0
+    print("\n#3: The possibility that this ip runs a honeypot ssh server:"
+          "\n" + str(sshserver) + "/1")
+    logging.info("Result check ssh server: " + str(sshserver) + "/1")
+
+    logging.info("End check ssh server")
+
+
+def detectionMethod7(ip):
+    # detect virtual dionaea
+    return
+
+
+def detectionMethod8(ip):
     # detect virtual machine
     return
 
@@ -135,4 +177,7 @@ def active(ip):
     detectionMethod4(ip)
     detectionMethod5(ip)
     detectionMethod6(ip)#TODO
+    detectionMethod7(ip)#TODO
+    detectionMethod8(ip)#TODO
 
+    print("\n\nFor details about the process of scanning, check the logfile 'stefanMap.log'.\n")

@@ -64,7 +64,7 @@ def processInput():
 
 
 def runAgain():
-    print("Do you want to run one of the scan methods of stefanMap or close the program?")
+    print("Do you want to run one of the scan methods of stefanMap again or close the program?")
     again = input("Typ 'a' for run again or 'c' for close:")
 
     if again == "a":
@@ -74,9 +74,10 @@ def runAgain():
     elif again == "c":
         logging.info("Close stefanMap selected")
         print("Clossing stefanMap...")
-        return
+        logging.info("stefanMap finished\n")
+        sys.exit(0)
     else:
-        print("Your input is true, please try again.")
+        print("Your input is not true, please try again.")
         runAgain()
 
 
@@ -87,32 +88,24 @@ def stefanMap():
 
     # append data to logfile
     logging.info("stefanMap started")
-
     # run an full network arp scan
     arpScan()
-
     # read choise and execute a function
     processInput()
-
-    print("\n\nFor details about the process of scanning, check the logfile 'stefanMap.log'.\n")
-
     # run the program again
     runAgain()
-
-    # append data to logfile
-    logging.info("stefanMap finished\n")
 
 try:
     stefanMap()
 # except when pressed ctrl + c
 except KeyboardInterrupt as e:
     logging.warning("The following error raise: " + str(e))
-    logging.info("stefanMap stopped\n")
     print("Clossing stefanMap...")
+    logging.info("stefanMap stopped\n")
     sys.exit(0)
 # except when system exit
 except SystemExit as e:
     logging.warning("The following error raise: " + str(e))
-    logging.info("stefanMap stopped\n")
     print("Clossing stefanMap...")
+    logging.info("stefanMap stopped\n")
     sys.exit(0)

@@ -10,6 +10,7 @@ def help():
     print("a    : Active detection")
     print("f    : Full(active) network scan\n")
     print("For this python tool you must install the following linux tools:")
+    print("sudo pip3 install paramiko")
     print("sudo apt-get install nmap")
     print("sudo apt-get install arp-scan")
 
