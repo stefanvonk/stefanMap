@@ -1,3 +1,5 @@
+import sys
+
 import kippoDetect
 import detectKippoCowrie
 import isPortOpen
@@ -131,8 +133,9 @@ def detectionMethod6(ip):
         client = paramiko.SSHClient()
         client.load_system_host_keys()
         client.set_missing_host_key_policy(paramiko.WarningPolicy())
-        print(client)
         logging.info("Try to connect ssh server on " + str(ip))
+        _, stdout, _ = client.exec_command("hostname")
+        print(stdout.read())
         # try to connect to ip:22
         try:
             client.connect(ip, 22, 'root', '123456')
@@ -154,6 +157,7 @@ def detectionMethod6(ip):
         except paramiko.ssh_exception.BadHostKeyException:
             logging.info("This server is probably a ssh honeypot witch does a man-in-the-middle attack")
             sshserver = 1
+        # other exceptions
         except Exception as e:
             logging.warning("The following error raise when trying connect to ssh server:" + str(e))
             sshserver = 0

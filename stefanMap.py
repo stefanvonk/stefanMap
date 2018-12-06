@@ -73,8 +73,6 @@ def runAgain():
         runAgain()
     elif again == "c":
         logging.info("Close stefanMap selected")
-        print("Clossing stefanMap...")
-        logging.info("stefanMap finished\n")
         sys.exit(0)
     else:
         print("Your input is not true, please try again.")
@@ -107,5 +105,5 @@ except KeyboardInterrupt as e:
 except SystemExit as e:
     logging.warning("The following error raise: " + str(e))
     print("Clossing stefanMap...")
-    logging.info("stefanMap stopped\n")
+    logging.info("stefanMap finished\n")
     sys.exit(0)
