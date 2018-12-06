@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="ssh fix">
+    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="hostname is sshesame">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/active.py" beforeDir="false" afterPath="$PROJECT_DIR$/active.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stefanMap.log" beforeDir="false" afterPath="$PROJECT_DIR$/stefanMap.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stefanMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/stefanMap.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,14 +45,14 @@
         <counts>
           <entry key="dummy" value="88" />
           <entry key="log" value="12" />
-          <entry key="py" value="20440" />
-          <entry key="txt" value="869" />
+          <entry key="py" value="20755" />
+          <entry key="txt" value="920" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="973" />
-          <entry key="Python" value="20436" />
+          <entry key="PLAIN_TEXT" value="1024" />
+          <entry key="Python" value="20751" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -80,25 +78,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stefanMap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1819">
-              <caret line="107" column="40" lean-forward="true" selection-start-line="107" selection-start-column="40" selection-end-line="107" selection-end-column="40" />
+            <state relative-caret-position="498">
+              <caret line="92" column="27" lean-forward="true" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
                 <marker date="1544106452850" expanded="true" signature="141:768" ph="..." />
                 <marker date="1544106452850" expanded="true" signature="765:768" ph="..." />
                 <marker date="1544106452850" expanded="true" signature="2064:2522" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kippoDetect.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-              <folding>
-                <element signature="e#54#72#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,16 +106,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/active.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="136" column="37" selection-start-line="136" selection-start-column="37" selection-end-line="136" selection-end-column="37" />
+            <state relative-caret-position="646">
+              <caret line="189" column="19" selection-start-line="189" selection-start-column="19" selection-end-line="189" selection-end-column="19" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1544109106599" expanded="true" signature="141:2293" ph="..." />
-                <marker date="1544109106599" expanded="true" signature="1115:1666" ph="..." />
-                <marker date="1544109106599" expanded="true" signature="1691:2293" ph="..." />
-                <marker date="1544109106599" expanded="true" signature="2318:3314" ph="..." />
-                <marker date="1544109106599" expanded="true" signature="4246:4251" ph="..." />
-                <marker date="1544109106599" expanded="true" signature="6259:6262" ph="..." />
+                <marker date="1544110331010" expanded="true" signature="141:2525" ph="..." />
+                <marker date="1544110331010" expanded="true" signature="610:822" ph="..." />
+                <marker date="1544110331010" expanded="true" signature="1347:1898" ph="..." />
+                <marker date="1544110331010" expanded="true" signature="1923:2525" ph="..." />
+                <marker date="1544110331010" expanded="true" signature="2550:3546" ph="..." />
+                <marker date="1544110331010" expanded="true" signature="4478:4483" ph="..." />
+                <marker date="1544110331010" expanded="true" signature="7075:7078" ph="..." />
               </folding>
             </state>
           </provider>
@@ -796,23 +783,46 @@
       <option name="project" value="LOCAL" />
       <updated>1544106329368</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="paramiko get hostname">
+      <created>1544109148652</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1544109148652</updated>
+    </task>
+    <task id="LOCAL-00045" summary="hostname is sshesame">
+      <created>1544110104502</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1544110104502</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-1088" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.21641791" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.21641791" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50080776" side_tool="true" weight="0.17324094" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.2979415" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.2979415" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.399287" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.328877" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053304" side_tool="true" weight="0.2979415" />
@@ -836,8 +846,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Logging and loop filesystem" />
-    <MESSAGE value="comments" />
     <MESSAGE value="Canarytokens initiation with windows folder" />
     <MESSAGE value="Fix Windows Folder script" />
     <MESSAGE value="PDF detection fixed" />
@@ -861,7 +869,9 @@
     <MESSAGE value="remove exit() on BadHostKeyException" />
     <MESSAGE value="help() fix" />
     <MESSAGE value="ssh fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="ssh fix" />
+    <MESSAGE value="paramiko get hostname" />
+    <MESSAGE value="hostname is sshesame" />
+    <option name="LAST_COMMIT_MESSAGE" value="hostname is sshesame" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/example.log" />
@@ -941,25 +951,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kippoDetect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-          <folding>
-            <element signature="e#54#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/help.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stefanMap.log">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/fullNetworkScan.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -983,10 +980,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/stefanMap.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kippoDetect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding>
+            <element signature="e#54#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/stefanMap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="107" column="40" lean-forward="true" selection-start-line="107" selection-start-column="40" selection-end-line="107" selection-end-column="40" />
+        <state relative-caret-position="498">
+          <caret line="92" column="27" lean-forward="true" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
             <marker date="1544106452850" expanded="true" signature="141:768" ph="..." />
@@ -998,16 +1008,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/active.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="136" column="37" selection-start-line="136" selection-start-column="37" selection-end-line="136" selection-end-column="37" />
+        <state relative-caret-position="646">
+          <caret line="189" column="19" selection-start-line="189" selection-start-column="19" selection-end-line="189" selection-end-column="19" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1544109106599" expanded="true" signature="141:2293" ph="..." />
-            <marker date="1544109106599" expanded="true" signature="1115:1666" ph="..." />
-            <marker date="1544109106599" expanded="true" signature="1691:2293" ph="..." />
-            <marker date="1544109106599" expanded="true" signature="2318:3314" ph="..." />
-            <marker date="1544109106599" expanded="true" signature="4246:4251" ph="..." />
-            <marker date="1544109106599" expanded="true" signature="6259:6262" ph="..." />
+            <marker date="1544110331010" expanded="true" signature="141:2525" ph="..." />
+            <marker date="1544110331010" expanded="true" signature="610:822" ph="..." />
+            <marker date="1544110331010" expanded="true" signature="1347:1898" ph="..." />
+            <marker date="1544110331010" expanded="true" signature="1923:2525" ph="..." />
+            <marker date="1544110331010" expanded="true" signature="2550:3546" ph="..." />
+            <marker date="1544110331010" expanded="true" signature="4478:4483" ph="..." />
+            <marker date="1544110331010" expanded="true" signature="7075:7078" ph="..." />
           </folding>
         </state>
       </provider>
