@@ -30,6 +30,16 @@ def portScan(ip):
     return result
 
 
+def checkSshesame():
+    fileHandle = open('stefanMap.log', "r")
+    lineList = fileHandle.readlines()
+    fileHandle.close()
+    if "sshesame" in str(lineList[len(lineList)-1]):
+        return True
+    else:
+        return False
+
+
 def detectionMethod1(ip):
     # kippoDetect, score 0 - 1
     logging.info("Start kippoDetect")
@@ -128,17 +138,18 @@ def detectionMethod6(ip):
     # check if ssh is running correctly
     logging.info("Start check ssh server")
 
+    sshesame = False
+
     if isPortOpen.isOpen(ip, 22):
         # set up ssh
         client = paramiko.SSHClient()
         client.load_system_host_keys()
         client.set_missing_host_key_policy(paramiko.WarningPolicy())
         logging.info("Try to connect ssh server on " + str(ip))
-        _, stdout, _ = client.exec_command("hostname")
-        print(stdout.read())
         # try to connect to ip:22
         try:
             client.connect(ip, 22, 'root', '123456')
+            sshesame = checkSshesame()
             logging.info("Authentication root, 123456: accepted")
             # try to execute command
             try:
@@ -151,14 +162,17 @@ def detectionMethod6(ip):
                 sshserver = 1
         # authentication error
         except paramiko.ssh_exception.AuthenticationException:
+            sshesame = checkSshesame()
             logging.info("Authentication root, 123456: failure")
             sshserver = 0
         # BadHostKeyException
         except paramiko.ssh_exception.BadHostKeyException:
+            sshesame = checkSshesame()
             logging.info("This server is probably a ssh honeypot witch does a man-in-the-middle attack")
             sshserver = 1
         # other exceptions
         except Exception as e:
+            sshesame = checkSshesame()
             logging.warning("The following error raise when trying connect to ssh server:" + str(e))
             sshserver = 0
     else:
@@ -168,6 +182,10 @@ def detectionMethod6(ip):
     print("\n#6: The possibility that this ip runs a honeypot ssh server:"
           "\n" + str(sshserver) + "/1")
     logging.info("Result check ssh server: " + str(sshserver) + "/1")
+
+    if sshesame:
+        print("\n#6.1: The hostname of the ssh server is sshesame:\n1/1")
+        logging.info("Result hostname ssh server is sshesame ssh server: 1/1")
 
     logging.info("End check ssh server")
 
