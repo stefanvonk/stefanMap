@@ -78,7 +78,8 @@ def probeBadVersion(sockfd):
     sockfd.close()
 
     if VERBOSE:
-        logging.info(str(response))
+        # logging.info(str(response))
+        return
 
     if b"bad version" in response:
         if VERBOSE:

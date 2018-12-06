@@ -5,7 +5,7 @@ import logging
 def passive(ip):
     print("\nFor this passive arp scan you need a local arp-scan installation. (Run 'sudo apt-get install arp-scan')")
 
-    subprocess.run(["sudo", "arp-scan", "-l", ip])
+    # subprocess.run(["sudo", "arp-scan", "-l", ip])
 
     # data = None
     # p0f = P0f("/etc/p0f/p0f.fp")  # point this to socket defined with "-s" argument.

@@ -65,7 +65,7 @@ def processInput():
 
 def runAgain():
     print("Do you want to run one of the scan methods of stefanMap or close the program?")
-    again = input("Typ 'a' for again or 'c' for close:")
+    again = input("Typ 'a' for run again or 'c' for close:")
 
     if again == "a":
         logging.info("Run stefanMap again selected")
@@ -92,7 +92,7 @@ def stefanMap():
     # read choise and execute a function
     processInput()
 
-    print("\n\nFor details about the process of scanning, check the logfile 'stefanMap.log'.")
+    print("\n\nFor details about the process of scanning, check the logfile 'stefanMap.log'.\n")
 
     # run the program again
     runAgain()

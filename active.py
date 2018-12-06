@@ -64,10 +64,10 @@ def detectionMethod3(ip):
     logging.info("Start check T-Pot daschboard")
 
     if isPortOpen.isOpen(ip, 64297):
-        logging.info("Port 64297 on " + str(ip) + " is open")
+        logging.info("There is probably an T-pot dashboard on this port")
         tpotdashboard = 1
     else:
-        logging.info("Port 64297 on " + str(ip) + " is closed")
+        logging.info("There is probably no T-pot dashboard on this port")
         tpotdashboard = 0
     print(
         "\n#3: The possibility that this ip runs a T-pot honeynetwork with a dashboard:\n" + str(tpotdashboard) + "/1")
@@ -91,7 +91,7 @@ def detectionMethod4(ip):
             logging.info("This webpage is not a dashboard from a mhn honeypot")
             mhndashboard = 0
     else:
-        logging.info("Port 80 on " + str(ip) + " is closed, there is definitely no mhn dashboard on this port")
+        logging.info("There is probably no mhn dashboard on this port")
         mhndashboard = 0
     print("\n#4: The possibility that this ip runs a mhn honeynetwork with a dashboard:\n" + str(mhndashboard) + "/1")
     logging.info("Result mhn dashboard: " + str(mhndashboard) + "/1")
@@ -127,6 +127,7 @@ def detectionMethod6(ip):
 
 
 def active(ip):
+    print("\nThe results of the active honeypot scan on " + ip)
     # run all detection methods
     detectionMethod1(ip)
     detectionMethod2(ip)
