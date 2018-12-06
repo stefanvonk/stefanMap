@@ -1,9 +1,28 @@
+import subprocess
 import passive
 import active
 import fullNetworkScan
 import help
 import logging
 import ipaddress
+
+
+def arpScan():
+    logging.info("Start passive arp scan")
+
+    try:
+        print("The results of a passive arp scan on the network of your machine:\n")
+        # run arp-scan
+        subprocess.run(["sudo", "arp-scan", "-l"])
+        logging.info("The passive arp scan was running without errors")
+    # exception when arp-scan is not installed
+    except Exception as e:
+        logging.warning("The following error raise when running arp-scan: " + str(e))
+        print("Error: please install arp-scan before run this full network scan. "
+              "(Run 'sudo apt-get install arp-scan')\n")
+
+    logging.info("End passive arp scan")
+
 
 def getIP():
     # ask user to enter ip address for scanning
@@ -21,19 +40,7 @@ def getIP():
         getIP()
 
 
-def stefanMap():
-    # setup logging: logfile stefanMap.log, add date and time to logging, add loglevel to the logging
-    logging.basicConfig(filename='stefanMap.log', format='%(asctime)s %(levelname)-8s %(message)s',
-                        level=logging.INFO, datefmt='%Y-%m-%d %H:%M:%S')
-
-    # append data to logfile
-    logging.info("stefanMap started")
-
-    # choose scan method
-    print("Choose your scan mehod:")
-    choise = input("p    : passive scan\na    : active scan\nf    : full network scan"
-                   "\n\nMake your choice: ")
-
+def procesInput(choise):
     if choise == "p":
         logging.info("Passive detection selected.")
         ip = getIP()
@@ -43,12 +50,32 @@ def stefanMap():
         ip = getIP()
         active.active(ip)
     elif choise == "f":
-        logging.info("Full network scan selected.")
+        logging.info("Full(active) network scan selected.")
         ip = getIP()
         fullNetworkScan.scanNetwork(ip)
     else:
         logging.info("Help function is showing.")
         help.help()
+
+
+def stefanMap():
+    # setup logging: logfile stefanMap.log, add date and time to logging, add loglevel to the logging
+    logging.basicConfig(filename='stefanMap.log', format='%(asctime)s %(levelname)-8s %(message)s',
+                        level=logging.INFO, datefmt='%Y-%m-%d %H:%M:%S')
+
+    # append data to logfile
+    logging.info("stefanMap started")
+
+    # run an full network arp scan
+    arpScan()
+
+    # choose scan method
+    print("Choose your scan mehod:")
+    choise = input("p    : passive scan\na    : active scan\nf    : full (active) network scan"
+                   "\n\nMake your choice: ")
+
+    # read choise and execute a function
+    procesInput(choise)
 
     print("\n\nFor details about the process check the logfile stefanMap.log.")
 

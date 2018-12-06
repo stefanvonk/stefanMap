@@ -1,12 +1,11 @@
 def help():
     print("Hello, this is the help function of honey-detect. Welcome! This script is created by Stefan Vonk, "
-          "for purpose of honeypot detection.\n")
-    print(":\n")
-    print("Choose one of the integers below to execute a detection script:\n")
-    print("p    : Pasive detection")
+          "for purpose of honeypot detection.")
+    print("This script is created to run on a Linux distribution.\n")
+    print("You can run the following scan methods:")
+    print("p    : Passive detection")
     print("a    : Active detection")
-    print("o    : On system detection\n")
-    print("")
-
-
-    print("For this python you must install the following dependecies: nmap, python-nmap")
+    print("f    : Full(active) network scan\n")
+    print("For this python tool you must install the following linux tools:")
+    print("sudo apt-get install nmap")
+    print("sudo apt-get install arp-scan")

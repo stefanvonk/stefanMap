@@ -11,3 +11,28 @@
 2018-12-05 12:33:26 INFO     stefanMap started
 2018-12-05 12:33:27 INFO     Full network scan selected.
 2018-12-05 12:33:31 INFO     Entered host IP is: 123.123.123.123
+2018-12-05 14:54:58 INFO     stefanMap started
+2018-12-05 14:55:00 INFO     Passive detection selected.
+2018-12-05 14:55:12 INFO     Entered host IP is: 192.168.11.132
+2018-12-05 15:08:20 INFO     stefanMap started
+2018-12-05 15:08:22 INFO     Help function is showing.
+2018-12-05 15:08:22 INFO     stefanMap Finished
+
+2018-12-05 15:08:28 INFO     stefanMap started
+2018-12-05 15:08:32 INFO     Passive detection selected.
+2018-12-05 15:08:52 INFO     Entered host IP is: 192.168.11.132
+2018-12-05 15:09:57 INFO     stefanMap started
+2018-12-05 15:09:58 INFO     Passive detection selected.
+2018-12-05 15:10:06 INFO     Entered host IP is: 192.168.11.132
+2018-12-05 15:16:50 INFO     stefanMap started
+2018-12-05 15:16:53 INFO     Passive detection selected.
+2018-12-05 15:17:00 INFO     Entered host IP is: 192.168.11.132
+2018-12-05 15:20:22 INFO     stefanMap started
+2018-12-05 15:20:26 INFO     Passive detection selected.
+2018-12-05 15:20:31 INFO     Entered host IP is: 192.168.11.132
+2018-12-06 11:58:34 INFO     stefanMap started
+2018-12-06 11:58:34 INFO     Start passive arp scan
+2018-12-06 11:58:34 WARNING  The following error raise when running arp-scan: 'module' object has no attribute 'run'
+2018-12-06 11:58:34 INFO     End passive arp scan
+2018-12-06 12:01:16 INFO     Passive detection selected.
+2018-12-06 12:01:24 INFO     Entered host IP is: 192.168.11.132
