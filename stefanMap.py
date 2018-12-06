@@ -1,4 +1,6 @@
 import subprocess
+import sys
+
 import passive
 import active
 import fullNetworkScan
@@ -11,7 +13,7 @@ def arpScan():
     logging.info("Start passive arp scan")
 
     try:
-        print("The results of a passive arp scan on the network of your machine:\n")
+        print("The results of a passive arp scan on the network of your machine:")
         # run arp-scan
         subprocess.run(["sudo", "arp-scan", "-l"])
         logging.info("The passive arp scan was running without errors")
@@ -70,7 +72,7 @@ def stefanMap():
     arpScan()
 
     # choose scan method
-    print("Choose your scan mehod:")
+    print("\nChoose your scan mehod:")
     choise = input("p    : passive scan\na    : active scan\nf    : full (active) network scan"
                    "\n\nMake your choice: ")
 
@@ -80,7 +82,19 @@ def stefanMap():
     print("\n\nFor details about the process check the logfile stefanMap.log.")
 
     # append data to logfile
-    logging.info("stefanMap Finished\n")
+    logging.info("stefanMap finished\n")
 
-
-stefanMap()
+try:
+    stefanMap()
+# except when pressed ctrl + c
+except KeyboardInterrupt as e:
+    logging.warning("The following error raise: " + str(e))
+    logging.info("stefanMap stopped\n")
+    print("Clossing stefanMap...")
+    sys.exit(0)
+# except when system exit
+except SystemExit as e:
+    logging.warning("The following error raise: " + str(e))
+    logging.info("stefanMap stopped\n")
+    print("Clossing stefanMap...")
+    sys.exit(0)
