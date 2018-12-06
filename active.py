@@ -129,8 +129,9 @@ def detectionMethod6(ip):
     if isPortOpen.isOpen(ip, 22):
         # set up ssh
         client = paramiko.SSHClient()
-        #client.load_system_host_keys()
-        #client.set_missing_host_key_policy(paramiko.WarningPolicy())
+        client.load_system_host_keys()
+        client.set_missing_host_key_policy(paramiko.WarningPolicy())
+        print(client)
         logging.info("Try to connect ssh server on " + str(ip))
         # try to connect to ip:22
         try:
