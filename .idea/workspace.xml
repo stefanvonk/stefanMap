@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="hostname is sshesame">
+    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="remove \t">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/active.py" beforeDir="false" afterPath="$PROJECT_DIR$/active.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/honeytoken/honeytoken.py" beforeDir="false" afterPath="$PROJECT_DIR$/honeytoken/honeytoken.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,43 +30,43 @@
     <session id="487997866">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
+          <entry key="project.closed" value="19" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="7" />
-          <entry key="project.open.time.8" value="2" />
+          <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="4" />
-          <entry key="project.opened" value="19" />
+          <entry key="project.opened" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="88" />
           <entry key="log" value="12" />
-          <entry key="py" value="20755" />
-          <entry key="txt" value="920" />
+          <entry key="py" value="20810" />
+          <entry key="txt" value="940" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="1024" />
-          <entry key="Python" value="20751" />
+          <entry key="PLAIN_TEXT" value="1044" />
+          <entry key="Python" value="20806" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="log" value="6" />
-          <entry key="py" value="62" />
+          <entry key="py" value="63" />
           <entry key="txt" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="Python" value="59" />
+          <entry key="Python" value="60" />
         </counts>
       </usages-collector>
     </session>
@@ -78,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stefanMap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="92" column="27" lean-forward="true" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
+            <state relative-caret-position="1445">
+              <caret line="92" column="27" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
                 <marker date="1544106452850" expanded="true" signature="141:768" ph="..." />
@@ -93,7 +94,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/passive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
+            <state relative-caret-position="765">
               <caret line="46" column="96" selection-start-line="46" selection-start-column="96" selection-end-line="46" selection-end-column="96" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
@@ -103,20 +104,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/active.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="189" column="19" selection-start-line="189" selection-start-column="19" selection-end-line="189" selection-end-column="19" />
+            <state relative-caret-position="714">
+              <caret line="203" lean-forward="true" selection-start-line="203" selection-end-line="203" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <marker date="1544110331010" expanded="true" signature="141:2525" ph="..." />
-                <marker date="1544110331010" expanded="true" signature="610:822" ph="..." />
-                <marker date="1544110331010" expanded="true" signature="1347:1898" ph="..." />
-                <marker date="1544110331010" expanded="true" signature="1923:2525" ph="..." />
-                <marker date="1544110331010" expanded="true" signature="2550:3546" ph="..." />
-                <marker date="1544110331010" expanded="true" signature="4478:4483" ph="..." />
-                <marker date="1544110331010" expanded="true" signature="7075:7078" ph="..." />
+                <element signature="e#0#9#0" expanded="true" />
+                <marker date="1544172431681" expanded="true" signature="151:2634" ph="..." />
+                <marker date="1544172431681" expanded="true" signature="660:931" ph="..." />
+                <marker date="1544172431681" expanded="true" signature="1456:2007" ph="..." />
+                <marker date="1544172431681" expanded="true" signature="2032:2634" ph="..." />
+                <marker date="1544172431681" expanded="true" signature="2659:3655" ph="..." />
+                <marker date="1544172431681" expanded="true" signature="4587:4592" ph="..." />
+                <marker date="1544172431681" expanded="true" signature="7185:7188" ph="..." />
               </folding>
             </state>
           </provider>
@@ -126,7 +127,7 @@
         <entry file="file://$PROJECT_DIR$/fullNetworkScan.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -137,8 +138,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/local.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="157" column="17" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
+            <state relative-caret-position="255">
+              <caret line="33" column="68" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="68" />
               <folding>
                 <element signature="e#142#151#0" expanded="true" />
                 <marker date="1544005306311" expanded="true" signature="4927:4928" ph="..." />
@@ -167,20 +168,20 @@
         <entry file="file://$PROJECT_DIR$/help.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/honeytoken/honeytoken.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="31" selection-end-column="39" />
+            <state relative-caret-position="238">
+              <caret line="47" column="8" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1544005541562" expanded="true" signature="1511:1512" ph="..." />
-                <marker date="1544005541562" expanded="true" signature="1550:2328" ph="..." />
+                <marker date="1544180475130" expanded="true" signature="1511:1512" ph="..." />
+                <marker date="1544180475130" expanded="true" signature="1550:2335" ph="..." />
               </folding>
             </state>
           </provider>
@@ -237,7 +238,6 @@
         <option value="$PROJECT_DIR$/nmapSystemScan.py" />
         <option value="$PROJECT_DIR$/isPortOpen.py" />
         <option value="$PROJECT_DIR$/local.py" />
-        <option value="$PROJECT_DIR$/honeytoken/honeytoken.py" />
         <option value="$PROJECT_DIR$/GitHub_commands.txt" />
         <option value="$PROJECT_DIR$/pasive.py" />
         <option value="C:/Program Files (x86)/Python32/Lib/site-packages/p0f/__init__.py" />
@@ -248,6 +248,7 @@
         <option value="$PROJECT_DIR$/stefanMap.py" />
         <option value="$PROJECT_DIR$/stefanMap.log" />
         <option value="$PROJECT_DIR$/active.py" />
+        <option value="$PROJECT_DIR$/honeytoken/honeytoken.py" />
       </list>
     </option>
   </component>
@@ -258,17 +259,16 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-58" />
-    <option name="y" value="-1094" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="2578" />
+    <option name="height" value="1568" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -285,6 +285,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -797,7 +798,21 @@
       <option name="project" value="LOCAL" />
       <updated>1544110104502</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="fix text">
+      <created>1544110343684</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1544110343684</updated>
+    </task>
+    <task id="LOCAL-00047" summary="remove \t">
+      <created>1544110500945</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1544110500945</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TodoView">
@@ -810,10 +825,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-1088" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="2062" height="1254" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.21641791" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.21878122" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50080776" side_tool="true" weight="0.17324094" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -846,8 +861,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Canarytokens initiation with windows folder" />
-    <MESSAGE value="Fix Windows Folder script" />
     <MESSAGE value="PDF detection fixed" />
     <MESSAGE value="Windowsfolder fix, proof of concept is ready" />
     <MESSAGE value="several fixes" />
@@ -871,7 +884,9 @@
     <MESSAGE value="ssh fix" />
     <MESSAGE value="paramiko get hostname" />
     <MESSAGE value="hostname is sshesame" />
-    <option name="LAST_COMMIT_MESSAGE" value="hostname is sshesame" />
+    <MESSAGE value="fix text" />
+    <MESSAGE value="remove \t" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove \t" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/example.log" />
@@ -903,13 +918,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GitHub_commands.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/detectKippoCowrie.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -927,62 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="157" column="17" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
-          <folding>
-            <element signature="e#142#151#0" expanded="true" />
-            <marker date="1544005306311" expanded="true" signature="4927:4928" ph="..." />
-            <marker date="1544005306311" expanded="true" signature="4927:4932" ph="..." />
-            <marker date="1544005306311" expanded="true" signature="4927:5758" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/passive.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="96" selection-start-line="46" selection-start-column="96" selection-end-line="46" selection-end-column="96" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-            <marker date="1544100982303" expanded="true" signature="224:230" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/help.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fullNetworkScan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/honeytoken/honeytoken.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="31" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1544005541562" expanded="true" signature="1511:1512" ph="..." />
-            <marker date="1544005541562" expanded="true" signature="1550:2328" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stefanMap.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/kippoDetect.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -995,8 +947,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stefanMap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="92" column="27" lean-forward="true" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
+        <state relative-caret-position="1445">
+          <caret line="92" column="27" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
             <marker date="1544106452850" expanded="true" signature="141:768" ph="..." />
@@ -1006,19 +958,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/passive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="46" column="96" selection-start-line="46" selection-start-column="96" selection-end-line="46" selection-end-column="96" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+            <marker date="1544100982303" expanded="true" signature="224:230" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GitHub_commands.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stefanMap.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/help.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullNetworkScan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="33" column="68" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="68" />
+          <folding>
+            <element signature="e#142#151#0" expanded="true" />
+            <marker date="1544005306311" expanded="true" signature="4927:4928" ph="..." />
+            <marker date="1544005306311" expanded="true" signature="4927:4932" ph="..." />
+            <marker date="1544005306311" expanded="true" signature="4927:5758" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/active.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="189" column="19" selection-start-line="189" selection-start-column="19" selection-end-line="189" selection-end-column="19" />
+        <state relative-caret-position="714">
+          <caret line="203" lean-forward="true" selection-start-line="203" selection-end-line="203" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1544172431681" expanded="true" signature="151:2634" ph="..." />
+            <marker date="1544172431681" expanded="true" signature="660:931" ph="..." />
+            <marker date="1544172431681" expanded="true" signature="1456:2007" ph="..." />
+            <marker date="1544172431681" expanded="true" signature="2032:2634" ph="..." />
+            <marker date="1544172431681" expanded="true" signature="2659:3655" ph="..." />
+            <marker date="1544172431681" expanded="true" signature="4587:4592" ph="..." />
+            <marker date="1544172431681" expanded="true" signature="7185:7188" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/honeytoken/honeytoken.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="47" column="8" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1544110331010" expanded="true" signature="141:2525" ph="..." />
-            <marker date="1544110331010" expanded="true" signature="610:822" ph="..." />
-            <marker date="1544110331010" expanded="true" signature="1347:1898" ph="..." />
-            <marker date="1544110331010" expanded="true" signature="1923:2525" ph="..." />
-            <marker date="1544110331010" expanded="true" signature="2550:3546" ph="..." />
-            <marker date="1544110331010" expanded="true" signature="4478:4483" ph="..." />
-            <marker date="1544110331010" expanded="true" signature="7075:7078" ph="..." />
+            <marker date="1544180475130" expanded="true" signature="1511:1512" ph="..." />
+            <marker date="1544180475130" expanded="true" signature="1550:2335" ph="..." />
           </folding>
         </state>
       </provider>

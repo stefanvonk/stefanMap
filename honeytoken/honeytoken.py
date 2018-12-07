@@ -43,7 +43,7 @@ def pdf():
 
 # analyse windows folder
 def folder():
-    foldername = input("Enter the path of the Windows Folder you will check (for example: D:/Stefan Vonk/Desktop/files/): ")
+    foldername = input("Enter the path of the Windows Folder you will check (for example: D:/Stefan Vonk/Desktop/My Documents/): ")
     filename = "/desktop.ini"
     try:
         # open file and read the content to variable

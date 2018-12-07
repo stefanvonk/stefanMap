@@ -1,3 +1,4 @@
+import os
 import sys
 
 import kippoDetect
@@ -31,11 +32,14 @@ def portScan(ip):
 
 
 def checkSshesame():
-    fileHandle = open('stefanMap.log', "r")
-    lineList = fileHandle.readlines()
-    fileHandle.close()
-    if "sshesame" in str(lineList[len(lineList)-1]):
-        return True
+    if os.path.exists('stefanMap.log'):
+        fileHandle = open('stefanMap.log', "r")
+        lineList = fileHandle.readlines()
+        fileHandle.close()
+        if "sshesame" in str(lineList[len(lineList)-1]):
+            return True
+        else:
+            return False
     else:
         return False
 
@@ -194,12 +198,13 @@ def detectionMethod6(ip):
 
 
 def detectionMethod7(ip):
-    # detect virtual dionaea
+    # detect dionaea
     return
 
 
 def detectionMethod8(ip):
     # detect virtual machine
+    # vendor
     return
 
 
@@ -211,7 +216,7 @@ def active(ip):
     detectionMethod3(ip)
     detectionMethod4(ip)
     detectionMethod5(ip)
-    detectionMethod6(ip)#TODO
+    detectionMethod6(ip)
     detectionMethod7(ip)#TODO
     detectionMethod8(ip)#TODO
 
