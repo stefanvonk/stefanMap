@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="remove \t">
+    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="read logfile fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/active.py" beforeDir="false" afterPath="$PROJECT_DIR$/active.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/honeytoken/honeytoken.py" beforeDir="false" afterPath="$PROJECT_DIR$/honeytoken/honeytoken.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/help.py" beforeDir="false" afterPath="$PROJECT_DIR$/help.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/passive.py" beforeDir="false" afterPath="$PROJECT_DIR$/passive.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,10 +18,12 @@
     <SUITE FILE_PATH="coverage/honey_detect$help.coverage" NAME="help Coverage Results" MODIFIED="1540899358316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/honey-detect$Main.coverage" NAME="Main Coverage Results" MODIFIED="1540802285246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/honey_detect$honeytoken__1_.coverage" NAME="honeytoken (1) Coverage Results" MODIFIED="1543658414771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/honeytoken" />
+    <SUITE FILE_PATH="coverage/honey_detect$active.coverage" NAME="active Coverage Results" MODIFIED="1544200867677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/honey_detect$pdfparse.coverage" NAME="pdfparse Coverage Results" MODIFIED="1543500487010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/honeytoken" />
     <SUITE FILE_PATH="coverage/honey_detect$local.coverage" NAME="local Coverage Results" MODIFIED="1543833583729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/honey_detect$honeytoken.coverage" NAME="honeytoken Coverage Results" MODIFIED="1543489782282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/honey_detect$stefanMap.coverage" NAME="stefanMap Coverage Results" MODIFIED="1544106568497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/honey_detect$test.coverage" NAME="test Coverage Results" MODIFIED="1544200573593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/honey_detect$onSystem.coverage" NAME="onSystem Coverage Results" MODIFIED="1540895223324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -30,43 +33,44 @@
     <session id="487997866">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="19" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.6" value="2" />
-          <entry key="project.open.time.7" value="7" />
+          <entry key="project.open.time.7" value="8" />
           <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="4" />
-          <entry key="project.opened" value="20" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="88" />
           <entry key="log" value="12" />
-          <entry key="py" value="20810" />
-          <entry key="txt" value="940" />
+          <entry key="py" value="21946" />
+          <entry key="txt" value="965" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="1044" />
-          <entry key="Python" value="20806" />
+          <entry key="PLAIN_TEXT" value="1069" />
+          <entry key="Python" value="21942" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="log" value="6" />
-          <entry key="py" value="63" />
+          <entry key="py" value="64" />
           <entry key="txt" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="Python" value="60" />
+          <entry key="Python" value="61" />
         </counts>
       </usages-collector>
     </session>
@@ -79,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stefanMap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1445">
-              <caret line="92" column="27" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
+            <state relative-caret-position="289">
+              <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
                 <marker date="1544106452850" expanded="true" signature="141:768" ph="..." />
@@ -91,14 +95,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/passive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="46" column="96" selection-start-line="46" selection-start-column="96" selection-end-line="46" selection-end-column="96" />
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
-                <element signature="e#0#17#0" expanded="true" />
-                <marker date="1544100982303" expanded="true" signature="224:230" ph="..." />
+                <element signature="e#0#13#0" expanded="true" />
+                <marker date="1544436594663" expanded="true" signature="195:388" ph="..." />
+                <marker date="1544436594663" expanded="true" signature="413:418" ph="..." />
+                <marker date="1544436594663" expanded="true" signature="413:1552" ph="..." />
               </folding>
             </state>
           </provider>
@@ -107,17 +113,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/active.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="203" lean-forward="true" selection-start-line="203" selection-end-line="203" />
+            <state relative-caret-position="583">
+              <caret line="234" column="4" selection-start-line="234" selection-start-column="4" selection-end-line="234" selection-end-column="69" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1544172431681" expanded="true" signature="151:2634" ph="..." />
-                <marker date="1544172431681" expanded="true" signature="660:931" ph="..." />
-                <marker date="1544172431681" expanded="true" signature="1456:2007" ph="..." />
-                <marker date="1544172431681" expanded="true" signature="2032:2634" ph="..." />
-                <marker date="1544172431681" expanded="true" signature="2659:3655" ph="..." />
-                <marker date="1544172431681" expanded="true" signature="4587:4592" ph="..." />
-                <marker date="1544172431681" expanded="true" signature="7185:7188" ph="..." />
+                <marker date="1544436263751" expanded="true" signature="169:2652" ph="..." />
               </folding>
             </state>
           </provider>
@@ -138,7 +138,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/local.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="544">
               <caret line="33" column="68" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="68" />
               <folding>
                 <element signature="e#142#151#0" expanded="true" />
@@ -153,8 +153,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GitHub_commands.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+            <state relative-caret-position="340">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -168,21 +168,7 @@
         <entry file="file://$PROJECT_DIR$/help.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/honeytoken/honeytoken.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="47" column="8" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <marker date="1544180475130" expanded="true" signature="1511:1512" ph="..." />
-                <marker date="1544180475130" expanded="true" signature="1550:2335" ph="..." />
-              </folding>
+              <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -242,13 +228,14 @@
         <option value="$PROJECT_DIR$/pasive.py" />
         <option value="C:/Program Files (x86)/Python32/Lib/site-packages/p0f/__init__.py" />
         <option value="$PROJECT_DIR$/detectKippoCowrie.py" />
-        <option value="$PROJECT_DIR$/passive.py" />
         <option value="$PROJECT_DIR$/fullNetworkScan.py" />
-        <option value="$PROJECT_DIR$/help.py" />
         <option value="$PROJECT_DIR$/stefanMap.py" />
         <option value="$PROJECT_DIR$/stefanMap.log" />
-        <option value="$PROJECT_DIR$/active.py" />
         <option value="$PROJECT_DIR$/honeytoken/honeytoken.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/active.py" />
+        <option value="$PROJECT_DIR$/help.py" />
+        <option value="$PROJECT_DIR$/passive.py" />
       </list>
     </option>
   </component>
@@ -259,16 +246,17 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="2578" />
-    <option name="height" value="1568" />
+    <option name="x" value="-8" />
+    <option name="y" value="-1088" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -285,7 +273,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,7 +302,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.stefanMap">
+  <component name="RunManager" selected="Python.active">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -336,6 +323,28 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
+    <configuration name="active" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="honey-detect" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/active.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="honeytoken (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="honey-detect" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -350,28 +359,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/honeytoken/honeytoken.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="honeytoken" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="honey-detect" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\Stefan\PycharmProjects\honey-detect\honeytoken\honeytoken.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -402,28 +389,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pdfparse" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="honey-detect" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/honeytoken" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/honeytoken/pdfparse.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="stefanMap" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="honey-detect" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -446,6 +411,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="honey-detect" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -457,18 +444,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.stefanMap" />
-      <item itemvalue="Python.honeytoken" />
       <item itemvalue="Python.honeytoken (1)" />
-      <item itemvalue="Python.pdfparse" />
       <item itemvalue="Python.local" />
+      <item itemvalue="Python.active" />
+      <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.active" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.stefanMap" />
         <item itemvalue="Python.local" />
         <item itemvalue="Python.honeytoken (1)" />
-        <item itemvalue="Python.pdfparse" />
-        <item itemvalue="Python.honeytoken" />
       </list>
     </recent_temporary>
   </component>
@@ -812,7 +799,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544110500945</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="read logfile fix">
+      <created>1544180498368</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1544180498368</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TodoView">
@@ -825,15 +819,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2062" height="1254" extended-state="6" />
+    <frame x="-8" y="-1088" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.21878122" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.22334754" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50080776" side_tool="true" weight="0.17324094" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.2979415" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.2976827" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.399287" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -861,7 +855,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PDF detection fixed" />
     <MESSAGE value="Windowsfolder fix, proof of concept is ready" />
     <MESSAGE value="several fixes" />
     <MESSAGE value="str() fixed" />
@@ -886,7 +879,8 @@
     <MESSAGE value="hostname is sshesame" />
     <MESSAGE value="fix text" />
     <MESSAGE value="remove \t" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove \t" />
+    <MESSAGE value="read logfile fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="read logfile fix" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/example.log" />
@@ -945,44 +939,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stefanMap.py">
+    <entry file="file://$PROJECT_DIR$/honeytoken/honeytoken.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="92" column="27" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-            <marker date="1544106452850" expanded="true" signature="141:768" ph="..." />
-            <marker date="1544106452850" expanded="true" signature="765:768" ph="..." />
-            <marker date="1544106452850" expanded="true" signature="2064:2522" ph="..." />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="47" column="8" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/passive.py">
+    <entry file="file://$PROJECT_DIR$/test.py" />
+    <entry file="file://$PROJECT_DIR$/local.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="46" column="96" selection-start-line="46" selection-start-column="96" selection-end-line="46" selection-end-column="96" />
+        <state relative-caret-position="544">
+          <caret line="33" column="68" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="68" />
           <folding>
-            <element signature="e#0#17#0" expanded="true" />
-            <marker date="1544100982303" expanded="true" signature="224:230" ph="..." />
+            <element signature="e#142#151#0" expanded="true" />
+            <marker date="1544005306311" expanded="true" signature="4927:4928" ph="..." />
+            <marker date="1544005306311" expanded="true" signature="4927:4932" ph="..." />
+            <marker date="1544005306311" expanded="true" signature="4927:5758" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GitHub_commands.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stefanMap.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/help.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="340">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -996,44 +977,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="33" column="68" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="68" />
-          <folding>
-            <element signature="e#142#151#0" expanded="true" />
-            <marker date="1544005306311" expanded="true" signature="4927:4928" ph="..." />
-            <marker date="1544005306311" expanded="true" signature="4927:4932" ph="..." />
-            <marker date="1544005306311" expanded="true" signature="4927:5758" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/active.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="203" lean-forward="true" selection-start-line="203" selection-end-line="203" />
+        <state relative-caret-position="583">
+          <caret line="234" column="4" selection-start-line="234" selection-start-column="4" selection-end-line="234" selection-end-column="69" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1544172431681" expanded="true" signature="151:2634" ph="..." />
-            <marker date="1544172431681" expanded="true" signature="660:931" ph="..." />
-            <marker date="1544172431681" expanded="true" signature="1456:2007" ph="..." />
-            <marker date="1544172431681" expanded="true" signature="2032:2634" ph="..." />
-            <marker date="1544172431681" expanded="true" signature="2659:3655" ph="..." />
-            <marker date="1544172431681" expanded="true" signature="4587:4592" ph="..." />
-            <marker date="1544172431681" expanded="true" signature="7185:7188" ph="..." />
+            <marker date="1544436263751" expanded="true" signature="169:2652" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/honeytoken/honeytoken.py">
+    <entry file="file://$PROJECT_DIR$/help.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="47" column="8" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+        <state relative-caret-position="306">
+          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stefanMap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1544180475130" expanded="true" signature="1511:1512" ph="..." />
-            <marker date="1544180475130" expanded="true" signature="1550:2335" ph="..." />
+            <element signature="e#0#17#0" expanded="true" />
+            <marker date="1544106452850" expanded="true" signature="141:768" ph="..." />
+            <marker date="1544106452850" expanded="true" signature="765:768" ph="..." />
+            <marker date="1544106452850" expanded="true" signature="2064:2522" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stefanMap.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/passive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1544436594663" expanded="true" signature="195:388" ph="..." />
+            <marker date="1544436594663" expanded="true" signature="413:418" ph="..." />
+            <marker date="1544436594663" expanded="true" signature="413:1552" ph="..." />
           </folding>
         </state>
       </provider>

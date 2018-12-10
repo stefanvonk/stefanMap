@@ -1,47 +1,55 @@
-import subprocess
+import getmac
+import requests
+from netdisco.discovery import NetworkDiscovery
 import logging
 
 
+def detectionMethod1(ip):
+    # scan network traffic
+    logging.info("Start scan network traffic")
+
+    netdis = NetworkDiscovery()
+    netdis.scan()
+
+    for dev in netdis.discover():
+        print(dev, netdis.get_info(dev))
+
+    netdis.stop()
+    logging.info("End scan network traffic")
+
+
+def detectionMethod2(ip):
+    # detect virtual machine vendor
+    logging.info("Start check MAC address vendor")
+
+    # set api url
+    url = "https://api.macvendors.com/"
+    vendor = "Could not get the MAC vendor"
+
+    try:
+        # get mac address from ip, via passive arp scanning (no network request)
+        mac = getmac.get_mac_address(ip=ip, network_request=False)
+        try:
+            # Make a get request to get response from the macvendors api
+            response = requests.get(url + mac)
+            # set response to variable
+            vendor = response.content.decode("utf-8")
+        except Exception as e:
+            logging.warning("The following error raise when trying to get response from macvendors.com:" + str(e))
+    except Exception as e:
+        logging.warning("The following error raise when trying to get the MAC address from the network machine:" + str(e))
+
+    print("#8: The vendor of the MAC address of this machine is: " + str(vendor))
+    print("Check manually whether this is virtual machine vendor.")
+    logging.info("Result of MAC address vendor: " + str(vendor))
+
+    logging.info("End check MAC address vendor")
+
+
 def passive(ip):
-    print("\nFor this passive arp scan you need a local arp-scan installation. (Run 'sudo apt-get install arp-scan')")
-
-    # subprocess.run(["sudo", "arp-scan", "-l", ip])
-
-    # data = None
-    # p0f = P0f("/etc/p0f/p0f.fp")  # point this to socket defined with "-s" argument.
-    # try:
-    #     data = p0f.get_info(ip, True)
-    #     p0f.close()
-    # except P0fException as e:
-    #     logging.warning("p0f error: Invalid query was sent to p0f, maybe the API is changed: " + str(e))
-    # except KeyError as e:
-    #     logging.warning("p0f error: No data is available for this IP address: " + str(e))
-    # except ValueError as e:
-    #     logging.warning("p0f error: p0f returned invalid constant values, maybe the API is changed: " + str(e))
-    #
-    # if data:
-    #     print("Magic:", data["magic"])
-    #     print("Status:", data["status"])
-    #     print("First seen:", data["first_seen"])
-    #     print("Last seen:", data["last_seen"])
-    #     print("Total connections:", data["total_conn"])
-    #     print("Uptime (min):", data["uptime_min"])
-    #     print("Uptime (days):", data["up_mod_days"])
-    #     print("Last nat connection:", data["last_nat"])
-    #     print("Last OS mismatch:", data["last_chg"])
-    #     print("System distance:", data["distance"])
-    #     print("User-Agent or Server strings accuracy:", data["bad_sw"], "// 0: User-Agent not present, 1: OS difference, 2: outright mismatch")
-    #     print("OS match quality:", data["os_match_q"], "// 0: normal match, 1: fuzzy, 2: generic signature, 3: both")
-    #     print("Name of matched OS:", data["os_name"])
-    #     print("OS version:", data["os_flavor"])
-    #     print("Last identified HTTP application:", data["http_name"])
-    #     print("Version of this HTTP application:", data["http_flavor"])
-    #     print("Network link type:", data["link_type"])
-    #     print("System language:", data["language"])
-    #
-    #     logging.info("p0f good")
-    # else:
-    #     print("p0f not good")
-    #     logging.info("p0f not good")
+    print("\nThe results of the passive honeypot scan on " + ip + ":")
+    # run all detection methods
+    detectionMethod1(ip)
+    detectionMethod2(ip)
 
     print("\n\nFor details about the process of scanning, check the logfile 'stefanMap.log'.\n")
