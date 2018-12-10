@@ -43,11 +43,11 @@ def detectionMethod1(ip):
     # analyze network sniff file
     logging.info("Start analyze network traffic")
 
-    print("#1: Results of the hosts which are on the subnet of the entered IP address:")
+    print("\n#1: Results of the hosts which are on the subnet of the entered IP address:")
 
     try:
         # run tshark network sniff
-        subprocess.call(["sudo", "tshark", "-r", "networksniff.pcap", "-Y", "'ip.src==" + ip + "/24'", "-z",
+        subprocess.call(["sudo", "tshark", "-r", "networksniff.pcap", "-Y", "ip.src==" + ip + "/24", "-z",
                          "ip_hosts,tree"])
         logging.info("File networksniff.pcap analyzing 1 is done")
     except Exception as e:
@@ -55,11 +55,11 @@ def detectionMethod1(ip):
         print("Error: please install tshark before run this full network scan. "
               "(Run 'sudo apt-get install tshark')\n")
 
-    print("#1.1: Results of the host of the entered IP address:")
+    print("\n#1.1: Results of the host of the entered IP address:")
 
     try:
         # run tshark network sniff
-        subprocess.call(["sudo", "tshark", "-r", "networksniff.pcap", "-Y", "'ip.src==" + ip + "'", "-z",
+        subprocess.call(["sudo", "tshark", "-r", "networksniff.pcap", "-Y", "ip.src==" + ip + "", "-z",
                          "ip_hosts,tree"])
         logging.info("File networksniff.pcap analyzing 2 is done")
     except Exception as e:
@@ -76,7 +76,7 @@ def detectionMethod2(ip):
 
     vendor = detectMACvendor.macVendor(ip)
 
-    print("#2: The vendor of the MAC address of this machine is: " + vendor)
+    print("\n#2: The vendor of the MAC address of this machine is: " + vendor)
     print("Check manually whether this is virtual machine vendor.")
     logging.info("Result of MAC address vendor: " + vendor)
 
