@@ -234,13 +234,13 @@ def detectionMethod8(ip):
 def active(ip):
     print("\nThe results of the active honeypot scan on " + ip + ":")
     # run all detection methods
-    detectionMethod1(ip)
-    detectionMethod2(ip)
-    detectionMethod3(ip)
-    detectionMethod4(ip)
-    detectionMethod5(ip)
-    detectionMethod6(ip)
-    detectionMethod7(ip)#TODO
-    detectionMethod8(ip)
+    detectionMethod1(ip) # kippoDetect
+    detectionMethod2(ip) # detectKippoCowrie
+    detectionMethod3(ip) # T-pot dashboard
+    detectionMethod4(ip) # mhn dashboard
+    detectionMethod5(ip) # port scan
+    detectionMethod6(ip) # check ssh server
+    detectionMethod7(ip) # TODO detect dionaea
+    detectionMethod8(ip) # virtual machine/MAC vendor
 
     print("\n\nFor details about the process of scanning, check the logfile 'stefanMap.log'.\n")

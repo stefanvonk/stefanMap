@@ -130,10 +130,10 @@ def detectionMethod4():
 def local():
     print("The following actions are done by the script:")
 
-    detectionMethod1()
-    detectionMethod2()
-    detectionMethod3()#TODO
-    detectionMethod4()#TODO
+    detectionMethod1() # detection of standard honeypot account configuration
+    detectionMethod2() # detection of standard honeypot files and folders
+    detectionMethod3() # TODO network traffic of the machine
+    detectionMethod4() # TODO services of machine
 
 
 local()

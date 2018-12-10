@@ -38,7 +38,7 @@ def getIP():
     except Exception as e:
         logging.warning("The following error raise when checking the IP address: " + str(e))
         print("Your input does not appear to be an IPv4 or IPv6 address, please try again.")
-        getIP()
+        return getIP()
 
 
 def processInput():
