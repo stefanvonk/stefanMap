@@ -6,7 +6,7 @@ def scanNetwork(ip):
     try:
         print("\nThe results of a full network scan on " + ip + "/24")
         # run nmap scan
-        subprocess.run(["sudo", "nmap", "-T4", "-F", ip + "/24"])
+        subprocess.call(["sudo", "nmap", "-T4", "-F", ip + "/24"])
         logging.info("The nmap scan was running without errors")
     # exception when nmap is not installed
     except Exception as e:

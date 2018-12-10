@@ -1,6 +1,4 @@
 import os
-import getmac
-import requests
 import kippoDetect
 import detectKippoCowrie
 import isPortOpen
@@ -8,6 +6,7 @@ import logging
 import socket
 import urllib.request
 import paramiko
+import detectMACvendor
 
 
 def portScan(ip):
@@ -188,11 +187,11 @@ def detectionMethod6(ip):
     logging.info("Result check ssh server: " + str(sshserver) + "/1")
 
     if sshesame:
-        print("\n#6.1: The hostname of the ssh server is sshesame (sshesame is a known honeypot):\n1/1")
-        logging.info("Result of hostname ssh server is sshesame (sshesame is a known honeypot): 1/1")
+        print("\n#6.1: The hostname of the ssh server is sshesame (a known honeypot):\n1/1")
+        logging.info("Result of hostname ssh server is sshesame (a known honeypot): 1/1")
     else:
-        print("\n#6.1: The hostname of the ssh server is sshesame (sshesame is a known honeypot):\n0/1")
-        logging.info("Result of hostname ssh server is sshesame (sshesame is a known honeypot): 0/1")
+        print("\n#6.1: The hostname of the ssh server is sshesame (a known honeypot):\n0/1")
+        logging.info("Result of hostname ssh server is sshesame (a known honeypot): 0/1")
 
     logging.info("End check ssh server")
 
@@ -206,27 +205,11 @@ def detectionMethod8(ip):
     # detect virtual machine vendor
     logging.info("Start check MAC address vendor")
 
-    # set api url
-    url = "https://api.macvendors.com/"
-    vendor = "Could not get the MAC vendor"
+    vendor = detectMACvendor.macVendor(ip)
 
-    try:
-        # get mac address from ip, via passive arp scanning (no network request)
-        mac = getmac.get_mac_address(ip=ip, network_request=False)
-        try:
-            # Make a get request to get response from the macvendors api
-            response = requests.get(url + mac)
-            # set response to variable
-            vendor = response.content.decode("utf-8")
-        except Exception as e:
-            logging.warning("The following error raise when trying to get response from macvendors.com:" + str(e))
-    except Exception as e:
-        logging.warning(
-            "The following error raise when trying to get the MAC address from the network machine:" + str(e))
-
-    print("\n#8: The vendor of the MAC address of this machine is: " + str(vendor))
+    print("\n#8: The vendor of the MAC address of this machine is: " + vendor)
     print("Check manually whether this is virtual machine vendor.")
-    logging.info("Result of MAC address vendor: " + str(vendor))
+    logging.info("Result of MAC address vendor: " + vendor)
 
     logging.info("End check MAC address vendor")
 

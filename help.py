@@ -9,6 +9,7 @@ def help():
     print("p    : Passive detection")
     print("a    : Active detection")
     print("f    : Full(active) network scan\n")
+    print("Run this tool as root!\n")
     print("For this python tool you must install the following dependencies:")
     print("sudo pip3 install paramiko")
     print("sudo pip3 install getmac")

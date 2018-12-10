@@ -14,7 +14,7 @@ def arpScan():
     try:
         print("The results of a passive arp scan on the network of your machine:")
         # run arp-scan
-        subprocess.run(["sudo", "arp-scan", "-l"])
+        subprocess.call(["sudo", "arp-scan", "-l"])
         logging.info("The passive arp scan was running without errors")
     # exception when arp-scan is not installed
     except Exception as e:

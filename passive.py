@@ -1,8 +1,7 @@
-import ipaddress
 import subprocess
-import getmac
-import requests
 import logging
+import detectMACvendor
+
 
 def enterSniffDuration():
     # get duration of network sniffing from user
@@ -24,8 +23,8 @@ def sniffNetwork(duration):
 
     try:
         # run tshark network sniff
-        subprocess.run(["sudo", "touch", "networksniff.pcap"])
-        subprocess.run(["sudo", "tshark", "-a duration:" + duration, "-w networksniff.pcap"])
+        subprocess.call(["sudo", "touch", "networksniff.pcap"])
+        subprocess.call(["sudo", "tshark", "-a duration:" + duration, "-w networksniff.pcap"])
         logging.info("The network traffic of the last " + duration + " seconds is saved to the file networksniff.pcap")
     except Exception as e:
         logging.warning("The following error raise when running tshark: " + str(e))
@@ -39,10 +38,23 @@ def detectionMethod1(ip):
     # analyze network sniff file
     logging.info("Start analyze network traffic")
 
+    print("#1: Results of the hosts which are on the subnet of the entered IP address:")
+
     try:
         # run tshark network sniff
-        subprocess.run(["sudo", "tshark", "-r networksniff.pcap", "-Y 'ip.src == " + ip + "/24'", "-z ip_hosts,tree"])
-        logging.info("File networksniff.pcap analyzing is done")
+        subprocess.call(["sudo", "tshark", "-r networksniff.pcap", "-Y 'ip.src == " + ip + "/24'", "-z ip_hosts,tree"])
+        logging.info("File networksniff.pcap analyzing 1 is done")
+    except Exception as e:
+        logging.warning("The following error raise when running tshark: " + str(e))
+        print("Error: please install tshark before run this full network scan. "
+              "(Run 'sudo apt-get install tshark')\n")
+
+    print("#1.1: Results of the host of the entered IP address:")
+
+    try:
+        # run tshark network sniff
+        subprocess.call(["sudo", "tshark", "-r networksniff.pcap", "-Y 'ip.src == " + ip, "-z ip_hosts,tree"])
+        logging.info("File networksniff.pcap analyzing 2 is done")
     except Exception as e:
         logging.warning("The following error raise when running tshark: " + str(e))
         print("Error: please install tshark before run this full network scan. "
@@ -55,26 +67,11 @@ def detectionMethod2(ip):
     # detect virtual machine vendor
     logging.info("Start check MAC address vendor")
 
-    # set api url
-    url = "https://api.macvendors.com/"
-    vendor = "Could not get the MAC vendor"
+    vendor = detectMACvendor.macVendor(ip)
 
-    try:
-        # get mac address from ip, via passive arp scanning (no network request)
-        mac = getmac.get_mac_address(ip=ip, network_request=False)
-        try:
-            # Make a get request to get response from the macvendors api
-            response = requests.get(url + mac)
-            # set response to variable
-            vendor = response.content.decode("utf-8")
-        except Exception as e:
-            logging.warning("The following error raise when trying to get response from macvendors.com:" + str(e))
-    except Exception as e:
-        logging.warning("The following error raise when trying to get the MAC address from the network machine:" + str(e))
-
-    print("#2: The vendor of the MAC address of this machine is: " + str(vendor))
+    print("#2: The vendor of the MAC address of this machine is: " + vendor)
     print("Check manually whether this is virtual machine vendor.")
-    logging.info("Result of MAC address vendor: " + str(vendor))
+    logging.info("Result of MAC address vendor: " + vendor)
 
     logging.info("End check MAC address vendor")
 
