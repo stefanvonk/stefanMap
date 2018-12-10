@@ -99,13 +99,12 @@ try:
     stefanMap()
 # except when pressed ctrl + c
 except KeyboardInterrupt as e:
-    logging.warning("The following error raise: " + str(e))
+    logging.warning("The following error raise: Ctrl + c is pressed")
     print("\nClossing stefanMap...")
     logging.info("stefanMap stopped\n")
     sys.exit(0)
 # except when system exit
 except SystemExit as e:
-    logging.warning("The following error raise: " + str(e))
     print("Clossing stefanMap...")
     logging.info("stefanMap finished\n")
     sys.exit(0)

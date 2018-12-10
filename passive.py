@@ -47,7 +47,8 @@ def detectionMethod1(ip):
 
     try:
         # run tshark network sniff
-        subprocess.call(["sudo", "tshark", "-r", "networksniff.pcap", "-Y", "'ip.src==" + ip + "/24'", "-z", "ip_hosts,tree"])
+        subprocess.call(["sudo", "tshark", "-r", "networksniff.pcap", "-Y", "'ip.src==" + ip + "/24'", "-z",
+                         "ip_hosts,tree"])
         logging.info("File networksniff.pcap analyzing 1 is done")
     except Exception as e:
         logging.warning("The following error raise when running tshark: " + str(e))
@@ -58,7 +59,8 @@ def detectionMethod1(ip):
 
     try:
         # run tshark network sniff
-        subprocess.call(["sudo", "tshark", "-r", "networksniff.pcap", "-Y", "'ip.src==" + ip, "-z", "ip_hosts,tree"])
+        subprocess.call(["sudo", "tshark", "-r", "networksniff.pcap", "-Y", "'ip.src==" + ip + "'", "-z",
+                         "ip_hosts,tree"])
         logging.info("File networksniff.pcap analyzing 2 is done")
     except Exception as e:
         logging.warning("The following error raise when running tshark: " + str(e))
