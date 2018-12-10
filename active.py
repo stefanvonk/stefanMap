@@ -224,7 +224,7 @@ def detectionMethod8(ip):
         logging.warning(
             "The following error raise when trying to get the MAC address from the network machine:" + str(e))
 
-    print("#8: The vendor of the MAC address of this machine is: " + str(vendor))
+    print("\n#8: The vendor of the MAC address of this machine is: " + str(vendor))
     print("Check manually whether this is virtual machine vendor.")
     logging.info("Result of MAC address vendor: " + str(vendor))
 

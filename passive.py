@@ -1,6 +1,6 @@
 import getmac
 import requests
-from netdisco.discovery import NetworkDiscovery
+import pyshark
 import logging
 
 
@@ -8,13 +8,10 @@ def detectionMethod1(ip):
     # scan network traffic
     logging.info("Start scan network traffic")
 
-    netdis = NetworkDiscovery()
-    netdis.scan()
+    capture = pyshark.LiveCapture().sniff(timeout=30)
+    for packet in capture.sniff_continuously(packet_count=5):
+        print('Just arrived:', packet)
 
-    for dev in netdis.discover():
-        print(dev, netdis.get_info(dev))
-
-    netdis.stop()
     logging.info("End scan network traffic")
 
 
@@ -49,7 +46,7 @@ def detectionMethod2(ip):
 def passive(ip):
     print("\nThe results of the passive honeypot scan on " + ip + ":")
     # run all detection methods
-    detectionMethod1(ip)
+    detectionMethod1(ip)#TODO
     detectionMethod2(ip)
 
     print("\n\nFor details about the process of scanning, check the logfile 'stefanMap.log'.\n")

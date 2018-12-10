@@ -127,37 +127,6 @@ def detectionMethod4():
     print("\n#4: check the services of the machine.")
 
 
-def detectionMethod5():
-    print("\n#5: Detect virtualization of the machine.")
-    #
-    # name = "0"
-    # hid = "0"
-    # hid2 = "0"
-    # try:
-    #     hid = cpuHypervisorID()
-    #     if hid == 'VMwareVMware':
-    #         name = 'vmware'
-    #     elif hid == 'Microsoft Hv':
-    #         name = 'hyperv'
-    #     elif hid == 'XenVMMXenVMM':
-    #         name = 'xen'
-    #     elif hid == 'KVMKVMKVM':
-    #         name = 'kvm'
-    # except Exception as e:
-    #     print("The following error raise when trying to detect virtualization: " + str(e))
-    #
-    # try:
-    #     hid2 = cpuModelName()
-    #     if 'QEMU' in hid2:
-    #         name = 'qemu'
-    # except Exception as e:
-    #     print("The following error raise when trying to detect virtualization: " + str(e))
-    #
-    # print(name)
-    # print(hid)
-    # print(hid2)
-
-
 def local():
     print("The following actions are done by the script:")
 
@@ -165,7 +134,6 @@ def local():
     detectionMethod2()
     detectionMethod3()#TODO
     detectionMethod4()#TODO
-    detectionMethod5()#TODO
 
 
 local()

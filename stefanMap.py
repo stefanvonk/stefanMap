@@ -86,6 +86,9 @@ def stefanMap():
 
     # append data to logfile
     logging.info("stefanMap started")
+
+    #TODO check for installation of ssh, nmap and arp-scan
+
     # run an full network arp scan
     arpScan()
     # read choise and execute a function

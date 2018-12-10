@@ -12,8 +12,8 @@ def help():
     print("For this python tool you must install the following linux tools:")
     print("sudo pip3 install paramiko")
     print("sudo pip3 install getmac")
-    print("sudo pip3 install requests")
-    print("sudo pip3 install netdisco")
+    print("sudo pip3 install requests")# whit linux it is standard installed
+    print("sudo pip3 install pyshark")
     print("sudo apt-get install ssh")
     print("sudo apt-get install nmap")
     print("sudo apt-get install arp-scan")
