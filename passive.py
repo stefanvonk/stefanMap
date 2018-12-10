@@ -4,14 +4,19 @@ import detectMACvendor
 
 
 def enterSniffDuration():
-    # get duration of network sniffing from user
+    # ask user to enter duration for network sniffing
     try:
         duration = int(input("Enter the time of the duration of networksniffing in seconds (between 1 and 3600):"))
+        # check duration
         if duration > 0 and duration < 3600:
+            logging.info("Entered network sniffing duration is: " + str(duration))
+            # return duration
             return duration
+        # input again when the duration integer is not between 1 and 3600
         else:
             print("Your input cannot be processed. Please enter an integer between 1 and 3600.")
             return enterSniffDuration()
+    # exception when the entered duration is not a int
     except:
         print("Your input cannot be processed. Please enter an integer between 1 and 3600.")
         return enterSniffDuration()
@@ -78,7 +83,7 @@ def detectionMethod2(ip):
 
 def passive(ip):
     # get duration of network sniffing
-    duration = enterSniffDuration()
+    duration = str(enterSniffDuration())
     # sniff entire network for duration
     sniffNetwork(duration)
 

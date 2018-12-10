@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="pyshark fix">
-      <change afterPath="$PROJECT_DIR$/detectMACvendor.py" afterDir="false" />
+    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="subprocess fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/active.py" beforeDir="false" afterPath="$PROJECT_DIR$/active.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fullNetworkScan.py" beforeDir="false" afterPath="$PROJECT_DIR$/fullNetworkScan.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/help.py" beforeDir="false" afterPath="$PROJECT_DIR$/help.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/passive.py" beforeDir="false" afterPath="$PROJECT_DIR$/passive.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stefanMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/stefanMap.py" afterDir="false" />
@@ -53,14 +50,14 @@
         <counts>
           <entry key="dummy" value="88" />
           <entry key="log" value="14" />
-          <entry key="py" value="23999" />
-          <entry key="txt" value="1013" />
+          <entry key="py" value="24204" />
+          <entry key="txt" value="1028" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="1119" />
-          <entry key="Python" value="23995" />
+          <entry key="PLAIN_TEXT" value="1134" />
+          <entry key="Python" value="24200" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -89,12 +86,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stefanMap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            <state relative-caret-position="515">
+              <caret line="36" column="4" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="65" />
               <folding>
-                <marker date="1544452991589" expanded="true" signature="141:769" ph="..." />
-                <marker date="1544452991589" expanded="true" signature="766:769" ph="..." />
-                <marker date="1544452991589" expanded="true" signature="2072:2530" ph="..." />
+                <element signature="e#0#17#0" expanded="true" />
+                <marker date="1544453377101" expanded="true" signature="141:769" ph="..." />
+                <marker date="1544453377101" expanded="true" signature="766:769" ph="..." />
+                <marker date="1544453377101" expanded="true" signature="1983:2441" ph="..." />
               </folding>
             </state>
           </provider>
@@ -103,14 +101,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/passive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+            <state relative-caret-position="238">
+              <caret line="14" column="73" lean-forward="true" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
-                <marker date="1544452991577" expanded="true" signature="624:625" ph="..." />
-                <marker date="1544452991577" expanded="true" signature="2620:2623" ph="..." />
-                <marker date="1544452991577" expanded="true" signature="2648:2653" ph="..." />
-                <marker date="1544452991577" expanded="true" signature="2648:3038" ph="..." />
+                <marker date="1544453499415" expanded="true" signature="896:897" ph="..." />
+                <marker date="1544453499415" expanded="true" signature="2892:2895" ph="..." />
+                <marker date="1544453499415" expanded="true" signature="2920:2925" ph="..." />
+                <marker date="1544453499415" expanded="true" signature="2920:3310" ph="..." />
               </folding>
             </state>
           </provider>
@@ -183,8 +181,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/help.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="78" lean-forward="true" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
+            <state relative-caret-position="170">
+              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -253,12 +251,12 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/stefanMap.log" />
         <option value="$PROJECT_DIR$/local.py" />
-        <option value="$PROJECT_DIR$/help.py" />
         <option value="$PROJECT_DIR$/active.py" />
         <option value="$PROJECT_DIR$/detectMACvendor.py" />
-        <option value="$PROJECT_DIR$/passive.py" />
-        <option value="$PROJECT_DIR$/stefanMap.py" />
         <option value="$PROJECT_DIR$/fullNetworkScan.py" />
+        <option value="$PROJECT_DIR$/help.py" />
+        <option value="$PROJECT_DIR$/stefanMap.py" />
+        <option value="$PROJECT_DIR$/passive.py" />
       </list>
     </option>
   </component>
@@ -492,13 +490,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540802019390</updated>
-    </task>
-    <task id="LOCAL-00004" summary="debug">
-      <created>1540895793871</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1540895793871</updated>
     </task>
     <task id="LOCAL-00005" summary="update read file">
       <created>1540896403348</created>
@@ -836,7 +827,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544451342133</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="subprocess fix">
+      <created>1544453003072</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1544453003073</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TodoView">
@@ -885,7 +883,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="logging toegevoegd" />
     <MESSAGE value="passive filled" />
     <MESSAGE value="nmap fix" />
     <MESSAGE value="code readability fix" />
@@ -910,7 +907,8 @@
     <MESSAGE value="added passive scanning" />
     <MESSAGE value="added passive pyshark scanning" />
     <MESSAGE value="pyshark fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="pyshark fix" />
+    <MESSAGE value="subprocess fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="subprocess fix" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/example.log" />
@@ -992,14 +990,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stefanMap.py">
+    <entry file="file://$PROJECT_DIR$/GitHub_commands.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="340">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2278">
+          <caret line="134" column="25" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="25" />
           <folding>
-            <marker date="1544452991589" expanded="true" signature="141:769" ph="..." />
-            <marker date="1544452991589" expanded="true" signature="766:769" ph="..." />
-            <marker date="1544452991589" expanded="true" signature="2072:2530" ph="..." />
+            <element signature="e#142#151#0" expanded="true" />
+            <marker date="1544451309150" expanded="true" signature="4901:4904" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/help.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stefanMap.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullNetworkScan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detectMACvendor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1015,64 +1049,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detectMACvendor.py">
+    <entry file="file://$PROJECT_DIR$/stefanMap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fullNetworkScan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        <state relative-caret-position="515">
+          <caret line="36" column="4" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="65" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stefanMap.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GitHub_commands.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/help.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="78" lean-forward="true" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2278">
-          <caret line="134" column="25" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="25" />
-          <folding>
-            <element signature="e#142#151#0" expanded="true" />
-            <marker date="1544451309150" expanded="true" signature="4901:4904" ph="..." />
+            <marker date="1544453377101" expanded="true" signature="141:769" ph="..." />
+            <marker date="1544453377101" expanded="true" signature="766:769" ph="..." />
+            <marker date="1544453377101" expanded="true" signature="1983:2441" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/passive.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+        <state relative-caret-position="238">
+          <caret line="14" column="73" lean-forward="true" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
-            <marker date="1544452991577" expanded="true" signature="624:625" ph="..." />
-            <marker date="1544452991577" expanded="true" signature="2620:2623" ph="..." />
-            <marker date="1544452991577" expanded="true" signature="2648:2653" ph="..." />
-            <marker date="1544452991577" expanded="true" signature="2648:3038" ph="..." />
+            <marker date="1544453499415" expanded="true" signature="896:897" ph="..." />
+            <marker date="1544453499415" expanded="true" signature="2892:2895" ph="..." />
+            <marker date="1544453499415" expanded="true" signature="2920:2925" ph="..." />
+            <marker date="1544453499415" expanded="true" signature="2920:3310" ph="..." />
           </folding>
         </state>
       </provider>
