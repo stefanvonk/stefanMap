@@ -207,7 +207,7 @@ def detectionMethod8(ip):
 
     vendor = detectMACvendor.macVendor(ip)
 
-    print("\n#8: The vendor of the MAC address of this machine is: " + vendor)
+    print("\n#8: The vendor of the MAC address of the machine is: " + vendor)
     print("Check manually whether this is virtual machine vendor.")
     logging.info("Result of MAC address vendor: " + vendor)
 
