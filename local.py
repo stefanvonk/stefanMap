@@ -132,9 +132,18 @@ def detectionMethod4():
     output = command.stdout.read()
 
     i = 1
-    for line in output.splitlines():
+    running = 0
+    notrunning = 0
+
+    for line in output.decode("utf-8").splitlines():
         print(i, line)
         i += 1
+        if " [ + ]  " in line:
+            running += 1
+        elif " [ - ]  " in line:
+            notrunning += 1
+
+    print("There are", i, "processes available on the machine.", running, "of this processes are running and", notrunning, "are not running.")
 
 
 def local():

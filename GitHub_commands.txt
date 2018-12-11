@@ -20,8 +20,8 @@ Repository clonen in map
 -------
 git init
 
-(git reset --hard)
-
 git remote add origin https://github.com/stefanvonk/honey-detect.git
+
+(git reset --hard)
 
 git pull origin master
