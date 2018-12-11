@@ -28,6 +28,14 @@ def cpuModelName():
     return ''
 
 
+def checkFound(number, name):
+    if number > 10:
+        print("A machine configuration with standard", name, "honeypot files and folders found.")
+        return True
+    else:
+        return False
+
+
 def detectionMethod1():
     print("\n#1: Check if there are standard honeypot accounts on the machine.")
 
@@ -73,15 +81,15 @@ def detectionMethod2():
             # check if the honeypot strings are in the folder names
             if "cowrie" in folderName:
                 cowrie += 1
-            elif "kippo" in folderName:
+            if "kippo" in folderName:
                 kippo += 1
-            elif "sshesame" in folderName:
+            if "sshesame" in folderName:
                 sshesame += 1
-            elif "mhn" in folderName:
+            if "mhn" in folderName:
                 mhn += 1
-            elif "dionaea" in folderName:
+            if "dionaea" in folderName:
                 dionaea += 1
-            elif "t-pot" in folderName or "tpot" in folderName or "t-sec" in folderName or "tsec" in folderName:
+            if "t-pot" in folderName or "tpot" in folderName or "t-sec" in folderName or "tsec" in folderName:
                 tpot += 1
 
             # loop through each filename
@@ -90,33 +98,22 @@ def detectionMethod2():
                 # check if the honeypot strings are in the filenames
                 if "cowrie" in fileName:
                     cowrie += 1
-                elif "kippo" in fileName:
+                if "kippo" in fileName:
                     kippo += 1
-                elif "sshesame" in fileName:
+                if "sshesame" in fileName:
                     sshesame += 1
-                elif "mhn" in fileName:
+                if "mhn" in fileName:
                     mhn += 1
-                elif "dionaea" in fileName:
+                if "dionaea" in fileName:
                     dionaea += 1
-                elif "t-pot" in fileName or "tpot" in fileName or "t-sec" in fileName or "tsec" in fileName:
+                if "t-pot" in fileName or "tpot" in fileName or "t-sec" in fileName or "tsec" in fileName:
                     tpot += 1
     except Exception as e:
         print("The following error raise when trying to map the filesystem: " + str(e))
 
     # if one of the variables > 10, a standard honeypot configuration is found
-    if cowrie > 10:
-        print("A machine configuration with standard cowrie honeypot files and folders found.")
-    elif kippo > 10:
-        print("A machine configuration with standard kippo honeypot files and folders found.")
-    elif sshesame > 10:
-        print("A machine configuration with standard sshesame honeypot files and folders found.")
-    elif mhn > 10:
-        print("A machine configuration with standard modern honeynetwork files and folders found.")
-    elif dionaea > 10:
-        print("A machine configuration with standard dionaea honeypot files and folders found.")
-    elif tpot > 10:
-        print("A machine configuration with standard T-pot honeypot files and folders found.")
-    else:
+    if (checkFound(mhn, "mhn") and checkFound(tpot, "tpot") and checkFound(cowrie, "cowrie") and
+        checkFound(kippo, "kippo") and checkFound(sshesame, "sshesame") and checkFound(dionaea, "dionaea")) is False:
         print("No standard honeypot machine configuration found.")
 
 
@@ -160,10 +157,10 @@ def detectionMethod4():
 def local():
     print("\nThe following actions are done by the script:")
 
-    detectionMethod1() # detection of standard honeypot account configuration
+    #detectionMethod1() # detection of standard honeypot account configuration
     detectionMethod2() # detection of standard honeypot files and folders
-    detectionMethod3() # TODO check network traffic of the machine
-    detectionMethod4() # TODO check services of machine
+    #detectionMethod3() # TODO check network traffic of the machine
+    #detectionMethod4() # TODO check services of machine
 
 
 local()
