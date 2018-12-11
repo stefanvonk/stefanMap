@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="Text fixes and added commands in local.py">
+    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="Text fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/local.py" afterDir="false" />
     </list>
@@ -167,12 +167,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/local.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="160" column="13" selection-start-line="160" selection-start-column="13" selection-end-line="160" selection-end-column="13" />
+            <state relative-caret-position="345">
+              <caret line="68" column="20" lean-forward="true" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
               <folding>
                 <element signature="e#142#151#0" expanded="true" />
-                <marker date="1544527259710" expanded="true" signature="5031:5964" ph="..." />
-                <marker date="1544527259710" expanded="true" signature="5976:5981" ph="..." />
+                <marker date="1544527853973" expanded="true" signature="5026:5959" ph="..." />
+                <marker date="1544527853973" expanded="true" signature="5971:5976" ph="..." />
               </folding>
             </state>
           </provider>
@@ -490,13 +490,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540802019390</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Logging and loop filesystem">
-      <created>1542982761343</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1542982761347</updated>
     </task>
     <task id="LOCAL-00017" summary="comments">
       <created>1542982871694</created>
@@ -834,7 +827,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544526709203</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Text fixes">
+      <created>1544527385949</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1544527385949</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TodoView">
@@ -883,7 +883,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Several fixes" />
     <MESSAGE value="urlopen http:// fix" />
     <MESSAGE value="loop fix" />
     <MESSAGE value="ssh server check added" />
@@ -908,7 +907,8 @@
     <MESSAGE value="local.py fix" />
     <MESSAGE value="Delete print in local" />
     <MESSAGE value="Text fixes and added commands in local.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Text fixes and added commands in local.py" />
+    <MESSAGE value="Text fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Text fixes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/example.log" />
@@ -997,19 +997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stefanMap.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fullNetworkScan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/passive.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1065,14 +1052,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/stefanMap.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullNetworkScan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/local.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="160" column="13" selection-start-line="160" selection-start-column="13" selection-end-line="160" selection-end-column="13" />
+        <state relative-caret-position="345">
+          <caret line="68" column="20" lean-forward="true" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
           <folding>
             <element signature="e#142#151#0" expanded="true" />
-            <marker date="1544527259710" expanded="true" signature="5031:5964" ph="..." />
-            <marker date="1544527259710" expanded="true" signature="5976:5981" ph="..." />
+            <marker date="1544527853973" expanded="true" signature="5026:5959" ph="..." />
+            <marker date="1544527853973" expanded="true" signature="5971:5976" ph="..." />
           </folding>
         </state>
       </provider>
