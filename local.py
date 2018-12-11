@@ -28,12 +28,12 @@ def cpuModelName():
     return ''
 
 
-def checkFound(number, name):
+def noHoneypot(number, name):
     if number > 10:
         print("A machine configuration with standard", name, "honeypot files and folders found.")
-        return True
-    else:
         return False
+    else:
+        return True
 
 
 def detectionMethod1():
@@ -74,7 +74,8 @@ def detectionMethod2():
 
     try:
         # set root directory to check from
-        rootDir = '/'
+        #rootDir = '/'
+        rootDir = 'D:/Stefan Vonk/Desktop/'
         # walk through each subdirectory
         for dirName, subdirList, fileList in os.walk(rootDir):
             folderName = '%s' % dirName
@@ -112,8 +113,8 @@ def detectionMethod2():
         print("The following error raise when trying to map the filesystem: " + str(e))
 
     # if one of the variables > 10, a standard honeypot configuration is found
-    if (checkFound(mhn, "mhn") and checkFound(tpot, "tpot") and checkFound(cowrie, "cowrie") and
-        checkFound(kippo, "kippo") and checkFound(sshesame, "sshesame") and checkFound(dionaea, "dionaea")) is False:
+    if (noHoneypot(mhn, "mhn") & noHoneypot(tpot, "t-pot") & noHoneypot(cowrie, "cowrie") &
+            noHoneypot(kippo, "kippo") & noHoneypot(sshesame, "sshesame") & noHoneypot(dionaea, "dionaea")):
         print("No standard honeypot machine configuration found.")
 
 
