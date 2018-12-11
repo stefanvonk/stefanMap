@@ -137,7 +137,6 @@ def detectionMethod4():
 
     for line in output.decode("utf-8").splitlines():
         i += 1
-        print(i, line)
         if " [ + ]  " in line:
             running += 1
         elif " [ - ]  " in line:
@@ -145,9 +144,9 @@ def detectionMethod4():
 
     print("There are", i, "processes available on the machine.", running, "of this processes are running and", notrunning, "not.")
     if i < 20 and running < 10:
-        print("This machine is not a normal used network machine.")
+        print("This machine seems to be not a normal used network machine.")
     else:
-        print("This machine is a normal used network machine.")
+        print("This machine seems to be a normal used network machine.")
 
 
 def local():

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="local read processes fix2">
+    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="local.py fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/local.py" afterDir="false" />
     </list>
@@ -49,14 +49,14 @@
         <counts>
           <entry key="dummy" value="88" />
           <entry key="log" value="14" />
-          <entry key="py" value="25372" />
-          <entry key="txt" value="1100" />
+          <entry key="py" value="25386" />
+          <entry key="txt" value="1106" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="1206" />
-          <entry key="Python" value="25368" />
+          <entry key="PLAIN_TEXT" value="1212" />
+          <entry key="Python" value="25382" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -167,12 +167,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/local.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="634">
-              <caret line="149" column="63" lean-forward="true" selection-start-line="149" selection-start-column="63" selection-end-line="149" selection-end-column="63" />
+            <state relative-caret-position="447">
+              <caret line="138" column="14" selection-start-line="138" selection-start-column="14" selection-end-line="138" selection-end-column="14" />
               <folding>
                 <element signature="e#142#151#0" expanded="true" />
-                <marker date="1544524057879" expanded="true" signature="5005:5604" ph="..." />
-                <marker date="1544524057879" expanded="true" signature="5616:5621" ph="..." />
+                <marker date="1544524258461" expanded="true" signature="5005:5599" ph="..." />
+                <marker date="1544524258461" expanded="true" signature="5611:5616" ph="..." />
               </folding>
             </state>
           </provider>
@@ -490,13 +490,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540802019390</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Functie main -&gt; checkKippo fix">
-      <created>1542286726015</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1542286726015</updated>
     </task>
     <task id="LOCAL-00014" summary="nmap toevoegen (1)">
       <created>1542290834174</created>
@@ -834,7 +827,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544523598413</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="local.py fix">
+      <created>1544524164047</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1544524164047</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TodoView">
@@ -850,7 +850,7 @@
     <frame x="-8" y="-1088" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.22547974" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.22547974" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50080776" side_tool="true" weight="0.17324094" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -883,7 +883,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix" />
     <MESSAGE value="p0f added" />
     <MESSAGE value="arp-scan added" />
     <MESSAGE value="Several fixes" />
@@ -908,7 +907,8 @@
     <MESSAGE value="local read processes" />
     <MESSAGE value="local read processes fix" />
     <MESSAGE value="local read processes fix2" />
-    <option name="LAST_COMMIT_MESSAGE" value="local read processes fix2" />
+    <MESSAGE value="local.py fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="local.py fix" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/example.log" />
@@ -1000,13 +1000,6 @@
     <entry file="file://$PROJECT_DIR$/stefanMap.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/GitHub_commands.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fullNetworkScan.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1065,14 +1058,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/GitHub_commands.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/local.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="149" column="63" lean-forward="true" selection-start-line="149" selection-start-column="63" selection-end-line="149" selection-end-column="63" />
+        <state relative-caret-position="447">
+          <caret line="138" column="14" selection-start-line="138" selection-start-column="14" selection-end-line="138" selection-end-column="14" />
           <folding>
             <element signature="e#142#151#0" expanded="true" />
-            <marker date="1544524057879" expanded="true" signature="5005:5604" ph="..." />
-            <marker date="1544524057879" expanded="true" signature="5616:5621" ph="..." />
+            <marker date="1544524258461" expanded="true" signature="5005:5599" ph="..." />
+            <marker date="1544524258461" expanded="true" signature="5611:5616" ph="..." />
           </folding>
         </state>
       </provider>
