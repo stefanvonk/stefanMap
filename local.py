@@ -105,17 +105,17 @@ def detectionMethod2():
 
     # if one of the variables > 10, a standard honeypot configuration is found
     if cowrie > 10:
-        print("A machine configuration found with standard cowrie honeypot files and folders.")
+        print("A machine configuration with standard cowrie honeypot files and folders found.")
     elif kippo > 10:
-        print("A machine configuration found with standard kippo honeypot files and folders.")
+        print("A machine configuration with standard kippo honeypot files and folders found.")
     elif sshesame > 10:
-        print("A machine configuration found with standard sshesame honeypot files and folders.")
+        print("A machine configuration with standard sshesame honeypot files and folders found.")
     elif mhn > 10:
-        print("A machine configuration found with standard modern honeynetwork files and folders.")
+        print("A machine configuration with standard modern honeynetwork files and folders found.")
     elif dionaea > 10:
-        print("A machine configuration found with standard dionaea honeypot files and folders.")
+        print("A machine configuration with standard dionaea honeypot files and folders found.")
     elif tpot > 10:
-        print("A machine configuration found with standard T-pot honeypot files and folders.")
+        print("A machine configuration with standard T-pot honeypot files and folders found.")
     else:
         print("No standard honeypot machine configuration found.")
 
@@ -128,13 +128,16 @@ def detectionMethod3():
 def detectionMethod4():
     print("\n#4: check the services of the machine.")
 
+    # run service command
     command = subprocess.Popen(["service", "--status-all"], stdout=subprocess.PIPE)
     output = command.stdout.read()
 
+    # set variables
     i = 0
     running = 0
     notrunning = 0
 
+    # check running or not running for each line in the output of the service command
     for line in output.decode("utf-8").splitlines():
         i += 1
         if " [ + ]  " in line:
@@ -142,11 +145,16 @@ def detectionMethod4():
         elif " [ - ]  " in line:
             notrunning += 1
 
-    print("There are", i, "processes available on the machine.", running, "of this processes are running and", notrunning, "not.")
+    # print results
+    print("There are", i, "processes available on the machine.", running, "of this processes are running and"
+          , notrunning, "not.")
+
+    # if there are less than 20 processes and less than 10 running processes, based on the services,
+    # the machine is not a normal network machine
     if i < 20 and running < 10:
-        print("This machine seems to be not a normal used network machine.")
+        print("Based on the services, this machine seems to be not a normal used network machine.\n")
     else:
-        print("This machine seems to be a normal used network machine.")
+        print("Based on the services, this machine seems to be a normal used network machine.\n")
 
 
 def local():
