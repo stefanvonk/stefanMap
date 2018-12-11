@@ -131,19 +131,23 @@ def detectionMethod4():
     command = subprocess.Popen(["service", "--status-all"], stdout=subprocess.PIPE)
     output = command.stdout.read()
 
-    i = 1
+    i = 0
     running = 0
     notrunning = 0
 
     for line in output.decode("utf-8").splitlines():
-        print(i, line)
         i += 1
+        print(i, line)
         if " [ + ]  " in line:
             running += 1
         elif " [ - ]  " in line:
             notrunning += 1
 
-    print("There are", i, "processes available on the machine.", running, "of this processes are running and", notrunning, "are not running.")
+    print("There are", i, "processes available on the machine.", running, "of this processes are running and", notrunning, "not.")
+    if i < 20 and running < 10:
+        print("This machine is not a normal used network machine.")
+    else:
+        print("This machine is a normal used network machine.")
 
 
 def local():
