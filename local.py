@@ -74,8 +74,7 @@ def detectionMethod2():
 
     try:
         # set root directory to check from
-        #rootDir = '/'
-        rootDir = 'D:/Stefan Vonk/Desktop/'
+        rootDir = '/'
         # walk through each subdirectory
         for dirName, subdirList, fileList in os.walk(rootDir):
             folderName = '%s' % dirName
