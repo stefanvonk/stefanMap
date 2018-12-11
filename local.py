@@ -3,6 +3,7 @@
 
 import os
 import struct
+import subprocess
 
 
 # source: https://gist.github.com/mojaves/3480749
@@ -123,17 +124,26 @@ def detectionMethod3():
     print("\n#3: Check the networktraffic of the machine.")
 
 
+
 def detectionMethod4():
     print("\n#4: check the services of the machine.")
+
+    command = subprocess.Popen(["service", "--status-all"], stdout=subprocess.PIPE)
+    output = command.stdout.read()
+
+    i = 1
+    for line in output.splitlines():
+        print(i, line)
+        i += 1
 
 
 def local():
     print("The following actions are done by the script:")
 
-    detectionMethod1() # detection of standard honeypot account configuration
-    detectionMethod2() # detection of standard honeypot files and folders
-    detectionMethod3() # TODO network traffic of the machine
-    detectionMethod4() # TODO services of machine
+    #detectionMethod1() # detection of standard honeypot account configuration
+    #detectionMethod2() # detection of standard honeypot files and folders
+    #detectionMethod3() # TODO check network traffic of the machine
+    detectionMethod4() # TODO check services of machine
 
 
 local()
