@@ -42,9 +42,9 @@ def detectionMethod1():
         elif "cowrie" in content or "Cowrie" in content:
             print("Cowrie useraccount detected")
         elif "tsec" in content or "Tsec" in content or "tpot" in content or "Tpot" in content:
-            print("T-potce useraccount detected")
+            print("t-pot useraccount detected")
         elif "t-sec" in content or "T-sec" in content or "t-pot" in content or "T-pot" in content:
-            print("T-potce useraccount detected")
+            print("t-pot useraccount detected")
         # the other honeypots don't have a standard user account
         else:
             print("No standard honeypot account configuration found.")
@@ -138,16 +138,26 @@ def noHoneypotService(output, strings, name):
 def detectionMethod4():
     print("\n#4: check the services of the machine.")
 
-    # # run service command
-    # command = subprocess.Popen(["ps", "aux"], stdout=subprocess.PIPE)
-    # output = command.stdout.read()
-    # content = output.decode("utf-8")
-    #
-    # # if strings are in output, a honeypot service is found
-    # if (noHoneypotService(content, ["mhn", ""], "mhn") & noHoneypotService(content, ["t-pot"], "t-pot") &
-    #         noHoneypotService(content, ["cowrie", ""], "cowrie") & noHoneypotService(content, ["kippo"], "kippo") &
-    #         noHoneypotService(content, ["sshesame"], "sshesame") & noHoneypotService(content, ["dionaea"], "dionaea")):
-    #     print("No running honeypot service found.")
+    # run service command
+    command = subprocess.Popen(["ps", "aux"], stdout=subprocess.PIPE)
+    output = command.stdout.read()
+    content = output.decode("utf-8")
+
+    # set search variables
+    mhn = ["/mhn/env/bin/python", "/mhn/env/bin/celery", "/mhn/env/bin/uwsgi", "mhn.tasks", "--loglevel=", "mhn:mhn"]
+    tpot = ["/opt/tpot", "/etc/tpot.yml", "suricata", "honeytrap", "p0f", "cowrie", "rdpy", "vnclowpot", "dionaea"]
+    cowrie = ["home/cowrie", "cowrie.python.logfile.logger", "cowrie-env/bin/python", "cowrie.pid", "cowrie-env/bin/twistd"]
+    kippo = ["home/kippo/", ".local/bin/twistd", "kippo.tac", "kippo.log", "kippo.pid"]
+    sshesame = ["./sshesame"]
+    dionaea = ["/opt/dionaea", "/bin/dionaea"]
+
+    # if strings are in output, a honeypot service is found
+    if (noHoneypotService(content, mhn, "mhn") & noHoneypotService(content, tpot, "t-pot") &
+            noHoneypotService(content, cowrie, "cowrie") & noHoneypotService(content, kippo, "kippo") &
+            noHoneypotService(content, sshesame, "sshesame") & noHoneypotService(content, dionaea, "dionaea")):
+        print("No running honeypot service found.")
+
+    # print blank line
     print("")
 
 
@@ -157,7 +167,7 @@ def local():
     detectionMethod1() # detection of standard honeypot account configuration
     detectionMethod2() # detection of standard honeypot files and folders
     detectionMethod3() # TODO check network traffic of the machine
-    detectionMethod4() # TODO check services of machineu
+    detectionMethod4() # check services of machine
 
 
 local()
