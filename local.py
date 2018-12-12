@@ -106,7 +106,7 @@ def noHoneypotService(output, strings, name):
 
 
 def detectionMethod3():
-    print("\n#3: check if there are standard honeypot services on the machine.")
+    print("\n#3: Check if there are standard honeypot services on the machine.")
 
     # run service command
     command = subprocess.Popen(["ps", "aux"], stdout=subprocess.PIPE)

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="Local final version fix">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="Local final version final fix">
       <change beforePath="$PROJECT_DIR$/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/local.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,14 +48,14 @@
         <counts>
           <entry key="dummy" value="96" />
           <entry key="log" value="16" />
-          <entry key="py" value="27769" />
-          <entry key="txt" value="1288" />
+          <entry key="py" value="27778" />
+          <entry key="txt" value="1294" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="1404" />
-          <entry key="Python" value="27765" />
+          <entry key="PLAIN_TEXT" value="1410" />
+          <entry key="Python" value="27774" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -167,12 +166,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/local.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="83" column="32" lean-forward="true" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
+            <state relative-caret-position="476">
+              <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
               <folding>
                 <element signature="e#142#151#0" expanded="true" />
-                <marker date="1544624066147" expanded="true" signature="184:186" ph="..." />
-                <marker date="1544624066147" expanded="true" signature="3357:3358" ph="..." />
+                <marker date="1544624349478" expanded="true" signature="184:186" ph="..." />
+                <marker date="1544624349478" expanded="true" signature="3363:3364" ph="..." />
               </folding>
             </state>
           </provider>
@@ -490,13 +489,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540802019390</updated>
-    </task>
-    <task id="LOCAL-00027" summary="nmap fix">
-      <created>1543847625051</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1543847625051</updated>
     </task>
     <task id="LOCAL-00028" summary="code readability fix">
       <created>1544008373755</created>
@@ -834,7 +826,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544623849012</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Local final version final fix">
+      <created>1544624084138</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1544624084138</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TodoView">
@@ -859,7 +858,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.399287" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32827735" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053304" side_tool="true" weight="0.2979415" />
@@ -883,7 +882,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="paramiko get hostname" />
     <MESSAGE value="hostname is sshesame" />
     <MESSAGE value="fix text" />
     <MESSAGE value="remove \t" />
@@ -908,7 +906,8 @@
     <MESSAGE value="update local" />
     <MESSAGE value="Local final version" />
     <MESSAGE value="Local final version fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Local final version fix" />
+    <MESSAGE value="Local final version final fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Local final version final fix" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/example.log" />
@@ -1067,12 +1066,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/local.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="83" column="32" lean-forward="true" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
+        <state relative-caret-position="476">
+          <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
           <folding>
             <element signature="e#142#151#0" expanded="true" />
-            <marker date="1544624066147" expanded="true" signature="184:186" ph="..." />
-            <marker date="1544624066147" expanded="true" signature="3357:3358" ph="..." />
+            <marker date="1544624349478" expanded="true" signature="184:186" ph="..." />
+            <marker date="1544624349478" expanded="true" signature="3363:3364" ph="..." />
           </folding>
         </state>
       </provider>
