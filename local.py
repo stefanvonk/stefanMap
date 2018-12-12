@@ -28,14 +28,6 @@ def cpuModelName():
     return ''
 
 
-def noHoneypot(number, name):
-    if number > 10:
-        print("A machine configuration with standard", name, "honeypot files and folders found.")
-        return False
-    else:
-        return True
-
-
 def detectionMethod1():
     print("\n#1: Check if there are standard honeypot accounts on the machine.")
 
@@ -59,6 +51,14 @@ def detectionMethod1():
     else:
         print("No such file or directory: '/etc/passwd'. This machine is probably not a honeypot because it isn't"
               " running a linux system.")
+
+
+def noHoneypot(number, name):
+    if number > 10:
+        print("A machine configuration with standard", name, "honeypot files and folders found.")
+        return False
+    else:
+        return True
 
 
 def detectionMethod2():
@@ -122,36 +122,33 @@ def detectionMethod3():
 
 
 
+def noHoneypotService(output, strings, name):
+    match = 0
+    for string in strings:
+        if string in output:
+            match += 1
+    if match == len(strings):
+        print("A running", name, "honeypot service found.")
+        return False
+    else:
+        return True
+
+
+
 def detectionMethod4():
     print("\n#4: check the services of the machine.")
 
-    # run service command
-    command = subprocess.Popen(["service", "--status-all"], stdout=subprocess.PIPE)
-    output = command.stdout.read()
-
-    # set variables
-    i = 0
-    running = 0
-    notrunning = 0
-
-    # check running or not running for each line in the output of the service command
-    for line in output.decode("utf-8").splitlines():
-        i += 1
-        if " [ + ]  " in line:
-            running += 1
-        elif " [ - ]  " in line:
-            notrunning += 1
-
-    # print results
-    print("There are", i, "processes available on the machine.", running, "of this processes are running and"
-          , notrunning, "not.")
-
-    # if there are less than 20 processes and less than 10 running processes, based on the services,
-    # the machine is not a normal network machine
-    if i < 20 and running < 10:
-        print("Based on the services, this machine seems to be not a normal used network machine.\n")
-    else:
-        print("Based on the services, this machine seems to be a normal used network machine.\n")
+    # # run service command
+    # command = subprocess.Popen(["ps", "aux"], stdout=subprocess.PIPE)
+    # output = command.stdout.read()
+    # content = output.decode("utf-8")
+    #
+    # # if strings are in output, a honeypot service is found
+    # if (noHoneypotService(content, ["mhn", ""], "mhn") & noHoneypotService(content, ["t-pot"], "t-pot") &
+    #         noHoneypotService(content, ["cowrie", ""], "cowrie") & noHoneypotService(content, ["kippo"], "kippo") &
+    #         noHoneypotService(content, ["sshesame"], "sshesame") & noHoneypotService(content, ["dionaea"], "dionaea")):
+    #     print("No running honeypot service found.")
+    print("")
 
 
 def local():
@@ -160,7 +157,7 @@ def local():
     detectionMethod1() # detection of standard honeypot account configuration
     detectionMethod2() # detection of standard honeypot files and folders
     detectionMethod3() # TODO check network traffic of the machine
-    detectionMethod4() # TODO check services of machine
+    detectionMethod4() # TODO check services of machineu
 
 
 local()
