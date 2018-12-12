@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="Local final version final fix final">
+    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="Local text fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/local.py" afterDir="false" />
     </list>
@@ -49,14 +49,14 @@
         <counts>
           <entry key="dummy" value="96" />
           <entry key="log" value="16" />
-          <entry key="py" value="27818" />
-          <entry key="txt" value="1300" />
+          <entry key="py" value="27820" />
+          <entry key="txt" value="1314" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="1416" />
-          <entry key="Python" value="27814" />
+          <entry key="PLAIN_TEXT" value="1430" />
+          <entry key="Python" value="27816" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -167,12 +167,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/local.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
-              <caret line="92" column="69" lean-forward="true" selection-start-line="92" selection-start-column="69" selection-end-line="92" selection-end-column="69" />
+            <state relative-caret-position="651">
+              <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
               <folding>
                 <element signature="e#142#151#0" expanded="true" />
-                <marker date="1544624573009" expanded="true" signature="184:186" ph="..." />
-                <marker date="1544624573009" expanded="true" signature="3363:3364" ph="..." />
+                <marker date="1544624699511" expanded="true" signature="184:186" ph="..." />
+                <marker date="1544624699511" expanded="true" signature="3363:3364" ph="..." />
               </folding>
             </state>
           </provider>
@@ -490,13 +490,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540802019390</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Fix">
-      <created>1544011720730</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1544011720730</updated>
     </task>
     <task id="LOCAL-00032" summary="p0f added">
       <created>1544017879804</created>
@@ -834,7 +827,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544624464792</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Local text fixes">
+      <created>1544624592833</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1544624592833</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TodoView">
@@ -883,7 +883,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix text" />
     <MESSAGE value="remove \t" />
     <MESSAGE value="read logfile fix" />
     <MESSAGE value="added passive scanning" />
@@ -908,7 +907,8 @@
     <MESSAGE value="Local final version fix" />
     <MESSAGE value="Local final version final fix" />
     <MESSAGE value="Local final version final fix final" />
-    <option name="LAST_COMMIT_MESSAGE" value="Local final version final fix final" />
+    <MESSAGE value="Local text fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Local text fixes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/example.log" />
@@ -1067,12 +1067,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/local.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="92" column="69" lean-forward="true" selection-start-line="92" selection-start-column="69" selection-end-line="92" selection-end-column="69" />
+        <state relative-caret-position="651">
+          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
           <folding>
             <element signature="e#142#151#0" expanded="true" />
-            <marker date="1544624573009" expanded="true" signature="184:186" ph="..." />
-            <marker date="1544624573009" expanded="true" signature="3363:3364" ph="..." />
+            <marker date="1544624699511" expanded="true" signature="184:186" ph="..." />
+            <marker date="1544624699511" expanded="true" signature="3363:3364" ph="..." />
           </folding>
         </state>
       </provider>
