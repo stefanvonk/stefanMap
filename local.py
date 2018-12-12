@@ -31,7 +31,7 @@ def detectionMethod1():
 
 def noHoneypot(number, name):
     if number > 10:
-        print("A machine configuration with standard", name, "honeypot files and folders found.")
+        print("A filesystem configuration with standard", name, "honeypot files and folders found.")
         return False
     else:
         return True
