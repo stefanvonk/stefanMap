@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="Erase logfile">
+    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="update local">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/help.py" beforeDir="false" afterPath="$PROJECT_DIR$/help.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/local.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,14 +49,14 @@
         <counts>
           <entry key="dummy" value="96" />
           <entry key="log" value="16" />
-          <entry key="py" value="27682" />
-          <entry key="txt" value="1251" />
+          <entry key="py" value="27758" />
+          <entry key="txt" value="1265" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="1367" />
-          <entry key="Python" value="27678" />
+          <entry key="PLAIN_TEXT" value="1381" />
+          <entry key="Python" value="27754" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -86,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stefanMap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="102" column="36" selection-start-line="102" selection-start-column="36" selection-end-line="102" selection-end-column="36" />
+            <state relative-caret-position="189">
+              <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
                 <marker date="1544454434041" expanded="true" signature="141:769" ph="..." />
@@ -168,12 +167,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/local.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="169" column="50" lean-forward="true" selection-start-line="169" selection-start-column="50" selection-end-line="169" selection-end-column="50" />
+            <state relative-caret-position="92">
+              <caret line="108" column="65" selection-start-line="108" selection-start-column="65" selection-end-line="108" selection-end-column="65" />
               <folding>
                 <element signature="e#142#151#0" expanded="true" />
-                <marker date="1544620451773" expanded="true" signature="861:864" ph="..." />
-                <marker date="1544620451773" expanded="true" signature="4408:4411" ph="..." />
+                <marker date="1544623744958" expanded="true" signature="184:186" ph="..." />
+                <marker date="1544623744958" expanded="true" signature="3354:3355" ph="..." />
               </folding>
             </state>
           </provider>
@@ -491,13 +490,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540802019390</updated>
-    </task>
-    <task id="LOCAL-00024" summary="logging toegevoegd">
-      <created>1543836653862</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1543836653862</updated>
     </task>
     <task id="LOCAL-00025" summary="passive filled">
       <created>1543846409454</created>
@@ -835,7 +827,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544604233066</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="update local">
+      <created>1544620933870</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1544620933870</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TodoView">
@@ -884,7 +883,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="remove exit() on BadHostKeyException" />
     <MESSAGE value="help() fix" />
     <MESSAGE value="ssh fix" />
     <MESSAGE value="paramiko get hostname" />
@@ -909,7 +907,8 @@
     <MESSAGE value="local.py fix" />
     <MESSAGE value="Total fix" />
     <MESSAGE value="Erase logfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Erase logfile" />
+    <MESSAGE value="update local" />
+    <option name="LAST_COMMIT_MESSAGE" value="update local" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/example.log" />
@@ -984,19 +983,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stefanMap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="102" column="36" selection-start-line="102" selection-start-column="36" selection-end-line="102" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-            <marker date="1544454434041" expanded="true" signature="141:769" ph="..." />
-            <marker date="1544454434041" expanded="true" signature="766:769" ph="..." />
-            <marker date="1544454434041" expanded="true" signature="1983:2441" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/honeytoken/honeytoken.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1055,6 +1041,19 @@
     <entry file="file://$PROJECT_DIR$/stefanMap.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/stefanMap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+            <marker date="1544454434041" expanded="true" signature="141:769" ph="..." />
+            <marker date="1544454434041" expanded="true" signature="766:769" ph="..." />
+            <marker date="1544454434041" expanded="true" signature="1983:2441" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/active.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
@@ -1068,12 +1067,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/local.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="169" column="50" lean-forward="true" selection-start-line="169" selection-start-column="50" selection-end-line="169" selection-end-column="50" />
+        <state relative-caret-position="92">
+          <caret line="108" column="65" selection-start-line="108" selection-start-column="65" selection-end-line="108" selection-end-column="65" />
           <folding>
             <element signature="e#142#151#0" expanded="true" />
-            <marker date="1544620451773" expanded="true" signature="861:864" ph="..." />
-            <marker date="1544620451773" expanded="true" signature="4408:4411" ph="..." />
+            <marker date="1544623744958" expanded="true" signature="184:186" ph="..." />
+            <marker date="1544623744958" expanded="true" signature="3354:3355" ph="..." />
           </folding>
         </state>
       </provider>

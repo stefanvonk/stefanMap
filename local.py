@@ -6,28 +6,6 @@ import struct
 import subprocess
 
 
-# source: https://gist.github.com/mojaves/3480749
-def cpuHypervisorID():
-    # we cannot (yet) use _cpuid because of the different unpack format.
-    HYPERVISOR_CPUID_LEAF = 0x40000000
-    with open('/dev/cpu/0/cpuid', 'rb') as f:
-        f.seek(HYPERVISOR_CPUID_LEAF)
-        c = struct.unpack('I12s', f.read(16))
-        return c[1].strip('\x00')
-
-
-# source: https://gist.github.com/mojaves/3480749
-def cpuModelName():
-    with open('/proc/cpuinfo', 'rt') as f:
-        for line in f:
-            if ':' in line:
-                k, v = line.split(':', 1)
-                k = k.strip()
-                if k == 'model name':
-                    return v.strip()
-    return ''
-
-
 def detectionMethod1():
     print("\n#1: Check if there are standard honeypot accounts on the machine.")
 
@@ -37,13 +15,11 @@ def detectionMethod1():
         content = file.read()
         file.close()
         # check if the variable contains a standard honeypot configuration
-        if "kippo" in content or "Kippo" in content:
+        if "kippo" in content:
             print("Kippo useraccount detected")
-        elif "cowrie" in content or "Cowrie" in content:
+        elif "cowrie" in content:
             print("Cowrie useraccount detected")
-        elif "tsec" in content or "Tsec" in content or "tpot" in content or "Tpot" in content:
-            print("t-pot useraccount detected")
-        elif "t-sec" in content or "T-sec" in content or "t-pot" in content or "T-pot" in content:
+        elif "tsec" in content or "tpot" in content:
             print("t-pot useraccount detected")
         # the other honeypots don't have a standard user account
         else:
@@ -89,7 +65,7 @@ def detectionMethod2():
                 mhn += 1
             if "dionaea" in folderName:
                 dionaea += 1
-            if "t-pot" in folderName or "tpot" in folderName or "t-sec" in folderName or "tsec" in folderName:
+            if "tpot" in folderName:
                 tpot += 1
 
             # loop through each filename
@@ -106,7 +82,7 @@ def detectionMethod2():
                     mhn += 1
                 if "dionaea" in fileName:
                     dionaea += 1
-                if "t-pot" in fileName or "tpot" in fileName or "t-sec" in fileName or "tsec" in fileName:
+                if "tpot" in fileName:
                     tpot += 1
     except Exception as e:
         print("The following error raise when trying to map the filesystem: " + str(e))
@@ -115,11 +91,6 @@ def detectionMethod2():
     if (noHoneypot(mhn, "mhn") & noHoneypot(tpot, "t-pot") & noHoneypot(cowrie, "cowrie") &
             noHoneypot(kippo, "kippo") & noHoneypot(sshesame, "sshesame") & noHoneypot(dionaea, "dionaea")):
         print("No standard honeypot machine configuration found.")
-
-
-def detectionMethod3():
-    print("\n#3: Check the networktraffic of the machine.")
-
 
 
 def noHoneypotService(output, strings, name):
@@ -134,9 +105,8 @@ def noHoneypotService(output, strings, name):
         return True
 
 
-
-def detectionMethod4():
-    print("\n#4: check the services of the machine.")
+def detectionMethod3():
+    print("\n#4: check if there are standard honeypot services on the machine.")
 
     # run service command
     command = subprocess.Popen(["ps", "aux"], stdout=subprocess.PIPE)
@@ -155,7 +125,7 @@ def detectionMethod4():
     if (noHoneypotService(content, mhn, "mhn") & noHoneypotService(content, tpot, "t-pot") &
             noHoneypotService(content, cowrie, "cowrie") & noHoneypotService(content, kippo, "kippo") &
             noHoneypotService(content, sshesame, "sshesame") & noHoneypotService(content, dionaea, "dionaea")):
-        print("No running honeypot service found.")
+        print("No standard running honeypot service found.")
 
     # print blank line
     print("")
@@ -166,8 +136,7 @@ def local():
 
     detectionMethod1() # detection of standard honeypot account configuration
     detectionMethod2() # detection of standard honeypot files and folders
-    detectionMethod3() # TODO check network traffic of the machine
-    detectionMethod4() # check services of machine
+    detectionMethod3() # check services of machine
 
 
 local()
