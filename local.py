@@ -7,7 +7,7 @@ import subprocess
 
 
 def detectionMethod1():
-    print("\n#1: Check if there are standard honeypot accounts on the machine.")
+    print("\n#1: Check if there are standard honeypot accounts on the machine:")
 
     # write the content of the /etc/passwd file to a variable
     if os.path.isdir('/etc/passwd') or os.path.exists('/etc/passwd'):
@@ -16,11 +16,11 @@ def detectionMethod1():
         file.close()
         # check if the variable contains a standard honeypot configuration
         if "kippo" in content:
-            print("A kippo useraccount detected")
+            print("A kippo useraccount found.")
         elif "cowrie" in content:
-            print("A cowrie useraccount detected")
+            print("A cowrie useraccount found.")
         elif "tsec" in content or "tpot" in content:
-            print("A t-pot useraccount detected")
+            print("A t-pot useraccount found.")
         # the other honeypots don't have a standard user account
         else:
             print("No standard honeypot account configuration found.")
@@ -38,7 +38,7 @@ def noHoneypot(number, name):
 
 
 def detectionMethod2():
-    print("\n#2: Check if there are standard honeypot files or folders on the machine.")
+    print("\n#2: Check if there are standard honeypot files or folders on the machine:")
 
     # declare variables
     cowrie = 0
@@ -85,7 +85,7 @@ def detectionMethod2():
                 if "tpot" in fileName:
                     tpot += 1
     except Exception as e:
-        print("The following error raise when trying to map the filesystem: " + str(e))
+        print("The following error raise when trying to map the filesystem:", str(e), ".")
 
     # if one of the variables > 10, a standard honeypot configuration is found
     if (noHoneypot(mhn, "mhn") & noHoneypot(tpot, "t-pot") & noHoneypot(cowrie, "cowrie") &
