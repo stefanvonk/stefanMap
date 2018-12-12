@@ -90,7 +90,7 @@ def detectionMethod2():
     # if one of the variables > 10, a standard honeypot configuration is found
     if (noHoneypot(mhn, "mhn") & noHoneypot(tpot, "t-pot") & noHoneypot(cowrie, "cowrie") &
             noHoneypot(kippo, "kippo") & noHoneypot(sshesame, "sshesame") & noHoneypot(dionaea, "dionaea")):
-        print("No standard honeypot machine configuration found.")
+        print("No standard honeypot filesystem configuration found.")
 
 
 def noHoneypotService(output, strings, name):

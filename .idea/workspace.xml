@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="update local">
+    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="Local final version fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/local.py" afterDir="false" />
     </list>
@@ -49,14 +49,14 @@
         <counts>
           <entry key="dummy" value="96" />
           <entry key="log" value="16" />
-          <entry key="py" value="27758" />
-          <entry key="txt" value="1265" />
+          <entry key="py" value="27769" />
+          <entry key="txt" value="1288" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="1381" />
-          <entry key="Python" value="27754" />
+          <entry key="PLAIN_TEXT" value="1404" />
+          <entry key="Python" value="27765" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -167,12 +167,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/local.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="108" column="65" selection-start-line="108" selection-start-column="65" selection-end-line="108" selection-end-column="65" />
+            <state relative-caret-position="279">
+              <caret line="83" column="32" lean-forward="true" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
               <folding>
                 <element signature="e#142#151#0" expanded="true" />
-                <marker date="1544623744958" expanded="true" signature="184:186" ph="..." />
-                <marker date="1544623744958" expanded="true" signature="3354:3355" ph="..." />
+                <marker date="1544624066147" expanded="true" signature="184:186" ph="..." />
+                <marker date="1544624066147" expanded="true" signature="3357:3358" ph="..." />
               </folding>
             </state>
           </provider>
@@ -490,20 +490,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540802019390</updated>
-    </task>
-    <task id="LOCAL-00025" summary="passive filled">
-      <created>1543846409454</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1543846409454</updated>
-    </task>
-    <task id="LOCAL-00026" summary="passive filled">
-      <created>1543847210075</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1543847210075</updated>
     </task>
     <task id="LOCAL-00027" summary="nmap fix">
       <created>1543847625051</created>
@@ -834,7 +820,21 @@
       <option name="project" value="LOCAL" />
       <updated>1544620933870</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Local final version">
+      <created>1544623768577</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1544623768578</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Local final version fix">
+      <created>1544623849011</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1544623849012</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TodoView">
@@ -883,8 +883,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="help() fix" />
-    <MESSAGE value="ssh fix" />
     <MESSAGE value="paramiko get hostname" />
     <MESSAGE value="hostname is sshesame" />
     <MESSAGE value="fix text" />
@@ -908,7 +906,9 @@
     <MESSAGE value="Total fix" />
     <MESSAGE value="Erase logfile" />
     <MESSAGE value="update local" />
-    <option name="LAST_COMMIT_MESSAGE" value="update local" />
+    <MESSAGE value="Local final version" />
+    <MESSAGE value="Local final version fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Local final version fix" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/example.log" />
@@ -1067,12 +1067,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/local.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="108" column="65" selection-start-line="108" selection-start-column="65" selection-end-line="108" selection-end-column="65" />
+        <state relative-caret-position="279">
+          <caret line="83" column="32" lean-forward="true" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
           <folding>
             <element signature="e#142#151#0" expanded="true" />
-            <marker date="1544623744958" expanded="true" signature="184:186" ph="..." />
-            <marker date="1544623744958" expanded="true" signature="3354:3355" ph="..." />
+            <marker date="1544624066147" expanded="true" signature="184:186" ph="..." />
+            <marker date="1544624066147" expanded="true" signature="3357:3358" ph="..." />
           </folding>
         </state>
       </provider>
