@@ -1,24 +1,10 @@
-import subprocess
-import logging
 import sys
-try:
-    print("Check if all dependencies are installed. Otherwise install required the dependencies.")
-    subprocess.Popen(["sudo", "pip3", "-y", "install", "paramiko"], stdout=subprocess.PIPE)
-    subprocess.Popen(["sudo", "pip3", "-y", "install", "getmac"], stdout=subprocess.PIPE)
-    subprocess.Popen(["sudo", "pip3", "-y", "install", "requests"], stdout=subprocess.PIPE)
-    subprocess.Popen(["sudo", "pip3", "-y", "install", "validators"], stdout=subprocess.PIPE)
-    subprocess.Popen(["sudo", "apt-get", "-y", "install", "ssh"], stdout=subprocess.PIPE)
-    subprocess.Popen(["sudo", "apt-get", "-y", "install", "nmap"], stdout=subprocess.PIPE)
-    subprocess.Popen(["sudo", "apt-get", "-y", "install", "arp-scan"], stdout=subprocess.PIPE)
-    subprocess.Popen(["sudo", "apt-get", "-y", "install", "tshark"], stdout=subprocess.PIPE)
-except Exception as e:
-    logging.warning("The following error raise when trying to install packages:", str(e))
-    print("The following error raise when trying to install packages:", str(e))
-    sys.exit(0)
+import subprocess
 import passive
 import active
 import fullNetworkScan
 import help
+import logging
 import ipaddress
 
 
@@ -99,22 +85,6 @@ def stefanMap():
 
     # append data to logfile
     logging.info("stefanMap started")
-
-    # checking if all dependencies are installed, if not than do an install
-    try:
-        print("Check if all dependencies are installed. Otherwise install required the dependencies.")
-        subprocess.Popen(["sudo", "pip3", "-y", "install", "paramiko"], stdout=subprocess.PIPE)
-        subprocess.Popen(["sudo", "pip3", "-y", "install", "getmac"], stdout=subprocess.PIPE)
-        subprocess.Popen(["sudo", "pip3", "-y", "install", "requests"], stdout=subprocess.PIPE)
-        subprocess.Popen(["sudo", "pip3", "-y", "install", "validators"], stdout=subprocess.PIPE)
-        subprocess.Popen(["sudo", "apt-get", "-y", "install", "ssh"], stdout=subprocess.PIPE)
-        subprocess.Popen(["sudo", "apt-get", "-y", "install", "nmap"], stdout=subprocess.PIPE)
-        subprocess.Popen(["sudo", "apt-get", "-y", "install", "arp-scan"], stdout=subprocess.PIPE)
-        subprocess.Popen(["sudo", "apt-get", "-y", "install", "tshark"], stdout=subprocess.PIPE)
-    except Exception as e:
-        logging.warning("The following error raise when trying to install packages:", str(e))
-        print("The following error raise when trying to install packages:", str(e))
-        sys.exit(0)
 
     # run an full network arp scan
     arpScan()
