@@ -1,4 +1,0 @@
-2018-12-11 11:19:19 INFO     stefanMap started
-2018-12-11 11:19:19 INFO     Start passive arp scan
-2018-12-11 11:19:19 WARNING  The following error raise when running arp-scan: [WinError 2] Het systeem kan het opgegeven bestand niet vinden
-2018-12-11 11:19:19 INFO     End passive arp scan
