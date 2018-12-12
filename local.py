@@ -16,11 +16,11 @@ def detectionMethod1():
         file.close()
         # check if the variable contains a standard honeypot configuration
         if "kippo" in content:
-            print("Kippo useraccount detected")
+            print("A kippo useraccount detected")
         elif "cowrie" in content:
-            print("Cowrie useraccount detected")
+            print("A cowrie useraccount detected")
         elif "tsec" in content or "tpot" in content:
-            print("t-pot useraccount detected")
+            print("A t-pot useraccount detected")
         # the other honeypots don't have a standard user account
         else:
             print("No standard honeypot account configuration found.")
