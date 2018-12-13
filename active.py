@@ -176,7 +176,7 @@ def detectionMethod6(ip):
             # establish a ssh connection
             client.connect(ip, 22, 'root', '123456')
             my_buffer, sys.stdout = sys.stdout, old_stdout
-            print(my_buffer.buffer)
+            print(my_buffer.buffer + "\n\n100")
 
             # check hostname of ssh-server
             sshesame = checkSshesame()
