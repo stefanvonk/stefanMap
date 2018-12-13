@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="detect macvendor fix">
+    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="dionaea detection fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/active.py" beforeDir="false" afterPath="$PROJECT_DIR$/active.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detectMACvendor.py" beforeDir="false" afterPath="$PROJECT_DIR$/detectMACvendor.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,14 +51,14 @@
         <counts>
           <entry key="dummy" value="96" />
           <entry key="log" value="16" />
-          <entry key="py" value="29132" />
-          <entry key="txt" value="1382" />
+          <entry key="py" value="29341" />
+          <entry key="txt" value="1407" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="1498" />
-          <entry key="Python" value="29128" />
+          <entry key="PLAIN_TEXT" value="1523" />
+          <entry key="Python" value="29337" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -67,7 +66,7 @@
           <entry key="log" value="8" />
           <entry key="md" value="1" />
           <entry key="nmap-secure-probes" value="1" />
-          <entry key="py" value="78" />
+          <entry key="py" value="79" />
           <entry key="txt" value="9" />
         </counts>
       </usages-collector>
@@ -75,7 +74,7 @@
         <counts>
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="21" />
-          <entry key="Python" value="75" />
+          <entry key="Python" value="76" />
         </counts>
       </usages-collector>
     </session>
@@ -88,7 +87,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stefanMap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-945">
+            <state relative-caret-position="-641">
               <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -103,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/honeytoken/honeytoken.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="391">
+              <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="30" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -112,7 +111,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/passive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state relative-caret-position="-272">
               <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
@@ -128,11 +127,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/active.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="223" column="13" selection-start-line="223" selection-start-column="13" selection-end-line="223" selection-end-column="13" />
+            <state relative-caret-position="34">
+              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
-                <marker date="1544695309706" expanded="true" signature="181:2769" ph="..." />
+                <marker date="1544696102814" expanded="true" signature="191:2779" ph="..." />
               </folding>
             </state>
           </provider>
@@ -468,27 +466,6 @@
       <option name="presentableId" value="Default" />
       <updated>1540802019390</updated>
     </task>
-    <task id="LOCAL-00038" summary="ssh server check added">
-      <created>1544103302521</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1544103302521</updated>
-    </task>
-    <task id="LOCAL-00039" summary="BadHostKeyException added">
-      <created>1544103752992</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1544103752992</updated>
-    </task>
-    <task id="LOCAL-00040" summary="remove exit() on BadHostKeyException">
-      <created>1544103884317</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1544103884317</updated>
-    </task>
     <task id="LOCAL-00041" summary="help() fix">
       <created>1544105089831</created>
       <option name="number" value="00041" />
@@ -811,7 +788,28 @@
       <option name="project" value="LOCAL" />
       <updated>1544695098586</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="dionaea detection test">
+      <created>1544695322236</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1544695322236</updated>
+    </task>
+    <task id="LOCAL-00088" summary="dionaea detection fix">
+      <created>1544695573379</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1544695573379</updated>
+    </task>
+    <task id="LOCAL-00089" summary="dionaea detection fix">
+      <created>1544695692548</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1544695692548</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TodoView">
@@ -827,7 +825,7 @@
     <frame x="-8" y="-1088" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.23027718" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.23027718" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50080776" side_tool="true" weight="0.17324094" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -860,8 +858,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="pyshark fix" />
-    <MESSAGE value="subprocess int-&gt;string fix" />
     <MESSAGE value="subprocess fix" />
     <MESSAGE value="passive fix" />
     <MESSAGE value="local read processes" />
@@ -885,7 +881,9 @@
     <MESSAGE value="fix" />
     <MESSAGE value="dionaea detection added" />
     <MESSAGE value="detect macvendor fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="detect macvendor fix" />
+    <MESSAGE value="dionaea detection test" />
+    <MESSAGE value="dionaea detection fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="dionaea detection fix" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/example.log" />
@@ -947,33 +945,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stefanMap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-945">
-          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1544628142139" expanded="true" signature="141:769" ph="..." />
-            <marker date="1544628142139" expanded="true" signature="766:769" ph="..." />
-            <marker date="1544628142139" expanded="true" signature="1983:2441" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/honeytoken/honeytoken.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/isPortOpen.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1004,9 +975,51 @@
     <entry file="file://$PROJECT_DIR$/stefanMap.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/detectMACvendor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stefanMap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-641">
+          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1544628142139" expanded="true" signature="141:769" ph="..." />
+            <marker date="1544628142139" expanded="true" signature="766:769" ph="..." />
+            <marker date="1544628142139" expanded="true" signature="1983:2441" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="111" column="44" lean-forward="true" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="68" />
+          <folding>
+            <element signature="e#142#151#0" expanded="true" />
+            <marker date="1544624699511" expanded="true" signature="184:186" ph="..." />
+            <marker date="1544624699511" expanded="true" signature="3363:3364" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/honeytoken/honeytoken.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="30" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/passive.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="-272">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
@@ -1018,23 +1031,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detectMACvendor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/active.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="223" column="13" selection-start-line="223" selection-start-column="13" selection-end-line="223" selection-end-column="13" />
+        <state relative-caret-position="34">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1544695309706" expanded="true" signature="181:2769" ph="..." />
+            <marker date="1544696102814" expanded="true" signature="191:2779" ph="..." />
           </folding>
         </state>
       </provider>

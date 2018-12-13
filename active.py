@@ -1,6 +1,6 @@
 import os
 import subprocess
-
+import sys
 import kippoDetect
 import detectKippoCowrie
 import isPortOpen
@@ -216,7 +216,23 @@ def detectionMethod7(ip):
     # try to connect to the ssl port of the machine and read the output
     try:
         logging.info("Try connection to the ssl port of the machine")
+
+        # create a buffer (with stdout) to print the output not to the commandline, but to a variable
+        class MyBuffer(object):
+            def __init__(self):
+                self.buffer = []
+
+            def write(self, *args, **kwargs):
+                self.buffer.append(args)
+
+        old_stdout = sys.stdout
+        sys.stdout = MyBuffer()
+
+        # execute the command in the buffer
+        # this command read the ssl certificate of the machine
         cmd = subprocess.check_output("openssl s_client -connect " + ip + ":443", shell=True)
+        my_buffer, sys.stdout = sys.stdout, old_stdout
+
         logging.info("Ssl connection established")
     except Exception as e:
         logging.warning("The following error raise when trying connect to ssl port:" + str(e))
