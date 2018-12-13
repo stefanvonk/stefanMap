@@ -162,27 +162,7 @@ def detectionMethod6(ip):
         logging.info("Try to connect ssh server on " + str(ip))
         # try to connect to ip:22
         try:
-            # create a buffer (with stdout) to print the results to a variable in stead of the console
-            class MyBuffer(object):
-                def __init__(self):
-                    self.buffer = []
-
-                def write(self, *args, **kwargs):
-                    self.buffer.append(args)
-
-                def flush(self):
-                    pass
-            # change stdout
-            old_stdout = sys.stdout
-            sys.stdout = MyBuffer()
-
-            # execute the peepdf library in the buffer
-            # establish a ssh connection
             client.connect(ip, 22, 'root', '123456')
-
-            # set buffer to variable my_buffer and rechange stdout
-            my_buffer, sys.stdout = sys.stdout, old_stdout
-
             # check hostname of ssh-server
             sshesame = checkSshesame()
             logging.info("Authentication root, 123456: accepted")
