@@ -7,7 +7,7 @@ import validators
 def macVendor(ip):
     # set api url
     url = "https://api.macvendors.com/"
-    vendor = "No results"
+    vendor = "Could not get"
 
     try:
         # get mac address from ip, via passive arp scanning (no network request)

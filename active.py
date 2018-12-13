@@ -221,6 +221,8 @@ def detectionMethod7(ip):
     except Exception as e:
         logging.warning("The following error raise when trying connect to ssl port:" + str(e))
 
+    print(cmd)
+
     # if the word dionaea is in the content of the output dionaeadetect = 1
     if "dionaea" in str(cmd):
         dionaeadetect = 1
