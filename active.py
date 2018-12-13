@@ -1,6 +1,5 @@
 import os
 import subprocess
-import sys
 import kippoDetect
 import detectKippoCowrie
 import isPortOpen
@@ -210,35 +209,24 @@ def detectionMethod7(ip):
     logging.info("Start dionaeaDetect")
 
     # set variables
-    cmd = ""
+    content = ""
     dionaeadetect = 0
 
     # try to connect to the ssl port of the machine and read the output
     try:
         logging.info("Try connection to the ssl port of the machine")
 
-        # create a buffer (with stdout) to print the output not to the commandline, but to a variable
-        class MyBuffer(object):
-            def __init__(self):
-                self.buffer = []
-
-            def write(self, *args, **kwargs):
-                self.buffer.append(args)
-
-        old_stdout = sys.stdout
-        sys.stdout = MyBuffer()
-
-        # execute the command in the buffer
-        # this command read the ssl certificate of the machine
-        cmd = subprocess.check_output("openssl s_client -connect " + ip + ":443", shell=True)
-        my_buffer, sys.stdout = sys.stdout, old_stdout
+        # execute command to get ssl certificate info
+        command = subprocess.Popen(["openssl", "s_client", "-connect", ip + ":443"], stdout=subprocess.PIPE)
+        output = command.stdout.read()
+        content = output.decode("utf-8")
 
         logging.info("Ssl connection established")
     except Exception as e:
         logging.warning("The following error raise when trying connect to ssl port:" + str(e))
 
     # if the string dionaea is in the content of the output dionaeadetect = 1
-    if "dionaea" in str(cmd):
+    if "dionaea" in str(content):
         dionaeadetect = 1
 
     print("\n#7: The possibility that this ip runs a dionaea honeypot:\n" + str(dionaeadetect) + "/1")
