@@ -201,7 +201,8 @@ def detectionMethod6(ip):
             # try to execute command
             try:
                 stdin, stdout, stderr = client.exec_command('ifconfig').decode("utf-8")
-                if stdout == "" or stdin == "" or stderr == "":
+                # if there is no output, commands cannot be execute on the ssh-server
+                if stdout == "" and stdin == "" and stderr == "":
                     logging.info('Commands execution not supported by this ssh server')
                     sshserver = 1
                 else:

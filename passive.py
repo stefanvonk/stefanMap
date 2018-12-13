@@ -60,7 +60,18 @@ def detectionMethod1(ip):
 
     try:
         # run tshark network sniff
-        subprocess.call(["sudo", "tshark", "-r", "networksniff.pcap", "-Y", "ip.src==" + ip])
+        command = subprocess.Popen(["sudo", "tshark", "-r", "networksniff.pcap", "-Y", "ip.src==" + ip], stdout=subprocess.PIPE)
+        output = command.stdout.read()
+        content = output.decode("utf-8")
+
+        # print content if there are outgoing network connections for ip
+        if str(ip) in content:
+            logging.info("Outgoing network connections for " + ip + " are printed")
+            print(content)
+        else:
+            logging.info("There are no outgoing network connections for " + ip)
+            print("There are no outgoing network connections for " + ip)
+
         logging.info("File networksniff.pcap analyzing 2 is done")
     except Exception as e:
         logging.warning("The following error raise when running tshark: " + str(e))

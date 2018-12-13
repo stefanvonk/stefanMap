@@ -15,7 +15,7 @@ def help():
     #print("sudo pip3 install getmac")
     #print("sudo pip3 install validators")
     #print("sudo apt-get install ssh")
-    print("sudo apt-get install nmap")
+    #print("sudo apt-get install nmap")
     #print("sudo apt-get install arp-scan")
     #print("sudo apt-get install tshark")
 
