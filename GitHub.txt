@@ -1,0 +1,19 @@
+Github commands for initiating, pushing and pulling
+
+Pushing
+----------
+git add .
+git commit -m "description"
+git push origin master
+
+
+Initiating
+----------
+git init
+git remote add origin https://github.com/stefanvonk/honey-detect.git
+
+
+Pulling
+----------
+(git reset --hard)
+git pull origin master

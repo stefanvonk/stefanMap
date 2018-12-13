@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="dionaea detection fix">
-      <change beforePath="$PROJECT_DIR$/../stefanMap/.idea/stefanMap.iml" beforeDir="false" />
+    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="Name fix">
+      <change afterPath="$PROJECT_DIR$/../stefanMap/tokens/tokens.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../stefanMap/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stefanMap/active.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/active.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stefanMap/honeytoken/honeytoken.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stefanMap/GitHub_commands.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/GitHub.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stefanMap/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,30 +53,32 @@
         <counts>
           <entry key="dummy" value="99" />
           <entry key="log" value="16" />
+          <entry key="md" value="1771" />
           <entry key="py" value="29690" />
-          <entry key="txt" value="1407" />
+          <entry key="txt" value="1518" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="1526" />
+          <entry key="Markdown" value="1771" />
+          <entry key="PLAIN_TEXT" value="1637" />
           <entry key="Python" value="29686" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="log" value="8" />
-          <entry key="md" value="1" />
+          <entry key="md" value="2" />
           <entry key="nmap-secure-probes" value="1" />
-          <entry key="py" value="84" />
-          <entry key="txt" value="10" />
+          <entry key="py" value="85" />
+          <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="22" />
-          <entry key="Python" value="81" />
+          <entry key="Markdown" value="2" />
+          <entry key="PLAIN_TEXT" value="23" />
+          <entry key="Python" value="82" />
         </counts>
       </usages-collector>
     </session>
@@ -101,11 +103,41 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../stefanMap/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="451">
+                <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../stefanMap/tokens/tokens.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../stefanMap/help.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../stefanMap/active.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="230" column="85" selection-start-line="230" selection-start-column="85" selection-end-line="230" selection-end-column="85" />
+            <state relative-caret-position="257">
+              <caret line="234" column="95" selection-start-line="234" selection-start-column="95" selection-end-line="234" selection-end-column="95" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <marker date="1544698237553" expanded="true" signature="180:2768" ph="..." />
@@ -136,10 +168,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../stefanMap/help.py">
+        <entry file="file://$PROJECT_DIR$/../stefanMap/GitHub.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="306">
+              <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -218,6 +250,8 @@
         <option value="$PROJECT_DIR$/active.py" />
         <option value="$PROJECT_DIR$/../stefanMap/tokens/tokens.py" />
         <option value="$PROJECT_DIR$/../stefanMap/active.py" />
+        <option value="$PROJECT_DIR$/../stefanMap/GitHub.txt" />
+        <option value="$PROJECT_DIR$/../stefanMap/README.md" />
       </list>
     </option>
   </component>
@@ -262,7 +296,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ifscp" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -452,13 +486,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540802019390</updated>
-    </task>
-    <task id="LOCAL-00044" summary="paramiko get hostname">
-      <created>1544109148652</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1544109148652</updated>
     </task>
     <task id="LOCAL-00045" summary="hostname is sshesame">
       <created>1544110104502</created>
@@ -796,7 +823,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544696955783</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="Name fix">
+      <created>1544698309390</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1544698309390</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TodoView">
@@ -810,6 +844,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-1088" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.23027718" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -847,7 +882,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="subprocess fix" />
     <MESSAGE value="passive fix" />
     <MESSAGE value="local read processes" />
     <MESSAGE value="local read processes fix" />
@@ -872,7 +906,8 @@
     <MESSAGE value="detect macvendor fix" />
     <MESSAGE value="dionaea detection test" />
     <MESSAGE value="dionaea detection fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="dionaea detection fix" />
+    <MESSAGE value="Name fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Name fix" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/example.log" />
@@ -913,14 +948,6 @@
           <folding>
             <element signature="e#234#244#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../stefanMap/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -966,23 +993,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../stefanMap/tokens/tokens.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../stefanMap/GitHub_commands.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../stefanMap/stefanMap.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../stefanMap/passive.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
@@ -1004,6 +1014,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../stefanMap/active.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="234" column="95" selection-start-line="234" selection-start-column="95" selection-end-line="234" selection-end-column="95" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1544698237553" expanded="true" signature="180:2768" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../stefanMap/stefanMap.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-641">
@@ -1017,6 +1038,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../stefanMap/stefanMap.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../stefanMap/GitHub.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../stefanMap/help.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1024,14 +1055,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../stefanMap/active.py">
+    <entry file="file://$PROJECT_DIR$/../stefanMap/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="451">
+            <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../stefanMap/tokens/tokens.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="230" column="85" selection-start-line="230" selection-start-column="85" selection-end-line="230" selection-end-column="85" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1544698237553" expanded="true" signature="180:2768" ph="..." />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
         </state>
       </provider>
     </entry>
