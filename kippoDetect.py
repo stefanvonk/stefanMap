@@ -1,8 +1,5 @@
 # This code is a modified version of a github library
-import socket, sys
-from colorama import init
-
-init(strip=not sys.stdout.isatty())  # strip colors if stdout is redirected
+import socket
 import isPortOpen
 import logging
 

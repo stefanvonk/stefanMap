@@ -12,9 +12,9 @@ def help():
     print("Run this tool as root!\n")
     print("For this python tool you must install the following dependencies:")
     print("sudo pip3 install paramiko")
-    print("sudo pip3 install getmac")
+    #print("sudo pip3 install getmac")
     print("sudo pip3 install requests") # whit linux this library is standard installed
-    print("sudo pip3 install validators")
+    #print("sudo pip3 install validators")
     print("sudo apt-get install ssh")
     print("sudo apt-get install nmap")
     print("sudo apt-get install arp-scan")
