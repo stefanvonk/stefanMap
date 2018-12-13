@@ -47,9 +47,15 @@ def detectionMethod1(ip):
           "IP address:\n")
 
     try:
-        # run tshark network sniff
-        subprocess.call(["sudo", "tshark", "-r", "networksniff.pcap", "-Y", "ip.src==" + ip + "/24", "-z",
-                         "ip_hosts,tree"])
+        # run tshark network sniff to variable content
+        command = subprocess.Popen(["sudo", "tshark", "-r", "networksniff.pcap", "-Y", "ip.src==" + ip + "/24", "-z",
+                         "ip_hosts,tree"], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+        output = command.stdout.read()
+        content = output.decode("utf-8")
+
+        # print output
+        print(content)
+
         logging.info("File networksniff.pcap analyzing 1 is done")
     except Exception as e:
         logging.warning("The following error raise when running tshark: " + str(e))
@@ -59,8 +65,9 @@ def detectionMethod1(ip):
     print("\n#1.1: Results of the outgoing connections of the entered IP address:\n")
 
     try:
-        # run tshark network sniff
-        command = subprocess.Popen(["sudo", "tshark", "-r", "networksniff.pcap", "-Y", "ip.src==" + ip], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        # run tshark network sniff to variable content
+        command = subprocess.Popen(["sudo", "tshark", "-r", "networksniff.pcap", "-Y", "ip.src==" + ip],
+                                   stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
         output = command.stdout.read()
         content = output.decode("utf-8")
 
