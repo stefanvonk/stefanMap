@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="network analyze stdout fix">
-      <change beforePath="$PROJECT_DIR$/../stefanMap/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stefanMap/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stefanMap/active.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/active.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stefanMap/detectKippoCowrie.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/detectKippoCowrie.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stefanMap/detectMACvendor.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/detectMACvendor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stefanMap/fullNetworkScan.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/fullNetworkScan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stefanMap/help.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/help.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stefanMap/isPortOpen.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/isPortOpen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stefanMap/kippoDetect.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/kippoDetect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stefanMap/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/local.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stefanMap/passive.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/passive.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stefanMap/stefanMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/stefanMap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stefanMap/tokens/tokens.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/tokens/tokens.py" afterDir="false" />
-    </list>
+    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="PEP 8 fix" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,13 +50,13 @@
           <entry key="log" value="16" />
           <entry key="md" value="1820" />
           <entry key="py" value="31032" />
-          <entry key="txt" value="1680" />
+          <entry key="txt" value="1690" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="1820" />
-          <entry key="PLAIN_TEXT" value="1902" />
+          <entry key="PLAIN_TEXT" value="1912" />
           <entry key="Python" value="31028" />
         </counts>
       </usages-collector>
@@ -141,8 +127,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../stefanMap/tokens/tokens.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+            <state relative-caret-position="512">
+              <caret line="40" column="63" lean-forward="true" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -548,13 +534,6 @@
       <option name="presentableId" value="Default" />
       <updated>1540802019390</updated>
     </task>
-    <task id="LOCAL-00062" summary="local.py fix">
-      <created>1544524164047</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1544524164047</updated>
-    </task>
     <task id="LOCAL-00063" summary="Delete print in local">
       <created>1544524285865</created>
       <option name="number" value="00063" />
@@ -891,7 +870,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544712156093</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="PEP 8 fix">
+      <created>1544714361040</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1544714361040</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TodoView">
@@ -910,7 +896,7 @@
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.23027718" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50080776" side_tool="true" weight="0.17324094" />
-      <window_info active="true" anchor="bottom" id="Inspection Results" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.29685807" />
@@ -944,7 +930,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="and -&gt; &amp; operator fix" />
     <MESSAGE value="local.py fix" />
     <MESSAGE value="Total fix" />
     <MESSAGE value="Erase logfile" />
@@ -969,7 +954,8 @@
     <MESSAGE value="ssl dionaea fix" />
     <MESSAGE value="network analyze fix" />
     <MESSAGE value="network analyze stdout fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="network analyze stdout fix" />
+    <MESSAGE value="PEP 8 fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="PEP 8 fix" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/example.log" />
@@ -1135,8 +1121,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../stefanMap/tokens/tokens.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+        <state relative-caret-position="512">
+          <caret line="40" column="63" lean-forward="true" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
