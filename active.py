@@ -194,6 +194,7 @@ def detectionMethod6(ip):
           "\n" + str(sshserver) + "/1")
     logging.info("Result check ssh server: " + str(sshserver) + "/1")
 
+    # check if the hostname of the machine is sshesame
     if sshesame:
         print("\n#6.1: The hostname of the ssh server is sshesame (a known honeypot):\n1/1")
         logging.info("Result of hostname ssh server is sshesame (a known honeypot): 1/1")
@@ -212,22 +213,24 @@ def detectionMethod7(ip):
     content = ""
     dionaeadetect = 0
 
-    # try to connect to the ssl port of the machine and read the output
-    try:
-        logging.info("Try connection to the ssl port of the machine")
+    # check if port 443 is open
+    if isPortOpen.isOpen(ip, 443):
+        # try to connect to the ssl port of the machine and read the output
+        try:
+            logging.info("Try connection to the ssl port of the machine")
 
-        # execute command to get ssl certificate info
-        command = subprocess.Popen(["openssl", "s_client", "-connect", ip + ":443"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-        output = command.stdout.read()
-        content = output.decode("utf-8")
+            # execute command to get ssl certificate info
+            command = subprocess.Popen(["openssl", "s_client", "-connect", ip + ":443"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+            output = command.stdout.read()
+            content = output.decode("utf-8")
 
-        logging.info("Ssl connection established")
-    except Exception as e:
-        logging.warning("The following error raise when trying connect to ssl port:" + str(e))
+            logging.info("Ssl connection established")
+        except Exception as e:
+            logging.warning("The following error raise when trying connect to ssl port:" + str(e))
 
-    # if the string dionaea is in the content of the output dionaeadetect = 1
-    if "dionaea" in str(content):
-        dionaeadetect = 1
+            # if the string dionaea is in the content of the output dionaeadetect = 1
+            if "dionaea" in str(content):
+                dionaeadetect = 1
 
     print("\n#7: The possibility that this ip runs a dionaea honeypot:\n" + str(dionaeadetect) + "/1")
     logging.info("Result dionaeaDetect: " + str(dionaeadetect) + "/1")
