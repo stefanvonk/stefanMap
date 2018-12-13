@@ -22,12 +22,15 @@ def pdf():
             def write(self, *args, **kwargs):
                 self.buffer.append(args)
 
+        # change stdout
         old_stdout = sys.stdout
         sys.stdout = MyBuffer()
 
         # execute the peepdf library in the buffer
         # whit this library read element 16 from the pdf file
         peepdf.PDFConsole.PDFConsole(pdf[1], VT_KEY).do_object(argv="16")
+
+        # set buffer to variable my_buffer and rechange stdout
         my_buffer, sys.stdout = sys.stdout, old_stdout
 
         # put the buffer to the variable content

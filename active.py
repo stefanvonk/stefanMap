@@ -172,12 +172,15 @@ def detectionMethod6(ip):
 
                 def flush(self):
                     pass
+            # change stdout
             old_stdout = sys.stdout
             sys.stdout = MyBuffer()
 
             # execute the peepdf library in the buffer
             # establish a ssh connection
             client.connect(ip, 22, 'root', '123456')
+
+            # set buffer to variable my_buffer and rechange stdout
             my_buffer, sys.stdout = sys.stdout, old_stdout
 
             # check hostname of ssh-server
