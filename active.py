@@ -1,5 +1,7 @@
 import os
 import subprocess
+import sys
+
 import kippoDetect
 import detectKippoCowrie
 import isPortOpen
@@ -8,40 +10,6 @@ import socket
 import urllib.request
 import paramiko
 import detectMACvendor
-
-
-def portScan(ip):
-    result = 0
-
-    def scan(port):
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.settimeout(0.5)
-        try:
-            # send data via socket to the port on ip
-            s.connect((ip, int(port)))
-            s.shutdown(2)
-            return 1
-        except Exception as e:
-            return 0
-
-    r = 1
-    for x in range(1, 1024):
-        result += scan(r)
-        r += 1
-    return result
-
-
-def checkSshesame():
-    if os.path.exists('stefanMap.log'):
-        fileHandle = open('stefanMap.log', "r")
-        lineList = fileHandle.readlines()
-        fileHandle.close()
-        if "sshesame" in str(lineList[len(lineList)-1]):
-            return True
-        else:
-            return False
-    else:
-        return False
 
 
 def detectionMethod1(ip):
@@ -102,7 +70,6 @@ def detectionMethod4(ip):
 
     # check if port 80 is open
     if isPortOpen.isOpen(ip, 80):
-        logging.info("Port 80 on " + str(ip) + " is open")
         # read content of webpage
         contentWebPage = str(urllib.request.urlopen("http://" + ip).read())
         # check if strings are in the content of the webpage
@@ -121,6 +88,27 @@ def detectionMethod4(ip):
     logging.info("Result mhn dashboard: " + str(mhndashboard) + "/1")
 
     logging.info("End check mhn daschboard")
+
+
+def portScan(ip):
+    result = 0
+
+    def scan(port):
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.settimeout(0.5)
+        try:
+            # send data via socket to the port on ip
+            s.connect((ip, int(port)))
+            s.shutdown(2)
+            return 1
+        except Exception as e:
+            return 0
+
+    r = 1
+    for x in range(1, 1024):
+        result += scan(r)
+        r += 1
+    return result
 
 
 def detectionMethod5(ip):
@@ -145,6 +133,21 @@ def detectionMethod5(ip):
     logging.info("End checkOpenPorst")
 
 
+def checkSshesame():
+    if os.path.exists('stefanMap.log'):
+        fileHandle = open('stefanMap.log', "r")
+        lineList = fileHandle.readlines()
+        fileHandle.close()
+        if "sshesame" in str(lineList[len(lineList)-1]) or "sshesame" in str(lineList[len(lineList)-2]) \
+                or "sshesame" in str(lineList[len(lineList)-3]) or "sshesame" in str(lineList[len(lineList)-4])\
+                or "sshesame" in str(lineList[len(lineList)-5]):
+            return True
+        else:
+            return False
+    else:
+        return False
+
+
 def detectionMethod6(ip):
     # check if ssh is running correctly
     logging.info("Start check ssh server")
@@ -159,14 +162,33 @@ def detectionMethod6(ip):
         logging.info("Try to connect ssh server on " + str(ip))
         # try to connect to ip:22
         try:
+            # create a buffer (with stdout) to print the results to a variable in stead of the console
+            class MyBuffer(object):
+                def __init__(self):
+                    self.buffer = []
+
+                def write(self, *args, **kwargs):
+                    self.buffer.append(args)
+            old_stdout = sys.stdout
+            sys.stdout = MyBuffer()
+
+            # execute the peepdf library in the buffer
+            # establish a ssh connection
             client.connect(ip, 22, 'root', '123456')
+            my_buffer, sys.stdout = sys.stdout, old_stdout
+
+            # check hostname of ssh-server
             sshesame = checkSshesame()
             logging.info("Authentication root, 123456: accepted")
             # try to execute command
             try:
-                stdin, stdout, stderr = client.exec_command('ifconfig')
-                logging.info('Commands execution is supported by this ssh server')
-                sshserver = 0
+                stdin, stdout, stderr = client.exec_command('ifconfig').decode("utf-8")
+                if stdout == "" or stdin == "" or stderr == "":
+                    logging.info('Commands execution not supported by this ssh server')
+                    sshserver = 1
+                else:
+                    logging.info('Commands execution is supported by this ssh server')
+                    sshserver = 0
             # if command execution failed
             except:
                 logging.info('Commands execution not supported by this ssh server')
