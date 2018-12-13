@@ -49,6 +49,7 @@ def detectionMethod1(ip):
     # kippoDetect, score 0 - 1
     logging.info("Start kippoDetect")
 
+    # try to detect kippo honeypot
     try:
         kippodetect = kippoDetect.checkKippo(ip)
     except Exception as e:
@@ -65,6 +66,7 @@ def detectionMethod2(ip):
     # detectKippoCowrie, score 0 - 3
     logging.info("Start detectKippoCowrie")
 
+    # try to detect kippo or cowrie
     try:
         detectkippocowrie = detectKippoCowrie.checkKippoCowrie(ip)
     except Exception as e:
@@ -81,6 +83,7 @@ def detectionMethod3(ip):
     # T-Pot dashboard - ip:64297, score 0 - 1
     logging.info("Start check T-Pot daschboard")
 
+    # check if port 64297 is open
     if isPortOpen.isOpen(ip, 64297):
         logging.info("There is probably an T-pot dashboard on this port")
         tpotdashboard = 1
@@ -98,9 +101,12 @@ def detectionMethod4(ip):
     # mhn dashboard - ip:80, score 0 - 1
     logging.info("Start check mhn daschboard")
 
+    # check if port 80 is open
     if isPortOpen.isOpen(ip, 80):
         logging.info("Port 80 on " + str(ip) + " is open")
+        # read content of webpage
         contentWebPage = str(urllib.request.urlopen("http://" + ip).read())
+        # check if strings are in the content of the webpage
         if "Modern Honeypot Network" in contentWebPage and "Modern Honeynet Framework" in contentWebPage \
                 and "threatstream.com" in contentWebPage:
             logging.info("This webpage is a dashboard from a mhn honeypot")
@@ -111,6 +117,7 @@ def detectionMethod4(ip):
     else:
         logging.info("There is probably no mhn dashboard on this port")
         mhndashboard = 0
+
     print("\n#4: The possibility that this ip runs a mhn honeynetwork with a dashboard:\n" + str(mhndashboard) + "/1")
     logging.info("Result mhn dashboard: " + str(mhndashboard) + "/1")
 
@@ -206,19 +213,19 @@ def detectionMethod7(ip):
     cmd = ""
     dionaeadetect = 0
 
+    # try to connect to the ssl port of the machine and read the output
     try:
         logging.info("Try connection to the ssl port of the machine")
         cmd = subprocess.check_output("openssl s_client -connect " + ip + ":443", shell=True)
-        logging.info("Ssl connection is succesfull made")
+        logging.info("Ssl connection established")
     except Exception as e:
         logging.warning("The following error raise when trying connect to ssl port:" + str(e))
 
-    print(cmd)
-
+    # if the word dionaea is in the content of the output dionaeadetect = 1
     if "dionaea" in str(cmd):
         dionaeadetect = 1
 
-    print("\n#1: The possibility that this ip runs a kippo honeypot:\n" + str(dionaeadetect) + "/1")
+    print("\n#7: The possibility that this ip runs a dionaea honeypot:\n" + str(dionaeadetect) + "/1")
     logging.info("Result dionaeaDetect: " + str(dionaeadetect) + "/1")
 
     logging.info("End dionaeaDetect")
@@ -246,7 +253,7 @@ def active(ip):
     detectionMethod4(ip) # mhn dashboard
     detectionMethod5(ip) # port scan
     detectionMethod6(ip) # check ssh server
-    detectionMethod7(ip) # TODO detect dionaea
+    detectionMethod7(ip) # detect dionaea
     detectionMethod8(ip) # virtual machine/MAC vendor
 
     print("\n\nFor details about the process of scanning, check the logfile 'stefanMap.log'.\n")
