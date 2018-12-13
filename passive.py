@@ -60,7 +60,7 @@ def detectionMethod1(ip):
 
     try:
         # run tshark network sniff
-        command = subprocess.Popen(["sudo", "tshark", "-r", "networksniff.pcap", "-Y", "ip.src==" + ip], stdout=subprocess.PIPE)
+        command = subprocess.Popen(["sudo", "tshark", "-r", "networksniff.pcap", "-Y", "ip.src==" + ip], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         output = command.stdout.read()
         content = output.decode("utf-8")
 
