@@ -4,7 +4,7 @@ import requests
 import validators
 
 
-def macVendor(ip):
+def mac_vendor(ip):
     # set api url
     url = "https://api.macvendors.com/"
     vendor = "Could not get"

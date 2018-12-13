@@ -1,7 +1,5 @@
 import os
 import subprocess
-import sys
-
 import kippoDetect
 import detectKippoCowrie
 import isPortOpen
@@ -12,7 +10,7 @@ import paramiko
 import detectMACvendor
 
 
-def detectionMethod1(ip):
+def detectionmethod1(ip):
     # kippoDetect, score 0 - 1
     logging.info("Start kippoDetect")
 
@@ -23,13 +21,13 @@ def detectionMethod1(ip):
 
     # try to detect kippo honeypot op port 22
     try:
-        kippodetect22 = kippoDetect.checkKippo(ip, 22)
+        kippodetect22 = kippoDetect.check_kippo(ip, 22)
     except Exception as e:
         logging.warning("The following error raise when running kippoDetect: " + str(e))
 
     # try to detect kippo honeypot op port 2222
     try:
-        kippodetect2222 = kippoDetect.checkKippo(ip, 2222)
+        kippodetect2222 = kippoDetect.check_kippo(ip, 2222)
     except Exception as e:
         logging.warning("The following error raise when running kippoDetect: " + str(e))
 
@@ -45,7 +43,7 @@ def detectionMethod1(ip):
     logging.info("End kippoDetect")
 
 
-def detectionMethod2(ip):
+def detectionmethod2(ip):
     # detectKippoCowrie, score 0 - 3
     logging.info("Start detectKippoCowrie")
 
@@ -56,13 +54,13 @@ def detectionMethod2(ip):
 
     # try to detect kippo or cowrie on port 22
     try:
-        detectkippocowrie22 = detectKippoCowrie.checkKippoCowrie(ip, 22)
+        detectkippocowrie22 = detectKippoCowrie.check_kippo_cowrie(ip, 22)
     except Exception as e:
         logging.warning("The following error raise when running detectKippoCowrie: " + str(e))
 
     # try to detect kippo or cowrie on port 2222
     try:
-        detectkippocowrie2222 = detectKippoCowrie.checkKippoCowrie(ip, 2222)
+        detectkippocowrie2222 = detectKippoCowrie.check_kippo_cowrie(ip, 2222)
     except Exception as e:
         logging.warning("The following error raise when running detectKippoCowrie: " + str(e))
 
@@ -78,12 +76,12 @@ def detectionMethod2(ip):
     logging.info("End detectKippoCowrie")
 
 
-def detectionMethod3(ip):
+def detectionmethod3(ip):
     # T-Pot dashboard - ip:64297, score 0 - 1
     logging.info("Start check T-Pot daschboard")
 
     # check if port 64297 is open
-    if isPortOpen.isOpen(ip, 64297):
+    if isPortOpen.is_open(ip, 64297):
         logging.info("There is probably an T-pot dashboard on this port")
         tpotdashboard = 1
     else:
@@ -93,20 +91,20 @@ def detectionMethod3(ip):
           "\n" + str(tpotdashboard) + "/1")
     logging.info("Result T-pot dashboard: " + str(tpotdashboard) + "/1")
 
-    logging.info("End check T-Pot daschboard")
+    logging.info("End check T-Pot dashboard")
 
 
-def detectionMethod4(ip):
+def detectionmethod4(ip):
     # mhn dashboard - ip:80, score 0 - 1
-    logging.info("Start check mhn daschboard")
+    logging.info("Start check mhn dashboard")
 
     # check if port 80 is open
-    if isPortOpen.isOpen(ip, 80):
+    if isPortOpen.is_open(ip, 80):
         # read content of webpage
-        contentWebPage = str(urllib.request.urlopen("http://" + ip).read())
+        content_web_page = str(urllib.request.urlopen("http://" + ip).read())
         # check if strings are in the content of the webpage
-        if "Modern Honeypot Network" in contentWebPage and "Modern Honeynet Framework" in contentWebPage \
-                and "threatstream.com" in contentWebPage:
+        if "Modern Honeypot Network" in content_web_page and "Modern Honeynet Framework" in content_web_page \
+                and "threatstream.com" in content_web_page:
             logging.info("This webpage is a dashboard from a mhn honeypot")
             mhndashboard = 1
         else:
@@ -122,7 +120,7 @@ def detectionMethod4(ip):
     logging.info("End check mhn daschboard")
 
 
-def portScan(ip):
+def port_scan(ip):
     result = 0
 
     def scan(port):
@@ -133,7 +131,7 @@ def portScan(ip):
             s.connect((ip, int(port)))
             s.shutdown(2)
             return 1
-        except Exception as e:
+        except:
             return 0
 
     r = 1
@@ -143,12 +141,12 @@ def portScan(ip):
     return result
 
 
-def detectionMethod5(ip):
+def detectionmethod5(ip):
     # check open ports, score 0 - 1
     logging.info("Start portScan")
 
     # if there are more than 10 ports open, it gives a true positive
-    openports = portScan(ip)
+    openports = port_scan(ip)
     if openports > 10:
         print("\n#5: The possibility that this ip runs a honeypot is on subject of more then 10 open ports:\n1/1")
         logging.info("Result portScan: 1/1")
@@ -162,17 +160,18 @@ def detectionMethod5(ip):
             "There are: " + str(openports) + " open ports and " + str(1023 - openports) +
             " closed ports on ip " + str(ip))
 
-    logging.info("End checkOpenPorst")
+    logging.info("End checkOpenPorts")
 
 
-def checkSshesame():
+def check_sshesame():
     if os.path.exists('stefanMap.log'):
-        fileHandle = open('stefanMap.log', "r")
-        lineList = fileHandle.readlines()
-        fileHandle.close()
-        if "sshesame" in str(lineList[len(lineList)-1]) or "sshesame" in str(lineList[len(lineList)-2]) \
-                or "sshesame" in str(lineList[len(lineList)-3]) or "sshesame" in str(lineList[len(lineList)-4])\
-                or "sshesame" in str(lineList[len(lineList)-5]):
+        file_handle = open('stefanMap.log', "r")
+        line_list = file_handle.readlines()
+        file_handle.close()
+        if "sshesame" in str(line_list[len(line_list) - 1]) or "sshesame" in str(line_list[len(line_list) - 2]) \
+                or "sshesame" in str(line_list[len(line_list) - 3])\
+                or "sshesame" in str(line_list[len(line_list) - 4]) \
+                or "sshesame" in str(line_list[len(line_list) - 5]):
             return True
         else:
             return False
@@ -180,13 +179,13 @@ def checkSshesame():
         return False
 
 
-def detectionMethod6(ip):
+def detectionmethod6(ip):
     # check if ssh is running correctly
     logging.info("Start check ssh server")
 
     sshesame = False
 
-    if isPortOpen.isOpen(ip, 22):
+    if isPortOpen.is_open(ip, 22):
         # set up ssh
         client = paramiko.SSHClient()
         client.load_system_host_keys()
@@ -196,7 +195,7 @@ def detectionMethod6(ip):
         try:
             client.connect(ip, 22, 'root', '123456')
             # check hostname of ssh-server
-            sshesame = checkSshesame()
+            sshesame = check_sshesame()
             logging.info("Authentication root, 123456: accepted")
             # try to execute command
             try:
@@ -214,17 +213,17 @@ def detectionMethod6(ip):
                 sshserver = 1
         # authentication error
         except paramiko.ssh_exception.AuthenticationException:
-            sshesame = checkSshesame()
+            sshesame = check_sshesame()
             logging.info("Authentication root, 123456: failure")
             sshserver = 0
         # BadHostKeyException
         except paramiko.ssh_exception.BadHostKeyException:
-            sshesame = checkSshesame()
+            sshesame = check_sshesame()
             logging.info("This server is probably a ssh honeypot witch does a man-in-the-middle attack")
             sshserver = 1
         # other exceptions
         except Exception as e:
-            sshesame = checkSshesame()
+            sshesame = check_sshesame()
             logging.warning("The following error raise when trying connect to ssh server:" + str(e))
             sshserver = 0
     else:
@@ -246,7 +245,7 @@ def detectionMethod6(ip):
     logging.info("End check ssh server")
 
 
-def detectionMethod7(ip):
+def detectionmethod7(ip):
     # dionaeaDetect, score 0 - 1
     logging.info("Start dionaeaDetect")
 
@@ -255,7 +254,7 @@ def detectionMethod7(ip):
     dionaeadetect = 0
 
     # check if port 443 is open
-    if isPortOpen.isOpen(ip, 443):
+    if isPortOpen.is_open(ip, 443):
         # try to connect to the ssl port of the machine and read the output
         try:
             logging.info("Try connection to the ssl port of the machine")
@@ -280,11 +279,11 @@ def detectionMethod7(ip):
     logging.info("End dionaeaDetect")
 
 
-def detectionMethod8(ip):
+def detectionmethod8(ip):
     # detect virtual machine vendor
     logging.info("Start check MAC address vendor")
 
-    vendor = detectMACvendor.macVendor(ip)
+    vendor = detectMACvendor.mac_vendor(ip)
 
     print("\n#8: The vendor of the MAC address of the machine is: " + vendor)
     print("Check manually whether this is virtual machine vendor.")
@@ -296,13 +295,13 @@ def detectionMethod8(ip):
 def active(ip):
     print("\nThe results of the active honeypot scan on " + ip + ":")
     # run all detection methods
-    detectionMethod1(ip) # kippoDetect
-    detectionMethod2(ip) # detectKippoCowrie
-    detectionMethod3(ip) # T-pot dashboard
-    detectionMethod4(ip) # mhn dashboard
-    detectionMethod5(ip) # port scan
-    detectionMethod6(ip) # check ssh server
-    detectionMethod7(ip) # detect dionaea
-    detectionMethod8(ip) # virtual machine/MAC vendor
+    detectionmethod1(ip)  # kippoDetect
+    detectionmethod2(ip)  # detectKippoCowrie
+    detectionmethod3(ip)  # T-pot dashboard
+    detectionmethod4(ip)  # mhn dashboard
+    detectionmethod5(ip)  # port scan
+    detectionmethod6(ip)  # check ssh server
+    detectionmethod7(ip)  # detect dionaea
+    detectionmethod8(ip)  # virtual machine/MAC vendor
 
     print("\n\nFor details about the process of scanning, check the logfile 'stefanMap.log'.\n")

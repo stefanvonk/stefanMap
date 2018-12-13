@@ -21,7 +21,6 @@ This script has been tested on Ubuntu 18.04 and runs on the following dependenci
 - Python libraries:
     - paramiko
     - getmac
-    - requests
     - validators
 - Ubuntu packages:
     - ssh
@@ -39,7 +38,7 @@ This honeypots are:
 6. Dionaea honeypot.
 
 ### 2. Honeytokens
-Another function of the tool is to detect wheter a file is a honeytoken or not.
+Another function of the tool is to detect whether a file is a honeytoken or not.
 The tool implements especially the detection of three types of honeytokens from
 the provider Canarytokens (https://canarytokens.org/generate).
 

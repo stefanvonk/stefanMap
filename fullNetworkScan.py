@@ -2,7 +2,7 @@ import subprocess
 import logging
 
 
-def scanNetwork(ip):
+def scan_network(ip):
     try:
         print("\nThe results of a full network scan on " + ip + "/24")
         # run nmap scan

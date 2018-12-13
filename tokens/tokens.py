@@ -10,9 +10,9 @@ def pdf():
     filename = input("Enter the path of the PDF file you will check (for example: D:/Stefan Vonk/Desktop/file.pdf): ")
     try:
         # parse the pdf file with the peepdf library
-        pdf = peepdf.PDFCore.PDFParser().parse(filename, forceMode=True)
+        pdf_file = peepdf.PDFCore.PDFParser().parse(filename, forceMode=True)
         # peepdf need this vtKey to execute his functions
-        VT_KEY = 'fc90df3f5ac749a94a94cb8bf87e05a681a2eb001aef34b6a0084b8c22c97a64'
+        vt_key = 'fc90df3f5ac749a94a94cb8bf87e05a681a2eb001aef34b6a0084b8c22c97a64'
 
         # create a buffer (with stdout) to put the output of the peepdf library in a variable
         class MyBuffer(object):
@@ -28,7 +28,7 @@ def pdf():
 
         # execute the peepdf library in the buffer
         # whit this library read element 16 from the pdf file
-        peepdf.PDFConsole.PDFConsole(pdf[1], VT_KEY).do_object(argv="16")
+        peepdf.PDFConsole.PDFConsole(pdf_file[1], vt_key).do_object(argv="16")
 
         # set buffer to variable my_buffer and rechange stdout
         my_buffer, sys.stdout = sys.stdout, old_stdout
@@ -52,8 +52,8 @@ def pdf():
 
 def folder():
     # analyze windows folder
-    foldername = input(
-        "Enter the path of the Windows Folder you will check (for example: D:/Stefan Vonk/Desktop/My Documents/): ")
+    foldername = input("Enter the path of the Windows Folder you will check "
+                       "(for example: D:/Stefan Vonk/Desktop/My Documents/): ")
     # desktop.ini contains the possible canarytokens url
     filename = "/desktop.ini"
     try:
@@ -62,7 +62,7 @@ def folder():
         content = str(file.read())
         file.close()
 
-        # check if part of canarytoken url is in the filecontent of desktop.ini
+        # check if part of canarytoken url is in the file content of desktop.ini
         if "%USERNAME%.%USERDOMAIN%.INI." in content and ".canarytokens.com" in content and "resource.dll" in content:
             print("\nThis Windows Folder is probably a Canarytoken.")
         else:
@@ -78,8 +78,8 @@ def folder():
 
 def word():
     # analyze microsoft word file
-    wordfile = input(
-        "Enter the path of the Microsoft Word file you will check (for example: D:/Stefan Vonk/Desktop/file.docx): ")
+    wordfile = input("Enter the path of the Microsoft Word file you will check"
+                     " (for example: D:/Stefan Vonk/Desktop/file.docx): ")
     try:
         # remove old unzip-docx directory
         if os.path.isdir("unzip-docx"):
@@ -89,16 +89,17 @@ def word():
         os.mkdir("unzip-docx")
 
         # unzip word file to unzip-docx directory
-        zip = zipfile.ZipFile(wordfile)
-        zip.extractall("unzip-docx")
+        zip_file = zipfile.ZipFile(wordfile)
+        zip_file.extractall("unzip-docx")
 
         # if exists, open file footer2.xml and read the content to a variable
         if os.path.exists('unzip-docx/word/footer2.xml'):
             file = open("unzip-docx/word/footer2.xml", 'r')
             content = file.read()
             file.close()
-            # check if part of canarytoken url is in the filecontent of footer2.xml
-            if 'INCLUDEPICTURE  "http://canarytokens.com/feedback/images/terms/' in content and '/contact.php" \d  \* MERGEFORMAT' in content:
+            # check if part of canarytoken url is in the file content of footer2.xml
+            if 'INCLUDEPICTURE  "http://canarytokens.com/feedback/images/terms/' in content \
+                    and '/contact.php" \d  \* MERGEFORMAT' in content:
                 print("\nThis Windows Folder is probably a Canarytoken.")
             else:
                 print("\nThis Windows Folder is probably not a Canarytoken.")

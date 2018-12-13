@@ -2,11 +2,10 @@
 # This script is standalone with no dependencies.
 
 import os
-import struct
 import subprocess
 
 
-def detectionMethod1():
+def detectionmethod1():
     print("\n#1: Check if there are standard honeypot accounts on the machine:")
 
     # write the content of the /etc/passwd file to a variable
@@ -16,11 +15,11 @@ def detectionMethod1():
         file.close()
         # check if the variable contains a standard honeypot configuration
         if "kippo" in content:
-            print("A kippo useraccount found.")
+            print("A kippo user account found.")
         elif "cowrie" in content:
-            print("A cowrie useraccount found.")
+            print("A cowrie user account found.")
         elif "tsec" in content or "tpot" in content:
-            print("A t-pot useraccount found.")
+            print("A t-pot user account found.")
         # the other honeypots don't have a standard user account
         else:
             print("No standard honeypot account configuration found.")
@@ -29,7 +28,7 @@ def detectionMethod1():
               " running a linux system.")
 
 
-def noHoneypot(number, name):
+def no_honeypot(number, name):
     if number > 10:
         print("A filesystem configuration with standard", name, "honeypot files and folders found.")
         return False
@@ -37,7 +36,7 @@ def noHoneypot(number, name):
         return True
 
 
-def detectionMethod2():
+def detectionmethod2():
     print("\n#2: Check if there are standard honeypot files or folders on the machine:")
 
     # declare variables
@@ -50,50 +49,50 @@ def detectionMethod2():
 
     try:
         # set root directory to check from
-        rootDir = '/'
+        root_dir = '/'
         # walk through each subdirectory
-        for dirName, subdirList, fileList in os.walk(rootDir):
-            folderName = '%s' % dirName
+        for dirName, subdirList, fileList in os.walk(root_dir):
+            folder_name = '%s' % dirName
             # check if the honeypot strings are in the folder names
-            if "cowrie" in folderName:
+            if "cowrie" in folder_name:
                 cowrie += 1
-            if "kippo" in folderName:
+            if "kippo" in folder_name:
                 kippo += 1
-            if "sshesame" in folderName:
+            if "sshesame" in folder_name:
                 sshesame += 1
-            if "mhn" in folderName:
+            if "mhn" in folder_name:
                 mhn += 1
-            if "dionaea" in folderName:
+            if "dionaea" in folder_name:
                 dionaea += 1
-            if "tpot" in folderName:
+            if "tpot" in folder_name:
                 tpot += 1
 
             # loop through each filename
             for fname in fileList:
-                fileName = fname
+                file_name = fname
                 # check if the honeypot strings are in the filenames
-                if "cowrie" in fileName:
+                if "cowrie" in file_name:
                     cowrie += 1
-                if "kippo" in fileName:
+                if "kippo" in file_name:
                     kippo += 1
-                if "sshesame" in fileName:
+                if "sshesame" in file_name:
                     sshesame += 1
-                if "mhn" in fileName:
+                if "mhn" in file_name:
                     mhn += 1
-                if "dionaea" in fileName:
+                if "dionaea" in file_name:
                     dionaea += 1
-                if "tpot" in fileName:
+                if "tpot" in file_name:
                     tpot += 1
     except Exception as e:
         print("The following error raise when trying to map the filesystem:", str(e), ".")
 
     # if one of the variables > 10, a standard honeypot configuration is found
-    if (noHoneypot(mhn, "mhn") & noHoneypot(tpot, "t-pot") & noHoneypot(cowrie, "cowrie") &
-            noHoneypot(kippo, "kippo") & noHoneypot(sshesame, "sshesame") & noHoneypot(dionaea, "dionaea")):
+    if (no_honeypot(mhn, "mhn") & no_honeypot(tpot, "t-pot") & no_honeypot(cowrie, "cowrie") &
+            no_honeypot(kippo, "kippo") & no_honeypot(sshesame, "sshesame") & no_honeypot(dionaea, "dionaea")):
         print("No standard honeypot filesystem configuration found.")
 
 
-def noHoneypotService(output, strings, name):
+def no_honeypot_service(output, strings, name):
     match = 0
     for string in strings:
         if string in output:
@@ -105,7 +104,7 @@ def noHoneypotService(output, strings, name):
         return True
 
 
-def detectionMethod3():
+def detectionmethod3():
     print("\n#3: Check if there are standard honeypot services on the machine:")
 
     # run service command
@@ -116,15 +115,16 @@ def detectionMethod3():
     # set search variables
     mhn = ["/mhn/env/bin/python", "/mhn/env/bin/celery", "/mhn/env/bin/uwsgi", "mhn.tasks", "--loglevel=", "mhn:mhn"]
     tpot = ["/opt/tpot", "/etc/tpot.yml", "suricata", "honeytrap", "p0f", "cowrie", "rdpy", "vnclowpot", "dionaea"]
-    cowrie = ["home/cowrie", "cowrie.python.logfile.logger", "cowrie-env/bin/python", "cowrie.pid", "cowrie-env/bin/twistd"]
+    cowrie = ["home/cowrie", "cowrie.python.logfile.logger", "cowrie-env/bin/python", "cowrie.pid",
+              "cowrie-env/bin/twistd"]
     kippo = ["home/kippo/", ".local/bin/twistd", "kippo.tac", "kippo.log", "kippo.pid"]
     sshesame = ["./sshesame"]
     dionaea = ["/opt/dionaea", "/bin/dionaea"]
 
     # if strings are in output, a honeypot service is found
-    if (noHoneypotService(content, mhn, "mhn") & noHoneypotService(content, tpot, "t-pot") &
-            noHoneypotService(content, cowrie, "cowrie") & noHoneypotService(content, kippo, "kippo") &
-            noHoneypotService(content, sshesame, "sshesame") & noHoneypotService(content, dionaea, "dionaea")):
+    if (no_honeypot_service(content, mhn, "mhn") & no_honeypot_service(content, tpot, "t-pot") &
+            no_honeypot_service(content, cowrie, "cowrie") & no_honeypot_service(content, kippo, "kippo") &
+            no_honeypot_service(content, sshesame, "sshesame") & no_honeypot_service(content, dionaea, "dionaea")):
         print("No standard running honeypot service found.")
 
     # print blank line
@@ -134,9 +134,9 @@ def detectionMethod3():
 def local():
     print("\nThe following actions are done by the script:")
 
-    detectionMethod1() # detection of standard honeypot account configuration
-    detectionMethod2() # detection of standard honeypot files and folders
-    detectionMethod3() # check services of machine
+    detectionmethod1()  # detection of standard honeypot account configuration
+    detectionmethod2()  # detection of standard honeypot files and folders
+    detectionmethod3()  # check services of machine
 
 
 local()

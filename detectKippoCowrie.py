@@ -33,12 +33,12 @@ VERBOSE = True
 ERROR = -1
 
 
-def getSSHBanner(bannerFromServer):
+def get_ssh_banner(banner_from_server):
     """
     This function receives the banner of the SSH server. It returns true if
     the server advertises itself as OpenSSH.
     """
-    banner = bannerFromServer.decode('utf-8').strip()
+    banner = banner_from_server.decode('utf-8').strip()
 
     if banner in DEFAULT_KIPPOCOWRIE_BANNERS:
         logging.info("[!] Heads up: the banner of this server is on Kippo/Cowrie's default list. May be promising...")
@@ -46,7 +46,7 @@ def getSSHBanner(bannerFromServer):
     return DEFAULT_BANNER in banner
 
 
-def connectToSSH(host, port):
+def connect_to_ssh(host, port):
     try:
         socket.setdefaulttimeout(5)
         sockfd = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -54,7 +54,7 @@ def connectToSSH(host, port):
 
         banner = sockfd.recv(1024)
 
-        if getSSHBanner(banner):
+        if get_ssh_banner(banner):
             if VERBOSE:
                 logging.info("[+] %s:%d advertised itself as OpenSSH. Continuing..." % (host, port))
             else:
@@ -68,7 +68,7 @@ def connectToSSH(host, port):
     return sockfd
 
 
-def probeBadVersion(sockfd):
+def probe_bad_version(sockfd):
     try:
         sockfd.sendall('SSH-1337\n'.encode('utf-8'))
     except Exception as err:
@@ -90,7 +90,7 @@ def probeBadVersion(sockfd):
 
 
 # this probe works against Cowrie, but also some misconfigured versions of OpenSSH 5.3
-def probeSpacerPacketCorrupt(sockfd):
+def probe_spacer_packet_corrupt(sockfd):
     try:
         sockfd.sendall("SSH-2.0-OpenSSH\n\n\n\n\n\n\n\n\n\n".encode('utf-8'))
     except Exception as err:
@@ -101,13 +101,14 @@ def probeSpacerPacketCorrupt(sockfd):
 
     if b"corrupt" in response or b"mismatch" in response:
         if VERBOSE:
-            logging.info("[*] Got 'packet corrupt' or 'protocol mismatch' in response of probe #2. Might be a honeypot!")
+            logging.info("[*] Got 'packet corrupt' or 'protocol mismatch' in response of probe #2. "
+                         "Might be a honeypot!")
             return True
         else:
             return False
 
 
-def probeDoubleBanner(sockfd):
+def probe_double_banner(sockfd):
     try:
         sockfd.sendall("SSH-2.0-OpenSSH_6.0p1 Debian-4+deb7u2\nSSH-2.0-OpenSSH_6.0p1 Debian-4+deb7u2\n".encode('utf-8'))
     except Exception as err:
@@ -118,40 +119,41 @@ def probeDoubleBanner(sockfd):
 
     if b"corrupt" in response or b"mismatch" in response:
         if VERBOSE:
-            logging.info("[*] Got 'packet corrupt' or 'protocol mismatch' in response of probe #3. Might be a honeypot!")
+            logging.info("[*] Got 'packet corrupt' or 'protocol mismatch' in response of probe #3. "
+                         "Might be a honeypot!")
         return True
     else:
         return False
 
 
-def detectKippoCowrie(host, port):
+def detect_kippo_cowrie(host, port):
     score = 0
 
     logging.info("[+] Detecting Kippo/Cowrie technique #1 - bad version")
-    sockfd = connectToSSH(host, port)
+    sockfd = connect_to_ssh(host, port)
 
     if sockfd:
-        if probeBadVersion(sockfd):
+        if probe_bad_version(sockfd):
             score += 1
     else:
         logging.info("Socket error in probe #1")
         sys.exit(ERROR)
 
     logging.info("[+] Detecting Kippo/Cowrie technique #2 - spacer")
-    sockfd = connectToSSH(host, port)
+    sockfd = connect_to_ssh(host, port)
 
     if sockfd:
-        if probeSpacerPacketCorrupt(sockfd):
+        if probe_spacer_packet_corrupt(sockfd):
             score += 1
     else:
         logging.info("Socket error in probe #2")
         sys.exit(ERROR)
 
     logging.info("[+] Detecting Kippo/Cowrie technique #3 - double banner")
-    sockfd = connectToSSH(host, port)
+    sockfd = connect_to_ssh(host, port)
 
     if sockfd:
-        if probeDoubleBanner(sockfd):
+        if probe_double_banner(sockfd):
             score += 1
     else:
         logging.info("Socket error in probe #3")
@@ -160,8 +162,8 @@ def detectKippoCowrie(host, port):
     return score
 
 
-def checkKippoCowrie(ip, port):
-    if isPortOpen.isOpen(ip, port):
-        return detectKippoCowrie(ip, port)
+def check_kippo_cowrie(ip, port):
+    if isPortOpen.is_open(ip, port):
+        return detect_kippo_cowrie(ip, port)
     else:
         return 0
