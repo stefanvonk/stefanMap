@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="kippo and kippocowrie fix port 2222">
-      <change beforePath="$PROJECT_DIR$/../stefanMap/detectKippoCowrie.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/detectKippoCowrie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stefanMap/active.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/active.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +51,7 @@
           <entry key="dummy" value="99" />
           <entry key="log" value="16" />
           <entry key="md" value="1819" />
-          <entry key="py" value="30391" />
+          <entry key="py" value="30401" />
           <entry key="txt" value="1630" />
         </counts>
       </usages-collector>
@@ -59,7 +59,7 @@
         <counts>
           <entry key="Markdown" value="1819" />
           <entry key="PLAIN_TEXT" value="1749" />
-          <entry key="Python" value="30387" />
+          <entry key="Python" value="30397" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -121,24 +121,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../stefanMap/active.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="66" column="29" lean-forward="true" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+            <state relative-caret-position="629">
+              <caret line="61" column="76" lean-forward="true" selection-start-line="61" selection-start-column="76" selection-end-line="61" selection-end-column="76" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1544709070007" expanded="true" signature="192:2833" ph="..." />
+                <marker date="1544709333907" expanded="true" signature="192:2843" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../stefanMap/detectKippoCowrie.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="164" column="42" lean-forward="true" selection-start-line="164" selection-start-column="42" selection-end-line="164" selection-end-column="42" />
+            <state relative-caret-position="668">
+              <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
               <folding>
                 <element signature="e#234#244#0" expanded="true" />
               </folding>
@@ -249,8 +249,8 @@
         <option value="$PROJECT_DIR$/../stefanMap/help.py" />
         <option value="$PROJECT_DIR$/../stefanMap/tokens/tokens.py" />
         <option value="$PROJECT_DIR$/../stefanMap/kippoDetect.py" />
-        <option value="$PROJECT_DIR$/../stefanMap/active.py" />
         <option value="$PROJECT_DIR$/../stefanMap/detectKippoCowrie.py" />
+        <option value="$PROJECT_DIR$/../stefanMap/active.py" />
       </list>
     </option>
   </component>
@@ -485,13 +485,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540802019390</updated>
-    </task>
-    <task id="LOCAL-00055" summary="subprocess int-&gt;string fix">
-      <created>1544454025955</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1544454025955</updated>
     </task>
     <task id="LOCAL-00056" summary="subprocess fix">
       <created>1544454663189</created>
@@ -829,7 +822,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544709093769</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="kippo and kippocowrie fix port 2222">
+      <created>1544709207096</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1544709207096</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1030,12 +1030,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../stefanMap/kippoDetect.py">
+    <entry file="file://$PROJECT_DIR$/../stefanMap/detectKippoCowrie.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        <state relative-caret-position="668">
+          <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
           <folding>
-            <element signature="e#54#67#0" expanded="true" />
+            <element signature="e#234#244#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1053,23 +1053,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../stefanMap/active.py">
+    <entry file="file://$PROJECT_DIR$/../stefanMap/kippoDetect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="66" column="29" lean-forward="true" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+        <state relative-caret-position="272">
+          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1544709070007" expanded="true" signature="192:2833" ph="..." />
+            <element signature="e#54#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../stefanMap/detectKippoCowrie.py">
+    <entry file="file://$PROJECT_DIR$/../stefanMap/active.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="164" column="42" lean-forward="true" selection-start-line="164" selection-start-column="42" selection-end-line="164" selection-end-column="42" />
+        <state relative-caret-position="629">
+          <caret line="61" column="76" lean-forward="true" selection-start-line="61" selection-start-column="76" selection-end-line="61" selection-end-column="76" />
           <folding>
-            <element signature="e#234#244#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1544709333907" expanded="true" signature="192:2843" ph="..." />
           </folding>
         </state>
       </provider>

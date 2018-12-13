@@ -53,13 +53,13 @@ def detectionMethod2(ip):
 
     # try to detect kippo or cowrie on port 22
     try:
-        detectkippocowrie22 = detectKippoCowrie.checkKippoCowrie(ip)
+        detectkippocowrie22 = detectKippoCowrie.checkKippoCowrie(ip, 22)
     except Exception as e:
         logging.warning("The following error raise when running detectKippoCowrie: " + str(e))
 
     # try to detect kippo or cowrie on port 2222
     try:
-        detectkippocowrie2222 = detectKippoCowrie.checkKippoCowrie(ip)
+        detectkippocowrie2222 = detectKippoCowrie.checkKippoCowrie(ip, 2222)
     except Exception as e:
         logging.warning("The following error raise when running detectKippoCowrie: " + str(e))
 
