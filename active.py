@@ -217,7 +217,7 @@ def detectionMethod7(ip):
         logging.info("Try connection to the ssl port of the machine")
 
         # execute command to get ssl certificate info
-        command = subprocess.Popen(["openssl", "s_client", "-connect", ip + ":443"], stdout=subprocess.PIPE)
+        command = subprocess.Popen(["openssl", "s_client", "-connect", ip + ":443"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         output = command.stdout.read()
         content = output.decode("utf-8")
 
