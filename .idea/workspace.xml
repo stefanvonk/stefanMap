@@ -52,7 +52,7 @@
           <entry key="dummy" value="99" />
           <entry key="log" value="16" />
           <entry key="md" value="1819" />
-          <entry key="py" value="30498" />
+          <entry key="py" value="30525" />
           <entry key="txt" value="1630" />
         </counts>
       </usages-collector>
@@ -60,7 +60,7 @@
         <counts>
           <entry key="Markdown" value="1819" />
           <entry key="PLAIN_TEXT" value="1749" />
-          <entry key="Python" value="30494" />
+          <entry key="Python" value="30521" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -125,11 +125,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../stefanMap/active.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+            <state relative-caret-position="408">
+              <caret line="264" column="44" selection-start-line="264" selection-start-column="44" selection-end-line="264" selection-end-column="44" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1544709758951" expanded="true" signature="192:2952" ph="..." />
+                <marker date="1544710472787" expanded="true" signature="192:2981" ph="..." />
               </folding>
             </state>
           </provider>
@@ -487,13 +487,6 @@
       <option name="presentableId" value="Default" />
       <updated>1540802019390</updated>
     </task>
-    <task id="LOCAL-00057" summary="subprocess fix">
-      <created>1544454835886</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1544454835886</updated>
-    </task>
     <task id="LOCAL-00058" summary="passive fix">
       <created>1544455463591</created>
       <option name="number" value="00058" />
@@ -830,7 +823,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544709340476</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="kippo and kippocowrie fix port 2222">
+      <created>1544709785838</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1544709785838</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1066,11 +1066,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../stefanMap/active.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+        <state relative-caret-position="408">
+          <caret line="264" column="44" selection-start-line="264" selection-start-column="44" selection-end-line="264" selection-end-column="44" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1544709758951" expanded="true" signature="192:2952" ph="..." />
+            <marker date="1544710472787" expanded="true" signature="192:2981" ph="..." />
           </folding>
         </state>
       </provider>

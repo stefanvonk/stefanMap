@@ -34,7 +34,9 @@ def detectionMethod1(ip):
         logging.warning("The following error raise when running kippoDetect: " + str(e))
 
     # check results
-    if kippodetect22 > 0 or kippodetect2222 > 0:
+    if kippodetect2222 > 0:
+        kippodetect = 1
+    if kippodetect22 > 0:
         kippodetect = 1
 
     print("\n#1: The possibility that this ip runs a kippo honeypot:\n" + str(kippodetect) + "/1")
@@ -266,9 +268,9 @@ def detectionMethod7(ip):
         except Exception as e:
             logging.warning("The following error raise when trying connect to ssl port:" + str(e))
 
-            # if the string dionaea is in the content of the output dionaeadetect = 1
-            if "dionaea" in str(content):
-                dionaeadetect = 1
+        # if the string dionaea is in the content of the output dionaeadetect = 1
+        if "dionaea" in str(content):
+            dionaeadetect = 1
 
     print("\n#7: The possibility that this ip runs a dionaea honeypot:\n" + str(dionaeadetect) + "/1")
     logging.info("Result dionaeaDetect: " + str(dionaeadetect) + "/1")
