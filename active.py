@@ -216,7 +216,7 @@ def detectionMethod7(ip):
     # try to connect to the ssl port of the machine and read the output
     try:
         logging.info("Try connection to the ssl port of the machine")
-        cmd = subprocess.call("openssl s_client -connect " + ip + ":443", shell=True, stdout=subprocess.PIPE)
+        cmd = subprocess.check_output("openssl s_client -connect " + ip + ":443", shell=True)
         logging.info("Ssl connection established")
     except Exception as e:
         logging.warning("The following error raise when trying connect to ssl port:" + str(e))
