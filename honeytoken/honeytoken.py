@@ -4,8 +4,9 @@ import zipfile
 import os
 import shutil
 
-# analyse pdf file
+
 def pdf():
+    # analyze pdf file
     filename = input("Enter the path of the PDF file you will check (for example: D:/Stefan Vonk/Desktop/file.pdf): ")
     try:
         # parse the pdf file with the peepdf library
@@ -25,13 +26,14 @@ def pdf():
         sys.stdout = MyBuffer()
 
         # execute the peepdf library in the buffer
+        # whit this library read element 16 from the pdf file
         peepdf.PDFConsole.PDFConsole(pdf[1], VT_KEY).do_object(argv="16")
         my_buffer, sys.stdout = sys.stdout, old_stdout
 
         # put the buffer to the variable content
         content = str(my_buffer.buffer)
 
-        # check if part of canarytoken url is in the filecontent
+        # check if part of canarytoken url is in the content of element 16 of the pdf
         if "/URI http://" in content and ".canarytokens.net/" in content and "/S /URI" in content:
             print("\nThis PDF file is probably a Canarytoken.")
         else:
@@ -41,9 +43,12 @@ def pdf():
     except Exception as e:
         print("\n" + str(e))
 
-# analyse windows folder
+
 def folder():
-    foldername = input("Enter the path of the Windows Folder you will check (for example: D:/Stefan Vonk/Desktop/My Documents/): ")
+    # analyze windows folder
+    foldername = input(
+        "Enter the path of the Windows Folder you will check (for example: D:/Stefan Vonk/Desktop/My Documents/): ")
+    # desktop.ini contains the possible canarytokens url
     filename = "/desktop.ini"
     try:
         # open file and read the content to variable
@@ -51,7 +56,7 @@ def folder():
         content = str(file.read())
         file.close()
 
-        # check if part of canarytoken url is in the filecontent
+        # check if part of canarytoken url is in the filecontent of desktop.ini
         if "%USERNAME%.%USERDOMAIN%.INI." in content and ".canarytokens.com" in content and "resource.dll" in content:
             print("\nThis Windows Folder is probably a Canarytoken.")
         else:
@@ -61,9 +66,11 @@ def folder():
     except Exception as e:
         print("\n" + str(e))
 
-# analyse microsoft word file
+
 def word():
-    wordfile = input("Enter the path of the Microsoft Word file you will check (for example: D:/Stefan Vonk/Desktop/file.docx): ")
+    # analyze microsoft word file
+    wordfile = input(
+        "Enter the path of the Microsoft Word file you will check (for example: D:/Stefan Vonk/Desktop/file.docx): ")
     try:
         # remove old unzip-docx directory
         if os.path.isdir("unzip-docx"):
@@ -76,12 +83,12 @@ def word():
         zip = zipfile.ZipFile(wordfile)
         zip.extractall("unzip-docx")
 
-        # if exists, open file footer3.xml and read the content to a variable
+        # if exists, open file footer2.xml and read the content to a variable
         if os.path.exists('unzip-docx/word/footer2.xml'):
             file = open("unzip-docx/word/footer2.xml", 'r')
             content = file.read()
             file.close()
-            # check if part of canarytoken url is in the filecontent
+            # check if part of canarytoken url is in the filecontent of footer2.xml
             if 'INCLUDEPICTURE  "http://canarytokens.com/feedback/images/terms/' in content and '/contact.php" \d  \* MERGEFORMAT' in content:
                 print("\nThis Windows Folder is probably a Canarytoken.")
             else:
@@ -93,11 +100,12 @@ def word():
     except Exception as e:
         print("\n" + str(e))
 
-# main function
+
 def honeytoken():
+    # main function
     print("Hello, this is a proof of concept to detect honeytokens. Welcome! This script is created by Stefan Vonk, "
-          "for purpose of analyse whether files or directories are canarytokens or not.\n")
-    print("Choose the sort of token you want to analyse:")
+          "for purpose of analyze whether files or directories are canarytokens or not.\n")
+    print("Choose the sort of token you want to analyze:")
 
     choise = input("a    : PDF file\nb    : Windows Folder\nc    : Microsoft Word Document\n\nMake your choice: ")
 
@@ -108,8 +116,9 @@ def honeytoken():
     elif choise == "c":
         word()
     else:
-       print("you have entered a wrong input.\n")
-       honeytoken()
+        print("you have entered a wrong input.\n")
+        honeytoken()
+
 
 # execute main function
 honeytoken()

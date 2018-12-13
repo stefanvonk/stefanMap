@@ -1,4 +1,6 @@
 import os
+import subprocess
+
 import kippoDetect
 import detectKippoCowrie
 import isPortOpen
@@ -197,8 +199,29 @@ def detectionMethod6(ip):
 
 
 def detectionMethod7(ip):
-    # detect dionaea
-    return
+    # dionaeaDetect, score 0 - 1
+    logging.info("Start dionaeaDetect")
+
+    # set variables
+    cmd = ""
+    dionaeadetect = 0
+
+    try:
+        logging.info("Try connection to the ssl port of the machine")
+        cmd = subprocess.check_output("openssl s_client -connect " + ip + ":443", shell=True)
+        logging.info("Ssl connection is succesfull made")
+    except Exception as e:
+        logging.warning("The following error raise when trying connect to ssl port:" + str(e))
+
+    print(cmd)
+
+    if "dionaea" in str(cmd):
+        dionaeadetect = 1
+
+    print("\n#1: The possibility that this ip runs a kippo honeypot:\n" + str(dionaeadetect) + "/1")
+    logging.info("Result dionaeaDetect: " + str(dionaeadetect) + "/1")
+
+    logging.info("End dionaeaDetect")
 
 
 def detectionMethod8(ip):
