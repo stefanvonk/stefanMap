@@ -160,8 +160,8 @@ def detectKippoCowrie(host, port):
     return score
 
 
-def checkKippoCowrie(ip):
-    if isPortOpen.isOpen(ip, 22):
-        return detectKippoCowrie(ip, 22)
+def checkKippoCowrie(ip, port):
+    if isPortOpen.isOpen(ip, port):
+        return detectKippoCowrie(ip, port)
     else:
         return 0

@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="ssh fix">
-      <change beforePath="$PROJECT_DIR$/../stefanMap/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stefanMap/active.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/active.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stefanMap/kippoDetect.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/kippoDetect.py" afterDir="false" />
+    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="kippo and kippocowrie fix port 2222">
+      <change beforePath="$PROJECT_DIR$/../stefanMap/detectKippoCowrie.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/detectKippoCowrie.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,15 +51,15 @@
           <entry key="dummy" value="99" />
           <entry key="log" value="16" />
           <entry key="md" value="1819" />
-          <entry key="py" value="30376" />
-          <entry key="txt" value="1590" />
+          <entry key="py" value="30391" />
+          <entry key="txt" value="1630" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="1819" />
-          <entry key="PLAIN_TEXT" value="1709" />
-          <entry key="Python" value="30372" />
+          <entry key="PLAIN_TEXT" value="1749" />
+          <entry key="Python" value="30387" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -69,7 +67,7 @@
           <entry key="log" value="8" />
           <entry key="md" value="2" />
           <entry key="nmap-secure-probes" value="1" />
-          <entry key="py" value="89" />
+          <entry key="py" value="90" />
           <entry key="txt" value="11" />
         </counts>
       </usages-collector>
@@ -77,7 +75,7 @@
         <counts>
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="23" />
-          <entry key="Python" value="86" />
+          <entry key="Python" value="87" />
         </counts>
       </usages-collector>
     </session>
@@ -123,7 +121,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../stefanMap/active.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="986">
@@ -131,6 +129,18 @@
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <marker date="1544709070007" expanded="true" signature="192:2833" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../stefanMap/detectKippoCowrie.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="736">
+              <caret line="164" column="42" lean-forward="true" selection-start-line="164" selection-start-column="42" selection-end-line="164" selection-end-column="42" />
+              <folding>
+                <element signature="e#234#244#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -240,6 +250,7 @@
         <option value="$PROJECT_DIR$/../stefanMap/tokens/tokens.py" />
         <option value="$PROJECT_DIR$/../stefanMap/kippoDetect.py" />
         <option value="$PROJECT_DIR$/../stefanMap/active.py" />
+        <option value="$PROJECT_DIR$/../stefanMap/detectKippoCowrie.py" />
       </list>
     </option>
   </component>
@@ -474,13 +485,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540802019390</updated>
-    </task>
-    <task id="LOCAL-00054" summary="subprocess int-&gt;string fix">
-      <created>1544453535412</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1544453535412</updated>
     </task>
     <task id="LOCAL-00055" summary="subprocess int-&gt;string fix">
       <created>1544454025955</created>
@@ -818,7 +822,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544707924964</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="kippo and kippocowrie fix port 2222">
+      <created>1544709093769</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1544709093769</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TodoView">
@@ -870,7 +881,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Delete print in local" />
     <MESSAGE value="Text fixes and added commands in local.py" />
     <MESSAGE value="Text fixes" />
     <MESSAGE value="rootDir fix" />
@@ -895,7 +905,8 @@
     <MESSAGE value="delete __pycache__" />
     <MESSAGE value="kippodetect remove dependencies" />
     <MESSAGE value="ssh fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="ssh fix" />
+    <MESSAGE value="kippo and kippocowrie fix port 2222" />
+    <option name="LAST_COMMIT_MESSAGE" value="kippo and kippocowrie fix port 2222" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/example.log" />
@@ -929,16 +940,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file://$PROJECT_DIR$/detect scripts/honeybee-master/honeybee-master/nmap-secure-probes" />
-    <entry file="file://$PROJECT_DIR$/../stefanMap/detectKippoCowrie.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="80" column="37" lean-forward="true" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
-          <folding>
-            <element signature="e#234#244#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../stefanMap/fullNetworkScan.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1059,6 +1060,16 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <marker date="1544709070007" expanded="true" signature="192:2833" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../stefanMap/detectKippoCowrie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="164" column="42" lean-forward="true" selection-start-line="164" selection-start-column="42" selection-end-line="164" selection-end-column="42" />
+          <folding>
+            <element signature="e#234#244#0" expanded="true" />
           </folding>
         </state>
       </provider>
