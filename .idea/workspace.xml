@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="kippodetect remove dependencies">
+    <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="ssh fix">
       <change beforePath="$PROJECT_DIR$/../stefanMap/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../stefanMap/active.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/active.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stefanMap/help.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/help.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,15 +52,15 @@
           <entry key="dummy" value="99" />
           <entry key="log" value="16" />
           <entry key="md" value="1819" />
-          <entry key="py" value="30004" />
-          <entry key="txt" value="1583" />
+          <entry key="py" value="30022" />
+          <entry key="txt" value="1590" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="1819" />
-          <entry key="PLAIN_TEXT" value="1702" />
-          <entry key="Python" value="30000" />
+          <entry key="PLAIN_TEXT" value="1709" />
+          <entry key="Python" value="30018" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -126,11 +125,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../stefanMap/active.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="179" column="42" selection-start-line="179" selection-start-column="42" selection-end-line="179" selection-end-column="42" />
+            <state relative-caret-position="289">
+              <caret line="179" lean-forward="true" selection-start-line="179" selection-end-line="179" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1544706790533" expanded="true" signature="192:2002" ph="..." />
+                <marker date="1544707227938" expanded="true" signature="192:2002" ph="..." />
               </folding>
             </state>
           </provider>
@@ -139,8 +138,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../stefanMap/tokens/tokens.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="28" selection-end-column="61" />
+            <state relative-caret-position="561">
+              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="38" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -474,13 +473,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540802019390</updated>
-    </task>
-    <task id="LOCAL-00048" summary="read logfile fix">
-      <created>1544180498368</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1544180498368</updated>
     </task>
     <task id="LOCAL-00049" summary="added passive scanning">
       <created>1544436612126</created>
@@ -818,7 +810,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544703453714</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="ssh fix">
+      <created>1544706835853</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1544706835853</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TodoView">
@@ -870,7 +869,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="local read processes fix2" />
     <MESSAGE value="Delete print in local" />
     <MESSAGE value="Text fixes and added commands in local.py" />
     <MESSAGE value="Text fixes" />
@@ -895,7 +893,8 @@
     <MESSAGE value="Fix readme" />
     <MESSAGE value="delete __pycache__" />
     <MESSAGE value="kippodetect remove dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="kippodetect remove dependencies" />
+    <MESSAGE value="ssh fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="ssh fix" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/example.log" />
@@ -1044,8 +1043,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../stefanMap/tokens/tokens.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="28" selection-end-column="61" />
+        <state relative-caret-position="561">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="38" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -1054,11 +1053,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../stefanMap/active.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="179" column="42" selection-start-line="179" selection-start-column="42" selection-end-line="179" selection-end-column="42" />
+        <state relative-caret-position="289">
+          <caret line="179" lean-forward="true" selection-start-line="179" selection-end-line="179" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1544706790533" expanded="true" signature="192:2002" ph="..." />
+            <marker date="1544707227938" expanded="true" signature="192:2002" ph="..." />
           </folding>
         </state>
       </provider>
