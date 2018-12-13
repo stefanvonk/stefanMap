@@ -169,6 +169,9 @@ def detectionMethod6(ip):
 
                 def write(self, *args, **kwargs):
                     self.buffer.append(args)
+
+                def flush(self):
+                    pass
             old_stdout = sys.stdout
             sys.stdout = MyBuffer()
 
@@ -176,7 +179,6 @@ def detectionMethod6(ip):
             # establish a ssh connection
             client.connect(ip, 22, 'root', '123456')
             my_buffer, sys.stdout = sys.stdout, old_stdout
-            print(my_buffer.buffer + "\n\n100")
 
             # check hostname of ssh-server
             sshesame = checkSshesame()
