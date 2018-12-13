@@ -33,7 +33,8 @@ def detectionMethod1(ip):
     except Exception as e:
         logging.warning("The following error raise when running kippoDetect: " + str(e))
 
-    if kippodetect22 == 1 or kippodetect2222 == 1:
+    # check results
+    if kippodetect22 > 0 or kippodetect2222 > 0:
         kippodetect = 1
 
     print("\n#1: The possibility that this ip runs a kippo honeypot:\n" + str(kippodetect) + "/1")
@@ -63,8 +64,11 @@ def detectionMethod2(ip):
     except Exception as e:
         logging.warning("The following error raise when running detectKippoCowrie: " + str(e))
 
-    if detectkippocowrie22 == 1 or detectkippocowrie2222 == 1:
-        detectkippocowrie = 1
+    # check results
+    if detectkippocowrie2222 > 0:
+        detectkippocowrie = detectkippocowrie2222
+    if detectkippocowrie22 > 0:
+        detectkippocowrie = detectkippocowrie22
 
     print("\n#2: The possibility that this ip runs a kippo or cowrie honeypot:\n" + str(detectkippocowrie) + "/3")
     logging.info("Result detectKippoCowrie: " + str(detectkippocowrie) + "/3")
