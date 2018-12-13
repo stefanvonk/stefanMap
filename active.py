@@ -16,12 +16,25 @@ def detectionMethod1(ip):
     # kippoDetect, score 0 - 1
     logging.info("Start kippoDetect")
 
-    # try to detect kippo honeypot
+    # declare variables
+    kippodetect = 0
+    kippodetect22 = 0
+    kippodetect2222 = 0
+
+    # try to detect kippo honeypot op port 22
     try:
-        kippodetect = kippoDetect.checkKippo(ip)
+        kippodetect22 = kippoDetect.checkKippo(ip, 22)
     except Exception as e:
         logging.warning("The following error raise when running kippoDetect: " + str(e))
-        kippodetect = 0
+
+    # try to detect kippo honeypot op port 2222
+    try:
+        kippodetect2222 = kippoDetect.checkKippo(ip, 2222)
+    except Exception as e:
+        logging.warning("The following error raise when running kippoDetect: " + str(e))
+
+    if kippodetect22 == 1 or kippodetect2222 == 1:
+        kippodetect = 1
 
     print("\n#1: The possibility that this ip runs a kippo honeypot:\n" + str(kippodetect) + "/1")
     logging.info("Result kippoDetect: " + str(kippodetect) + "/1")
@@ -33,12 +46,25 @@ def detectionMethod2(ip):
     # detectKippoCowrie, score 0 - 3
     logging.info("Start detectKippoCowrie")
 
-    # try to detect kippo or cowrie
+    # declare variables
+    detectkippocowrie = 0
+    detectkippocowrie22 = 0
+    detectkippocowrie2222 = 0
+
+    # try to detect kippo or cowrie on port 22
     try:
-        detectkippocowrie = detectKippoCowrie.checkKippoCowrie(ip)
+        detectkippocowrie22 = detectKippoCowrie.checkKippoCowrie(ip)
     except Exception as e:
         logging.warning("The following error raise when running detectKippoCowrie: " + str(e))
-        detectkippocowrie = 0
+
+    # try to detect kippo or cowrie on port 2222
+    try:
+        detectkippocowrie2222 = detectKippoCowrie.checkKippoCowrie(ip)
+    except Exception as e:
+        logging.warning("The following error raise when running detectKippoCowrie: " + str(e))
+
+    if detectkippocowrie22 == 1 or detectkippocowrie2222 == 1:
+        detectkippocowrie = 1
 
     print("\n#2: The possibility that this ip runs a kippo or cowrie honeypot:\n" + str(detectkippocowrie) + "/3")
     logging.info("Result detectKippoCowrie: " + str(detectkippocowrie) + "/3")

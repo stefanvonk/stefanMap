@@ -4,6 +4,7 @@
     <list default="true" id="c789fcbc-bdb6-415a-8ad4-775e06a5786f" name="Default" comment="ssh fix">
       <change beforePath="$PROJECT_DIR$/../stefanMap/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../stefanMap/active.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/active.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stefanMap/kippoDetect.py" beforeDir="false" afterPath="$PROJECT_DIR$/../stefanMap/kippoDetect.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +53,7 @@
           <entry key="dummy" value="99" />
           <entry key="log" value="16" />
           <entry key="md" value="1819" />
-          <entry key="py" value="30160" />
+          <entry key="py" value="30376" />
           <entry key="txt" value="1590" />
         </counts>
       </usages-collector>
@@ -60,7 +61,7 @@
         <counts>
           <entry key="Markdown" value="1819" />
           <entry key="PLAIN_TEXT" value="1709" />
-          <entry key="Python" value="30156" />
+          <entry key="Python" value="30372" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -89,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../stefanMap/stefanMap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+            <state relative-caret-position="374">
+              <caret line="22" column="56" lean-forward="true" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <marker date="1544628142139" expanded="true" signature="141:769" ph="..." />
@@ -101,11 +102,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../stefanMap/kippoDetect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+            <state relative-caret-position="272">
+              <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+              <folding>
+                <element signature="e#54#67#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,14 +123,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../stefanMap/active.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="165" column="42" lean-forward="true" selection-start-line="165" selection-start-column="42" selection-end-line="165" selection-end-column="42" />
+            <state relative-caret-position="986">
+              <caret line="66" column="29" lean-forward="true" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1544707868934" expanded="true" signature="192:2002" ph="..." />
+                <marker date="1544709070007" expanded="true" signature="192:2833" ph="..." />
               </folding>
             </state>
           </provider>
@@ -234,8 +238,8 @@
         <option value="$PROJECT_DIR$/../stefanMap/README.md" />
         <option value="$PROJECT_DIR$/../stefanMap/help.py" />
         <option value="$PROJECT_DIR$/../stefanMap/tokens/tokens.py" />
-        <option value="$PROJECT_DIR$/../stefanMap/active.py" />
         <option value="$PROJECT_DIR$/../stefanMap/kippoDetect.py" />
+        <option value="$PROJECT_DIR$/../stefanMap/active.py" />
       </list>
     </option>
   </component>
@@ -470,13 +474,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540802019390</updated>
-    </task>
-    <task id="LOCAL-00053" summary="subprocess fix">
-      <created>1544453003072</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1544453003073</updated>
     </task>
     <task id="LOCAL-00054" summary="subprocess int-&gt;string fix">
       <created>1544453535412</created>
@@ -814,7 +811,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544707669040</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="ssh fix">
+      <created>1544707924964</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1544707924964</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TodoView">
@@ -982,19 +986,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../stefanMap/stefanMap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1544628142139" expanded="true" signature="141:769" ph="..." />
-            <marker date="1544628142139" expanded="true" signature="766:769" ph="..." />
-            <marker date="1544628142139" expanded="true" signature="1983:2441" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../stefanMap/passive.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1038,21 +1029,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../stefanMap/active.py">
+    <entry file="file://$PROJECT_DIR$/../stefanMap/kippoDetect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="165" column="42" lean-forward="true" selection-start-line="165" selection-start-column="42" selection-end-line="165" selection-end-column="42" />
+        <state relative-caret-position="272">
+          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1544707868934" expanded="true" signature="192:2002" ph="..." />
+            <element signature="e#54#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../stefanMap/kippoDetect.py">
+    <entry file="file://$PROJECT_DIR$/../stefanMap/stefanMap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        <state relative-caret-position="374">
+          <caret line="22" column="56" lean-forward="true" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1544628142139" expanded="true" signature="141:769" ph="..." />
+            <marker date="1544628142139" expanded="true" signature="766:769" ph="..." />
+            <marker date="1544628142139" expanded="true" signature="1983:2441" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../stefanMap/active.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="66" column="29" lean-forward="true" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1544709070007" expanded="true" signature="192:2833" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

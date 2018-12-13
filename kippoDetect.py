@@ -10,11 +10,11 @@ spacer = b'\n\n\n\n\n\n\n\n'
 # detection is achived by issuing unexpected data to the running ssh service and checking
 # 'Protocol Mismatch' error or a 'bad packet length' error, both are non standard error messages.
 
-def checkKippo(ip):
+def checkKippo(ip, port):
     # check if port 22 is open on ip-address
-    if isPortOpen.isOpen(ip, 22):
+    if isPortOpen.isOpen(ip, port):
         # send data via socket to port 22 on ip-address
-        s.connect((ip, 22))
+        s.connect((ip, port))
         banner = s.recv(1024)
         s.send(banner + spacer)
         response = s.recv(1024)
