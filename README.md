@@ -14,8 +14,8 @@ It works with three detection levels:
 There is also a possibility to do a full network scan witch returns 
 all networks machines with the open ports of every machine.
 
-You can start the script by running stefanMap.py.
-You need to run this in Python 3 with root permissions.
+You can start the script by running stefanMap.py (passive and active scanning) and 
+local.py (local scanning). You need to run this in Python 3 with root permissions.
 
 This script has been tested on Ubuntu 18.04 and runs on the following dependencies:
 - Python libraries:
@@ -27,6 +27,8 @@ This script has been tested on Ubuntu 18.04 and runs on the following dependenci
     - nmap
     - arp-scan
     - tshark
+
+The script local.py doesn't have any dependencies.
 
 This function implements especially the detection of a number of specific honeypot.
 This honeypots are:
