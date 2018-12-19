@@ -27,7 +27,7 @@ def pdf():
         sys.stdout = MyBuffer()
 
         # execute the peepdf library in the buffer
-        # whit this library read element 16 from the pdf file
+        # whit this library read object 16 from the pdf file
         peepdf.PDFConsole.PDFConsole(pdf_file[1], vt_key).do_object(argv="16")
 
         # set buffer to variable my_buffer and rechange stdout
@@ -36,7 +36,7 @@ def pdf():
         # put the buffer to the variable content
         content = str(my_buffer.buffer)
 
-        # check if part of canarytoken url is in the content of element 16 of the pdf
+        # check if part of canarytoken url is in the content of object 16 of the pdf
         if "/URI http://" in content and ".canarytokens.net/" in content and "/S /URI" in content:
             print("\nThis PDF file is probably a Canarytoken.")
         else:
