@@ -1,5 +1,5 @@
 # stefanMap
-This tool is created by Stefan Vonk and does detection of honeypots and honeytokens. Using this tool is at your own risk!
+This tool is created by Stefan Vonk and does detection of honeypots and honeytokens. stefanMap is published under MIT license, using this tool is at your own risk!
 
 The tool has two functionalities.
 
